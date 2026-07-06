@@ -1,0 +1,25 @@
+# TLS con Caddy (Let's Encrypt automático)
+# 1. Edita docker/Caddyfile — reemplaza tu-dominio.com
+# 2. ./scripts/deploy.sh --tls
+# 3. DNS del dominio → IP del servidor (puertos 80 y 443 abiertos)
+
+services:
+  caddy:
+    image: caddy:2-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./docker/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - nginx
+    restart: unless-stopped
+
+  nginx:
+    ports: []
+
+volumes:
+  caddy_data:
+  caddy_config:

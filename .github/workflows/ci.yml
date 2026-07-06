@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: pdo_sqlite
+          coverage: xdebug
+      - run: composer install --no-interaction
+      - run: vendor/bin/phpunit --coverage-text --coverage-clover=coverage.xml
+      - run: php -r "require 'vendor/autoload.php'; \$app = require 'bootstrap/app.php'; echo 'bootstrap ok';"
+      - run: |
+          php -r "
+          require 'vendor/autoload.php';
+          \$app = require 'bootstrap/app.php';
+          ob_start();
+          (new App\Controllers\HealthController(\$app->database))->check();
+          \$out = ob_get_clean();
+          echo str_contains(\$out, 'healthy') ? 'health ok' : 'health fail';
+          "

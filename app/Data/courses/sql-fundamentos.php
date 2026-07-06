@@ -1,0 +1,182 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    [
+        'slug' => 'sql-select',
+        'order' => 1,
+        'title' => 'SELECT y filtros',
+        'level' => 'Fundamentos',
+        'minutes' => 25,
+        'summary' => 'Consultar datos con WHERE, ORDER BY y LIMIT.',
+        'concepts' => ['select', 'where', 'filter'],
+        'sections' => [
+            ['heading' => 'SELECT básico', 'body' => 'SQL lee datos de tablas. `SELECT` elige columnas, `FROM` indica la tabla.', 'code' => "SELECT name FROM users WHERE id = 1"],
+            ['heading' => 'Tablas de práctica', 'body' => 'Usamos `users` (id, name, city) y `orders` (id, user_id, product, amount). Las consultas corren en SQLite real.'],
+        ],
+        'exercises' => [
+            [
+                'type' => 'choice',
+                'question' => '¿Qué cláusula filtra filas en SQL?',
+                'options' => ['WHERE', 'FILTER', 'IF'],
+                'answer' => 'WHERE',
+                'explanation' => 'WHERE aplica condiciones antes de devolver resultados.',
+                'pro_tip' => 'Índices en columnas del WHERE aceleran consultas enormemente.',
+            ],
+            [
+                'type' => 'sql',
+                'question' => 'Selecciona name de users donde city es Madrid',
+                'starter' => 'SELECT name FROM users WHERE ',
+                'expected_output' => "name\nLuis",
+                'hint' => "SELECT name FROM users WHERE city = 'Madrid'",
+                'explanation' => '¡Ejecutaste SQL real contra una base de datos!',
+                'pro_tip' => 'Comillas simples para strings en SQL.',
+            ],
+        ],
+    ],
+    [
+        'slug' => 'sql-joins',
+        'order' => 2,
+        'title' => 'JOINs y relaciones',
+        'level' => 'Intermedio',
+        'minutes' => 30,
+        'summary' => 'INNER JOIN, LEFT JOIN y subconsultas.',
+        'concepts' => ['join', 'inner', 'left'],
+        'sections' => [
+            ['heading' => 'Relaciones', 'body' => 'Las tablas se relacionan por claves foráneas. `orders.user_id` apunta a `users.id`.'],
+            ['heading' => 'INNER JOIN', 'body' => 'Combina filas que coinciden en ambas tablas.', 'code' => "SELECT u.name, o.product\nFROM users u\nINNER JOIN orders o ON u.id = o.user_id"],
+        ],
+        'exercises' => [
+            [
+                'type' => 'choice',
+                'question' => '¿Qué JOIN devuelve solo filas con coincidencia en ambas tablas?',
+                'options' => ['INNER JOIN', 'LEFT JOIN siempre todo', 'CROSS DELETE'],
+                'answer' => 'INNER JOIN',
+                'explanation' => 'INNER JOIN = intersección de claves coincidentes.',
+                'pro_tip' => 'LEFT JOIN incluye usuarios sin pedidos (NULL en orders).',
+            ],
+            [
+                'type' => 'sql',
+                'question' => 'Lista product y amount de orders del usuario Ana (usa JOIN con users)',
+                'expected_output' => "product|amount\nLaptop|1200",
+                'hint' => "SELECT o.product, o.amount FROM orders o INNER JOIN users u ON o.user_id = u.id WHERE u.name = 'Ana'",
+                'explanation' => 'JOIN conecta datos relacionados entre tablas.',
+                'pro_tip' => 'Alias (u, o) hacen consultas largas legibles.',
+            ],
+        ],
+    ],
+    [
+        'slug' => 'sql-index',
+        'order' => 3,
+        'title' => 'Índices y performance',
+        'level' => 'Avanzado',
+        'minutes' => 35,
+        'summary' => 'EXPLAIN, índices y consultas lentas.',
+        'concepts' => ['index', 'explain', 'performance'],
+        'sections' => [
+            ['heading' => 'Índices', 'body' => 'Un **índice** es como el índice de un libro: encuentra filas sin escanear toda la tabla.'],
+            ['heading' => 'EXPLAIN', 'body' => '`EXPLAIN QUERY PLAN` muestra cómo SQLite ejecutará tu consulta.'],
+        ],
+        'exercises' => [
+            [
+                'type' => 'choice',
+                'question' => '¿Cuándo crear un índice?',
+                'options' => ['Columnas usadas frecuentemente en WHERE/JOIN', 'En todas las columnas siempre', 'Nunca'],
+                'answer' => 'Columnas usadas frecuentemente en WHERE/JOIN',
+                'explanation' => 'Índices aceleran lecturas pero ralentizan escrituras — úsalos con criterio.',
+                'pro_tip' => 'Índice compuesto (city, name) para filtros combinados.',
+            ],
+            [
+                'type' => 'contains',
+                'question' => 'Escribe el SQL para crear índice idx_users_city en users(city)',
+                'must_contain' => ['CREATE INDEX', 'idx_users_city', 'users', 'city'],
+                'hint' => 'CREATE INDEX idx_users_city ON users(city)',
+                'explanation' => 'CREATE INDEX prepara la BD para consultas rápidas por ciudad.',
+                'pro_tip' => 'En producción, crea índices en migraciones, no a mano.',
+            ],
+        ],
+    ],
+    [
+        'slug' => 'sql-tx',
+        'order' => 4,
+        'title' => 'Transacciones ACID',
+        'level' => 'Avanzado',
+        'minutes' => 25,
+        'summary' => 'BEGIN, COMMIT, ROLLBACK y consistencia.',
+        'concepts' => ['transaction', 'acid', 'rollback'],
+        'sections' => [
+            ['heading' => 'Transacciones', 'body' => 'Una **transacción** agrupa operaciones: o todas se aplican o ninguna (atomicidad).'],
+            ['heading' => 'ACID', 'body' => '**A**tomicidad, **C**onsistencia, **I**solación, **D**urabilidad — garantías de BD serias.'],
+        ],
+        'exercises' => [
+            [
+                'type' => 'choice',
+                'question' => '¿Qué hace ROLLBACK?',
+                'options' => ['Deshace cambios de la transacción actual', 'Borra la base de datos', 'Crea un índice'],
+                'answer' => 'Deshace cambios de la transacción actual',
+                'explanation' => 'ROLLBACK restaura el estado anterior si algo falla.',
+                'pro_tip' => 'Transferencias bancarias usan transacciones — no puedes perder dinero a medias.',
+            ],
+            [
+                'type' => 'contains',
+                'question' => 'Escribe BEGIN TRANSACTION, una operación y COMMIT',
+                'must_contain' => ['BEGIN', 'COMMIT'],
+                'hint' => "BEGIN TRANSACTION;\n-- tu SQL\nCOMMIT;",
+                'explanation' => 'BEGIN ... COMMIT delimita una unidad atómica de trabajo.',
+                'pro_tip' => 'En Laravel: DB::transaction(fn () => ...).',
+            ],
+        ],
+    ],
+    [
+        'slug' => 'sql-agg',
+        'order' => 5,
+        'title' => 'Agregaciones y GROUP BY',
+        'level' => 'Intermedio',
+        'minutes' => 30,
+        'summary' => 'COUNT, SUM, AVG y agrupar resultados.',
+        'concepts' => ['aggregate', 'group-by', 'having'],
+        'sections' => [
+            ['heading' => 'Funciones de agregación', 'body' => 'COUNT, SUM, AVG, MIN, MAX resumen filas.', 'code' => "SELECT city, COUNT(*) AS total\nFROM users\nGROUP BY city"],
+            ['heading' => 'HAVING', 'body' => 'Filtra **después** de agrupar — como WHERE pero para grupos.'],
+        ],
+        'exercises' => [
+            ['type' => 'choice', 'question' => '¿Qué cláusula agrupa filas con la misma ciudad?', 'options' => ['GROUP BY', 'ORDER BY', 'JOIN BY'], 'answer' => 'GROUP BY', 'explanation' => 'GROUP BY crea un grupo por cada valor distinto.', 'pro_tip' => 'Toda columna no agregada debe estar en GROUP BY.'],
+            ['type' => 'sql', 'question' => 'Cuenta cuántos users hay en total', 'expected_output' => "COUNT(*)\n3", 'hint' => 'SELECT COUNT(*) FROM users', 'explanation' => 'COUNT(*) cuenta todas las filas.', 'pro_tip' => 'COUNT(column) ignora NULLs en esa columna.'],
+        ],
+    ],
+    [
+        'slug' => 'sql-ddl',
+        'order' => 6,
+        'title' => 'CREATE TABLE y migraciones',
+        'level' => 'Diseño',
+        'minutes' => 30,
+        'summary' => 'Esquema, tipos, claves primarias y foráneas.',
+        'concepts' => ['ddl', 'schema', 'foreign-key'],
+        'sections' => [
+            ['heading' => 'DDL', 'body' => 'CREATE, ALTER, DROP definen estructura — no datos.', 'code' => "CREATE TABLE posts (\n  id INTEGER PRIMARY KEY,\n  user_id INTEGER REFERENCES users(id)\n);"],
+            ['heading' => 'Migraciones', 'body' => 'En Laravel/Symfony las migraciones versionan el esquema como Git versiona código.'],
+        ],
+        'exercises' => [
+            ['type' => 'choice', 'question' => '¿Qué define una clave primaria?', 'options' => ['Identificador único de cada fila', 'Solo decoración', 'Índice opcional siempre'], 'answer' => 'Identificador único de cada fila', 'explanation' => 'PRIMARY KEY garantiza unicidad y suele ser índice.', 'pro_tip' => 'UUID vs auto-increment — debate clásico en APIs.'],
+            ['type' => 'contains', 'question' => 'Escribe CREATE TABLE products con id INTEGER PRIMARY KEY', 'must_contain' => ['CREATE TABLE', 'PRIMARY KEY'], 'hint' => 'CREATE TABLE products (id INTEGER PRIMARY KEY)', 'explanation' => 'DDL crea la estructura antes de INSERT.', 'pro_tip' => 'REFERENCES users(id) crea integridad referencial.'],
+        ],
+    ],
+    [
+        'slug' => 'sql-design',
+        'order' => 7,
+        'title' => 'Normalización y diseño',
+        'level' => 'Avanzado',
+        'minutes' => 35,
+        'summary' => '1NF, relaciones 1:N y cuándo desnormalizar.',
+        'concepts' => ['normalization', '1nf', 'denormalization'],
+        'sections' => [
+            ['heading' => 'Normalización', 'body' => 'Evita duplicar datos: usuarios en una tabla, pedidos en otra, conectados por FK.'],
+            ['heading' => 'Desnormalizar', 'body' => 'A veces duplicas `user_name` en `orders` para lecturas rápidas — trade-off consciente.'],
+        ],
+        'exercises' => [
+            ['type' => 'choice', 'question' => '¿Relación users → orders típica?', 'options' => ['Uno a muchos (1:N)', 'Muchos a muchos siempre', 'Uno a uno solo'], 'answer' => 'Uno a muchos (1:N)', 'explanation' => 'Un usuario tiene muchos pedidos.', 'pro_tip' => 'N:M requiere tabla pivote (user_roles).'],
+            ['type' => 'choice', 'question' => '¿Cuándo desnormalizar?', 'options' => ['Lecturas muy frecuentes y JOINs costosos', 'Siempre al inicio', 'Nunca en producción'], 'answer' => 'Lecturas muy frecuentes y JOINs costosos', 'explanation' => 'Optimización medida — no prematura.', 'pro_tip' => 'Caché (Redis) a menudo es mejor que desnormalizar.'],
+        ],
+    ],
+];

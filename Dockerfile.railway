@@ -1,0 +1,42 @@
+FROM php:8.3-fpm-bookworm
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        libsqlite3-dev \
+        libpq-dev \
+        libonig-dev \
+        unzip \
+        curl \
+        nginx \
+        supervisor \
+        gettext-base \
+    && docker-php-ext-install pdo pdo_sqlite pdo_pgsql opcache mbstring \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm -f /etc/nginx/sites-enabled/default
+
+COPY docker/php-opcache.ini /usr/local/etc/php/conf.d/opcache.ini
+
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
+WORKDIR /var/www/html
+
+COPY . .
+
+RUN composer install --no-interaction --prefer-dist --no-dev --optimize-autoloader
+
+RUN mkdir -p storage/logs storage/cache storage/rate storage/backups storage/mail database \
+    && chown -R www-data:www-data storage database \
+    && sed -i 's/\r$//' docker/railway-entrypoint.sh \
+    && chmod +x docker/railway-entrypoint.sh \
+    && cp docker/railway-entrypoint.sh /usr/local/bin/railway-entrypoint.sh
+
+COPY docker/nginx.railway.conf.template /etc/nginx/templates/default.conf.template
+COPY docker/supervisord.railway.conf /etc/supervisor/conf.d/escala.conf
+
+ENV PORT=8080
+EXPOSE 8080
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=40s --retries=3 \
+    CMD sh -c 'curl -f "http://127.0.0.1:${PORT:-8080}/health" || exit 1'
+
+ENTRYPOINT ["/usr/local/bin/railway-entrypoint.sh"]
+CMD ["supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]

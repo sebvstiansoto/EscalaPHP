@@ -1,0 +1,185 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    [
+        'slug' => 'web-html',
+        'order' => 1,
+        'title' => 'HTML semántico',
+        'level' => 'Fundamentos',
+        'minutes' => 20,
+        'summary' => 'Estructura de una página con etiquetas con significado.',
+        'concepts' => ['html', 'tags', 'semantica'],
+        'sections' => [
+            ['heading' => '¿Qué es HTML?', 'body' => 'HTML define la **estructura** de una página: títulos, párrafos, listas, enlaces. El navegador lo interpreta y muestra.'],
+            ['heading' => 'Etiquetas semánticas', 'body' => 'Usa `<header>`, `<main>`, `<article>`, `<footer>` en vez de `<div>` genéricos. Ayuda a SEO y accesibilidad.', 'code' => "<article>\n  <h1>Título</h1>\n  <p>Contenido</p>\n</article>"],
+        ],
+        'exercises' => [
+            [
+                'type' => 'choice',
+                'question' => '¿Qué etiqueta define el contenido principal de una página?',
+                'options' => ['<main>', '<div>', '<span>'],
+                'answer' => '<main>',
+                'explanation' => '`<main>` marca el contenido central — semántico y accesible.',
+                'pro_tip' => 'Un solo `<main>` por página. Los lectores de pantalla lo usan para navegar.',
+            ],
+            [
+                'type' => 'choice',
+                'question' => '¿Cuál crea un enlace en HTML?',
+                'options' => ['<a href="...">', '<link>', '<url>'],
+                'answer' => '<a href="...">',
+                'explanation' => 'La etiqueta `<a>` con atributo `href` crea hipervínculos.',
+                'pro_tip' => 'Los enlaces son la base de la web — de ahí "HyperText".',
+            ],
+        ],
+    ],
+    [
+        'slug' => 'web-css',
+        'order' => 2,
+        'title' => 'CSS moderno',
+        'level' => 'Fundamentos',
+        'minutes' => 30,
+        'summary' => 'Estilos, Flexbox, Grid y variables CSS.',
+        'concepts' => ['css', 'flexbox', 'grid'],
+        'sections' => [
+            ['heading' => 'Selectores y propiedades', 'body' => 'CSS aplica estilos: `color`, `background`, `padding`. Seleccionas por etiqueta, clase (`.clase`) o id (`#id`).', 'code' => ".card {\n  color: #fff;\n  padding: 1rem;\n}"],
+            ['heading' => 'Flexbox', 'body' => '`display: flex` alinea elementos en fila o columna. Es la base del layout moderno.'],
+        ],
+        'exercises' => [
+            [
+                'type' => 'choice',
+                'question' => '¿Qué propiedad activa Flexbox?',
+                'options' => ['display: flex', 'position: flex', 'layout: flex'],
+                'answer' => 'display: flex',
+                'explanation' => '`display: flex` convierte un contenedor en flexible.',
+                'pro_tip' => 'Flexbox para una dimensión (fila o columna); Grid para dos.',
+            ],
+            [
+                'type' => 'choice',
+                'question' => '¿Cómo seleccionas un elemento por su clase en CSS?',
+                'options' => ['.miClase', '#miClase', '@miClase'],
+                'answer' => '.miClase',
+                'explanation' => 'El punto `.` selecciona por clase; `#` por id.',
+                'pro_tip' => 'Prefiere clases sobre ids para estilos reutilizables.',
+            ],
+        ],
+    ],
+    [
+        'slug' => 'web-js',
+        'order' => 3,
+        'title' => 'JavaScript en el navegador',
+        'level' => 'Fundamentos',
+        'minutes' => 35,
+        'summary' => 'Variables, funciones, console.log y manipular el DOM.',
+        'concepts' => ['javascript', 'dom', 'console'],
+        'sections' => [
+            ['heading' => 'JS da vida a la web', 'body' => 'JavaScript corre **en el navegador**. Reacciona a clics, valida formularios y consume APIs.'],
+            ['heading' => 'console.log', 'body' => 'Para mostrar valores usas `console.log()`. Aquí ejecutamos tu JS de verdad en el navegador.', 'code' => "console.log('Hola JavaScript')"],
+        ],
+        'exercises' => [
+            [
+                'type' => 'js',
+                'question' => 'Escribe código que imprima exactamente: Hola JS',
+                'starter' => "console.log(",
+                'expected_output' => 'Hola JS',
+                'hint' => "console.log('Hola JS')",
+                'explanation' => '¡Ejecutaste JavaScript real en tu navegador! Así funciona el frontend.',
+                'pro_tip' => 'console.log es tu mejor amigo para depurar. Ábrelo con F12 en cualquier web.',
+            ],
+            [
+                'type' => 'js',
+                'question' => 'Suma: declara let a = 5, let b = 7 e imprime a + b',
+                'expected_output' => '12',
+                'hint' => "let a = 5;\nlet b = 7;\nconsole.log(a + b);",
+                'explanation' => 'Variables con let y operaciones — la base de toda lógica JS.',
+                'pro_tip' => 'Usa `let` y `const`, evita `var` (obsoleto).',
+            ],
+        ],
+    ],
+    [
+        'slug' => 'web-forms',
+        'order' => 4,
+        'title' => 'Formularios y validación',
+        'level' => 'Intermedio',
+        'minutes' => 25,
+        'summary' => 'Inputs, labels, accesibilidad y validación en el cliente.',
+        'concepts' => ['forms', 'validation', 'a11y'],
+        'sections' => [
+            ['heading' => 'Formularios HTML', 'body' => '`<form>`, `<input>`, `<label>` y `required` conectan al usuario con tu app.', 'code' => "<label for=\"email\">Email</label>\n<input id=\"email\" type=\"email\" required>"],
+            ['heading' => 'Validación JS', 'body' => 'Antes de enviar, valida en JavaScript: longitud, formato email, contraseñas coincidentes.'],
+        ],
+        'exercises' => [
+            ['type' => 'choice', 'question' => '¿Qué atributo HTML marca un campo obligatorio?', 'options' => ['required', 'mandatory', 'must'], 'answer' => 'required', 'explanation' => 'required activa validación nativa del navegador.', 'pro_tip' => 'Siempre asocia label con for/id — accesibilidad básica.'],
+            ['type' => 'choice', 'question' => '¿Qué type de input es para correo electrónico?', 'options' => ['email', 'text', 'mail'], 'answer' => 'email', 'explanation' => 'type="email" valida formato básico en móviles y desktop.', 'pro_tip' => 'La validación del servidor sigue siendo obligatoria.'],
+        ],
+    ],
+    [
+        'slug' => 'web-grid',
+        'order' => 5,
+        'title' => 'CSS Grid y layouts',
+        'level' => 'Intermedio',
+        'minutes' => 30,
+        'summary' => 'Grid de dos dimensiones, áreas nombradas y responsive.',
+        'concepts' => ['grid', 'layout', 'responsive'],
+        'sections' => [
+            ['heading' => 'CSS Grid', 'body' => '`display: grid` define filas y columnas. Ideal para dashboards y layouts complejos.', 'code' => ".layout {\n  display: grid;\n  grid-template-columns: 1fr 3fr;\n  gap: 1rem;\n}"],
+            ['heading' => 'Responsive', 'body' => 'Con `grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))` las tarjetas se adaptan solas.'],
+        ],
+        'exercises' => [
+            ['type' => 'choice', 'question' => '¿Qué propiedad activa CSS Grid?', 'options' => ['display: grid', 'display: flex', 'layout: grid'], 'answer' => 'display: grid', 'explanation' => 'Grid controla filas y columnas a la vez.', 'pro_tip' => 'Flexbox para barras de navegación; Grid para la página entera.'],
+            ['type' => 'contains', 'question' => 'Escribe una regla CSS con display: grid y gap: 1rem', 'must_contain' => ['display: grid', 'gap'], 'hint' => "display: grid;\ngap: 1rem;", 'explanation' => 'gap separa celdas sin márgenes hacky.', 'pro_tip' => 'fr es la unidad flexible de Grid — reparte espacio libre.'],
+        ],
+    ],
+    [
+        'slug' => 'web-dom',
+        'order' => 6,
+        'title' => 'Manipular el DOM',
+        'level' => 'Intermedio',
+        'minutes' => 30,
+        'summary' => 'querySelector, eventos y actualizar la UI sin frameworks.',
+        'concepts' => ['dom', 'events', 'querySelector'],
+        'sections' => [
+            ['heading' => 'El DOM', 'body' => 'El navegador convierte HTML en un árbol de nodos. JavaScript puede leerlo y modificarlo.', 'code' => "const btn = document.querySelector('#miBtn');\nbtn.addEventListener('click', () => console.log('clic'));"],
+            ['heading' => 'Eventos', 'body' => 'click, submit, input — reaccionas a acciones del usuario sin recargar la página.'],
+        ],
+        'exercises' => [
+            ['type' => 'js', 'question' => 'Simula selección: const el = { textContent: "Hola" }; console.log(el.textContent)', 'expected_output' => 'Hola', 'hint' => 'const el = { textContent: "Hola" };\nconsole.log(el.textContent);', 'explanation' => 'textContent es cómo lees/escribes texto en un nodo.', 'pro_tip' => 'En el navegador real: document.querySelector("#id").textContent'],
+            ['type' => 'choice', 'question' => '¿Qué método registra un listener de eventos?', 'options' => ['addEventListener', 'onEvent', 'listen'], 'answer' => 'addEventListener', 'explanation' => 'addEventListener es el estándar moderno para eventos.', 'pro_tip' => 'Usa event delegation en listas largas para mejor rendimiento.'],
+        ],
+    ],
+    [
+        'slug' => 'web-fetch',
+        'order' => 7,
+        'title' => 'Fetch y APIs REST',
+        'level' => 'Intermedio',
+        'minutes' => 35,
+        'summary' => 'Consumir JSON desde tu backend PHP, Python o Node.',
+        'concepts' => ['fetch', 'json', 'api'],
+        'sections' => [
+            ['heading' => 'fetch()', 'body' => 'La API **fetch** pide datos HTTP de forma asíncrona. Las SPAs y Astro islands dependen de esto.', 'code' => "fetch('/api/users')\n  .then(r => r.json())\n  .then(data => console.log(data));"],
+            ['heading' => 'JSON', 'body' => 'Las APIs modernas devuelven JSON. `response.json()` lo parsea a objetos JavaScript.'],
+        ],
+        'exercises' => [
+            ['type' => 'js', 'question' => 'Parsea JSON: const data = JSON.parse(\'{"ok":true}\'); console.log(data.ok)', 'expected_output' => 'true', 'hint' => 'const data = JSON.parse(\'{"ok":true}\');\nconsole.log(data.ok);', 'explanation' => 'JSON.parse convierte string JSON en objeto JS.', 'pro_tip' => 'fetch + json es el puente frontend ↔ backend.'],
+            ['type' => 'choice', 'question' => '¿Qué método convierte la respuesta HTTP a objeto JS?', 'options' => ['response.json()', 'response.text()', 'response.html()'], 'answer' => 'response.json()', 'explanation' => '.json() parsea el cuerpo como JSON.', 'pro_tip' => 'Siempre verifica response.ok antes de parsear.'],
+        ],
+    ],
+    [
+        'slug' => 'web-async',
+        'order' => 8,
+        'title' => 'Async/await y Promesas',
+        'level' => 'Avanzado',
+        'minutes' => 35,
+        'summary' => 'Código asíncrono legible: Promises, async/await y errores.',
+        'concepts' => ['async', 'promise', 'await'],
+        'sections' => [
+            ['heading' => 'Promesas', 'body' => 'Una **Promise** representa un valor futuro: éxito (resolve) o error (reject).'],
+            ['heading' => 'async/await', 'body' => 'Sintaxis azucarada sobre promesas — código que parece síncrono.', 'code' => "async function cargar() {\n  const r = await fetch('/api');\n  return r.json();\n}"],
+        ],
+        'exercises' => [
+            ['type' => 'js', 'question' => 'Promesa resuelta: Promise.resolve(42).then(n => console.log(n))', 'expected_output' => '42', 'hint' => 'Promise.resolve(42).then(n => console.log(n));', 'explanation' => 'Las promesas encadenan operaciones asíncronas.', 'pro_tip' => 'async/await + try/catch maneja errores de red limpiamente.'],
+            ['type' => 'choice', 'question' => '¿Qué palabra clave espera una Promise dentro de async?', 'options' => ['await', 'wait', 'then'], 'answer' => 'await', 'explanation' => 'await pausa hasta que la promesa se resuelve.', 'pro_tip' => 'No abuses de await en serie — Promise.all paraleliza.'],
+        ],
+    ],
+];

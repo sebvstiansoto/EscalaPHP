@@ -1,0 +1,9 @@
+tu-dominio.com {
+    encode gzip
+    reverse_proxy nginx:80
+}
+
+# Redirige www → apex (opcional)
+# www.tu-dominio.com {
+#     redir https://tu-dominio.com{uri} permanent
+# }

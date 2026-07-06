@@ -1,0 +1,27 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - ./database:/app/database
+      - ./storage:/app/storage
+    environment:
+      APP_DEBUG: "true"
+      DB_DRIVER: sqlite
+
+  # Descomenta para PostgreSQL en producción:
+  # db:
+  #   image: postgres:16-alpine
+  #   environment:
+  #     POSTGRES_DB: escala
+  #     POSTGRES_USER: escala
+  #     POSTGRES_PASSWORD: secret
+  #   ports:
+  #     - "5432:5432"
+
+  # redis:
+  #   image: redis:7-alpine
+  #   ports:
+  #     - "6379:6379"

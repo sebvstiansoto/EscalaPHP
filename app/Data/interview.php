@@ -1,0 +1,357 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'php' => [
+        'title' => 'Entrevista PHP',
+        'questions' => [
+            ['q' => '¿Diferencia entre == y === en PHP?', 'hint' => '=== compara valor y tipo'],
+            ['q' => '¿Qué es Composer y para qué sirve?', 'hint' => 'Gestor de dependencias'],
+            ['q' => '¿Cómo previenes SQL injection?', 'hint' => 'PDO prepared statements'],
+            ['q' => '¿Qué es PSR-4?', 'hint' => 'Autoload de clases'],
+            ['q' => 'Explica MVC con un ejemplo.', 'hint' => 'Modelo, Vista, Controlador'],
+        ],
+    ],
+    'python' => [
+        'title' => 'Entrevista Python',
+        'questions' => [
+            ['q' => '¿Diferencia entre list y tuple?', 'hint' => 'Mutabilidad'],
+            ['q' => '¿Qué hace FastAPI?', 'hint' => 'API async con tipos'],
+            ['q' => '¿Qué es un virtual environment?', 'hint' => 'venv aísla dependencias'],
+            ['q' => '¿Decorador en Python?', 'hint' => 'Función que envuelve otra'],
+            ['q' => '¿Django vs FastAPI cuándo usar cada uno?', 'hint' => 'Monolito vs API'],
+        ],
+    ],
+    'sql' => [
+        'title' => 'Entrevista SQL',
+        'questions' => [
+            ['q' => '¿INNER vs LEFT JOIN?', 'hint' => 'Coincidencias vs incluir NULL'],
+            ['q' => '¿Cuándo crear un índice?', 'hint' => 'Columnas en WHERE/JOIN frecuentes'],
+            ['q' => '¿Qué es una transacción ACID?', 'hint' => 'Atomicidad, consistencia...'],
+            ['q' => '¿Normalización 3FN en una frase?', 'hint' => 'Sin dependencias transitivas'],
+            ['q' => '¿EXPLAIN para qué sirve?', 'hint' => 'Plan de ejecución de query'],
+        ],
+    ],
+    'devops' => [
+        'title' => 'Entrevista DevOps',
+        'questions' => [
+            ['q' => '¿Docker vs Kubernetes?', 'hint' => '1 app vs orquestación'],
+            ['q' => '¿Qué es CI/CD?', 'hint' => 'Integración y entrega continua'],
+            ['q' => '¿Blue-green deployment?', 'hint' => 'Dos entornos, switch sin downtime'],
+            ['q' => '¿Qué es un Pod?', 'hint' => 'Unidad mínima en K8s'],
+            ['q' => '¿GitFlow en una frase?', 'hint' => 'Ramas feature/release/hotfix'],
+        ],
+    ],
+    'react' => [
+        'title' => 'Entrevista React',
+        'questions' => [
+            ['q' => '¿Qué es JSX?', 'hint' => 'Sintaxis que mezcla HTML y JS'],
+            ['q' => '¿Diferencia useState y useEffect?', 'hint' => 'Estado vs efectos secundarios'],
+            ['q' => '¿Qué es prop drilling y cómo evitarlo?', 'hint' => 'Context o state management'],
+            ['q' => '¿Controlled vs uncontrolled input?', 'hint' => 'value en state vs ref DOM'],
+            ['q' => '¿Cómo optimizar re-renders?', 'hint' => 'memo, useMemo, useCallback'],
+        ],
+    ],
+    'laravel' => [
+        'title' => 'Entrevista Laravel',
+        'questions' => [
+            ['q' => '¿Qué es Eloquent?', 'hint' => 'ORM de Laravel'],
+            ['q' => '¿Service container / DI?', 'hint' => 'Resuelve dependencias automáticamente'],
+            ['q' => '¿Middleware vs Policy?', 'hint' => 'HTTP pipeline vs autorización'],
+            ['q' => '¿Qué hace artisan migrate?', 'hint' => 'Aplica migraciones'],
+            ['q' => '¿Sanctum vs Passport?', 'hint' => 'Tokens simples vs OAuth2 completo'],
+        ],
+    ],
+    'seguridad' => [
+        'title' => 'Entrevista Seguridad',
+        'questions' => [
+            ['q' => '¿Cómo previene XSS?', 'hint' => 'Escapar output, CSP'],
+            ['q' => '¿CSRF en una frase?', 'hint' => 'Token que prueba origen del form'],
+            ['q' => '¿Por qué bcrypt y no MD5?', 'hint' => 'Hash lento y con salt'],
+            ['q' => '¿Prepared statements por qué?', 'hint' => 'Separa SQL de datos'],
+            ['q' => '¿Riesgo de guardar JWT en localStorage?', 'hint' => 'XSS puede robarlo'],
+        ],
+    ],
+    'redis' => [
+        'title' => 'Entrevista Redis',
+        'questions' => [
+            ['q' => '¿Redis vs PostgreSQL?', 'hint' => 'RAM vs disco, caché vs fuente de verdad'],
+            ['q' => '¿Cache-aside en 4 pasos?', 'hint' => 'Get cache, miss, DB, set cache'],
+            ['q' => '¿Para qué INCR atómico?', 'hint' => 'Rate limiting, contadores'],
+            ['q' => '¿TTL y por qué importa?', 'hint' => 'Evita datos obsoletos eternos'],
+            ['q' => '¿Redis en Laravel para qué 3 cosas?', 'hint' => 'Cache, session, queue'],
+        ],
+    ],
+    'symfony' => [
+        'title' => 'Entrevista Symfony',
+        'questions' => [
+            ['q' => '¿Symfony vs Laravel?', 'hint' => 'Modular/enterprise vs productividad'],
+            ['q' => '¿Qué es el DI Container?', 'hint' => 'Resuelve dependencias'],
+            ['q' => '¿Doctrine vs Eloquent?', 'hint' => 'ORM Symfony vs Laravel'],
+            ['q' => '¿API Platform?', 'hint' => 'REST desde entidades'],
+            ['q' => '¿bin/console debug:router?', 'hint' => 'Lista rutas'],
+        ],
+    ],
+    'patrones' => [
+        'title' => 'Entrevista Patrones',
+        'questions' => [
+            ['q' => '¿Repository pattern?', 'hint' => 'Abstrae persistencia'],
+            ['q' => '¿Cuándo NO usar Singleton?', 'hint' => 'Tests, estado global'],
+            ['q' => '¿Strategy vs if/else?', 'hint' => 'Open/closed'],
+            ['q' => '¿Explica DIP.', 'hint' => 'Depender de abstracciones'],
+            ['q' => '¿SRP en una frase?', 'hint' => 'Una clase, una razón para cambiar'],
+        ],
+    ],
+    'nginx' => [
+        'title' => 'Entrevista Nginx',
+        'questions' => [
+            ['q' => '¿fastcgi_pass vs proxy_pass?', 'hint' => 'PHP-FPM vs HTTP upstream'],
+            ['q' => '¿Qué es try_files?', 'hint' => 'Frontend controller pattern'],
+            ['q' => '¿Causa común de 502?', 'hint' => 'Upstream/PHP-FPM caído'],
+            ['q' => '¿Cómo forzar HTTPS?', 'hint' => 'listen 443 + redirect 80'],
+            ['q' => '¿Rate limiting directiva?', 'hint' => 'limit_req'],
+        ],
+    ],
+    'django' => [
+        'title' => 'Entrevista Django REST',
+        'questions' => [
+            ['q' => '¿Serializer vs Model?', 'hint' => 'Validación JSON vs tabla BD'],
+            ['q' => '¿ModelViewSet provee?', 'hint' => 'CRUD HTTP'],
+            ['q' => '¿DRF vs FastAPI?', 'hint' => 'Ecosistema Django vs API pura'],
+            ['q' => '¿IsAuthenticated?', 'hint' => 'Permission class'],
+            ['q' => '¿Gunicorn rol?', 'hint' => 'WSGI server'],
+        ],
+    ],
+    'algoritmos' => [
+        'title' => 'Entrevista Algoritmos',
+        'questions' => [
+            ['q' => '¿Qué es O(n)?', 'hint' => 'Lineal con tamaño input'],
+            ['q' => '¿Two Sum con hash map?', 'hint' => 'O(n) tiempo'],
+            ['q' => '¿BFS vs DFS?', 'hint' => 'Cola vs profundidad'],
+            ['q' => '¿Binary search requisito?', 'hint' => 'Array ordenado'],
+            ['q' => '¿Primer paso en entrevista?', 'hint' => 'Clarificar ejemplos'],
+        ],
+    ],
+    'graphql' => [
+        'title' => 'Entrevista GraphQL',
+        'questions' => [
+            ['q' => '¿GraphQL vs REST overfetching?', 'hint' => 'Pides solo campos'],
+            ['q' => '¿Query vs Mutation?', 'hint' => 'Leer vs escribir'],
+            ['q' => '¿N+1 en GraphQL?', 'hint' => 'DataLoader/eager load'],
+            ['q' => '¿Cuándo NO GraphQL?', 'hint' => 'Cache CDN simple'],
+            ['q' => '¿Signo ! en schema?', 'hint' => 'Non-null'],
+        ],
+    ],
+    'arquitectura' => [
+        'title' => 'Entrevista Arquitectura',
+        'questions' => [
+            ['q' => '¿Monolito vs microservicios?', 'hint' => 'Equipo, escala, coste ops'],
+            ['q' => '¿Event-driven ventaja?', 'hint' => 'Desacopla'],
+            ['q' => '¿Strangler fig?', 'hint' => 'Migración gradual'],
+            ['q' => '¿Hexagonal ports?', 'hint' => 'Interfaces dominio'],
+            ['q' => '¿Escala horizontal requisito?', 'hint' => 'Stateless app'],
+        ],
+    ],
+    'nextjs' => [
+        'title' => 'Entrevista Next.js',
+        'questions' => [
+            ['q' => '¿SSR vs CSR en Next?', 'hint' => 'HTML en servidor vs cliente'],
+            ['q' => '¿Server vs Client Component?', 'hint' => 'use client para hooks/browser'],
+            ['q' => '¿App Router archivo página?', 'hint' => 'page.tsx'],
+            ['q' => '¿API routes en App Router?', 'hint' => 'route.ts con GET/POST'],
+            ['q' => '¿Cuándo usar SSG vs ISR?', 'hint' => 'Estático vs revalidación'],
+        ],
+    ],
+    'aws' => [
+        'title' => 'Entrevista AWS',
+        'questions' => [
+            ['q' => '¿EC2 vs Lambda?', 'hint' => 'Servidor persistente vs eventos'],
+            ['q' => '¿S3 para qué 3 cosas?', 'hint' => 'Assets, backups, static site'],
+            ['q' => '¿IAM best practice?', 'hint' => 'Least privilege'],
+            ['q' => '¿RDS vs self-hosted Postgres?', 'hint' => 'Managed backups/patches'],
+            ['q' => '¿Security Group vs NACL?', 'hint' => 'Instancia vs subnet'],
+        ],
+    ],
+    'colas' => [
+        'title' => 'Entrevista Colas',
+        'questions' => [
+            ['q' => '¿Por qué colas async?', 'hint' => 'Desacopla, resiliencia, picos'],
+            ['q' => '¿Idempotencia en workers?', 'hint' => 'Mensajes duplicados'],
+            ['q' => '¿DLQ para qué?', 'hint' => 'Mensajes fallidos inspeccionables'],
+            ['q' => '¿RabbitMQ exchange types?', 'hint' => 'direct, fanout, topic'],
+            ['q' => '¿Laravel Horizon?', 'hint' => 'Dashboard y workers Redis'],
+        ],
+    ],
+    'ethical-hacking' => [
+        'title' => 'Entrevista Ethical Hacking',
+        'questions' => [
+            ['q' => '¿Requisito legal antes de pentest?', 'hint' => 'Autorización escrita y scope'],
+            ['q' => '¿Recon pasivo vs activo?', 'hint' => 'OSINT vs tocar el target'],
+            ['q' => '¿IDOR en una frase?', 'hint' => 'Acceso a objeto ajeno por ID'],
+            ['q' => '¿Burp Suite para qué?', 'hint' => 'Proxy e interceptar HTTP'],
+            ['q' => '¿Qué incluye un buen reporte?', 'hint' => 'Pasos, impacto, severidad, fix'],
+        ],
+    ],
+    'go' => [
+        'title' => 'Entrevista Go',
+        'questions' => [
+            ['q' => '¿Goroutine vs OS thread?', 'hint' => 'Goroutines más ligeras, multiplexadas'],
+            ['q' => '¿Channel buffered vs unbuffered?', 'hint' => 'Sync vs async send'],
+            ['q' => '¿Error handling Go?', 'hint' => 'Return error, no exceptions'],
+            ['q' => '¿Cuándo elegir Go?', 'hint' => 'APIs, CLI, infra, concurrencia'],
+            ['q' => '¿interface{} vacía?', 'hint' => 'Acepta cualquier tipo'],
+        ],
+    ],
+    'java' => [
+        'title' => 'Entrevista Java/Spring',
+        'questions' => [
+            ['q' => '¿JVM vs JRE vs JDK?', 'hint' => 'Runtime vs dev kit'],
+            ['q' => '¿Spring Boot autoconfig?', 'hint' => 'Convención sobre config manual'],
+            ['q' => '¿JPA lazy loading riesgo?', 'hint' => 'N+1, LazyInitializationException'],
+            ['q' => '¿Bean scope singleton?', 'hint' => 'Una instancia por container'],
+            ['q' => '¿Spring vs Jakarta EE?', 'hint' => 'Spring más usado en startups/modern'],
+        ],
+    ],
+    'vue' => [
+        'title' => 'Entrevista Vue',
+        'questions' => [
+            ['q' => '¿Vue vs React filosofía?', 'hint' => 'Progresivo vs library pura'],
+            ['q' => '¿ref vs reactive?', 'hint' => 'Primitivos vs objetos'],
+            ['q' => '¿Pinia vs Vuex?', 'hint' => 'Pinia oficial Vue 3'],
+            ['q' => '¿Nuxt vs Vue SPA?', 'hint' => 'SSR/SSG vs solo cliente'],
+            ['q' => '¿Computed vs watch?', 'hint' => 'Derivado cacheado vs side effect'],
+        ],
+    ],
+    'system-design' => [
+        'title' => 'Entrevista System Design',
+        'questions' => [
+            ['q' => '¿Diseñar Twitter feed?', 'hint' => 'Fan-out, cache, timeline'],
+            ['q' => '¿CAP theorem?', 'hint' => 'Consistency vs Availability en partition'],
+            ['q' => '¿Cache aside pasos?', 'hint' => 'Get cache, miss, DB, set'],
+            ['q' => '¿Rate limiter diseño?', 'hint' => 'Token bucket, Redis INCR'],
+            ['q' => '¿Single point of failure?', 'hint' => 'Redundancia, replicas, multi-AZ'],
+        ],
+    ],
+    'terraform' => [
+        'title' => 'Entrevista Terraform',
+        'questions' => [
+            ['q' => '¿State remoto por qué?', 'hint' => 'Equipo comparte, locking'],
+            ['q' => '¿terraform import?', 'hint' => 'Adoptar recurso existente'],
+            ['q' => '¿Module vs root?', 'hint' => 'Reutilización encapsulada'],
+            ['q' => '¿Drift detection?', 'hint' => 'Plan periódico vs consola manual'],
+            ['q' => '¿TF vs CloudFormation?', 'hint' => 'Multi-cloud vs AWS-only'],
+        ],
+    ],
+    'kafka' => [
+        'title' => 'Entrevista Kafka',
+        'questions' => [
+            ['q' => '¿Partition key por qué?', 'hint' => 'Orden por entidad'],
+            ['q' => '¿Consumer lag?', 'hint' => 'Offset atrás vs producer'],
+            ['q' => '¿Kafka vs RabbitMQ?', 'hint' => 'Stream replay vs task queue'],
+            ['q' => '¿Exactly-once?', 'hint' => 'Transacciones + idempotencia'],
+            ['q' => '¿Retention policy?', 'hint' => 'Tiempo/tamaño logs retenidos'],
+        ],
+    ],
+    'grpc' => [
+        'title' => 'Entrevista gRPC',
+        'questions' => [
+            ['q' => '¿Protobuf ventaja?', 'hint' => 'Binario compacto, schema'],
+            ['q' => '¿Streaming types gRPC?', 'hint' => 'Unary, server, client, bidi'],
+            ['q' => '¿Deadline propagation?', 'hint' => 'Context timeout distribuido'],
+            ['q' => '¿gRPC browser?', 'hint' => 'grpc-web + proxy'],
+            ['q' => '¿Health check gRPC?', 'hint' => 'grpc.health.v1'],
+        ],
+    ],
+    'oauth' => [
+        'title' => 'Entrevista OAuth/OIDC',
+        'questions' => [
+            ['q' => '¿Authorization Code flow?', 'hint' => 'Code exchange server-side'],
+            ['q' => '¿PKCE para qué clients?', 'hint' => 'Public: SPA, mobile'],
+            ['q' => '¿Refresh token rotation?', 'hint' => 'Detecta robo token'],
+            ['q' => '¿id_token vs access_token?', 'hint' => 'Identidad vs API access'],
+            ['q' => '¿SAML vs OIDC?', 'hint' => 'XML enterprise vs JWT moderno'],
+        ],
+    ],
+    'observabilidad' => [
+        'title' => 'Entrevista Observabilidad',
+        'questions' => [
+            ['q' => '¿RED metrics?', 'hint' => 'Rate, Errors, Duration'],
+            ['q' => '¿Trace vs log?', 'hint' => 'Request journey vs evento puntual'],
+            ['q' => '¿SLO vs SLA?', 'hint' => 'Objetivo interno vs contrato'],
+            ['q' => '¿Alert fatigue fix?', 'hint' => 'Alertar síntomas, runbooks'],
+            ['q' => '¿OpenTelemetry?', 'hint' => 'Vendor-neutral instrumentation'],
+        ],
+    ],
+    'ai' => [
+        'title' => 'Entrevista IA/LLM',
+        'questions' => [
+            ['q' => '¿RAG vs fine-tuning?', 'hint' => 'Contexto privado vs pesos modelo'],
+            ['q' => '¿Prompt injection?', 'hint' => 'Usuario manipula system prompt'],
+            ['q' => '¿Temperature 0?', 'hint' => 'Output determinista'],
+            ['q' => '¿Vector DB para qué?', 'hint' => 'Similarity search embeddings'],
+            ['q' => '¿Eval LLM producción?', 'hint' => 'Golden set, regression prompts'],
+        ],
+    ],
+    'rust' => [
+        'title' => 'Entrevista Rust',
+        'questions' => [
+            ['q' => '¿Ownership en una frase?', 'hint' => 'Un valor, un owner, move/borrow'],
+            ['q' => '¿Send vs Sync?', 'hint' => 'Cross-thread transfer vs access'],
+            ['q' => '¿Rust vs Go?', 'hint' => 'Safety compile-time vs simplicidad'],
+            ['q' => '¿unwrap() riesgo?', 'hint' => 'Panic si None/Err'],
+            ['q' => '¿WASM use case Rust?', 'hint' => 'Performance browser/edge'],
+        ],
+    ],
+    'angular' => [
+        'title' => 'Entrevista Angular',
+        'questions' => [
+            ['q' => '¿RxJS Observable vs Promise?', 'hint' => 'Stream múltiples valores, cancelable'],
+            ['q' => '¿switchMap cuándo?', 'hint' => 'Search — cancela request previo'],
+            ['q' => '¿Dependency Injection Angular?', 'hint' => 'Constructor inject services'],
+            ['q' => '¿Standalone components?', 'hint' => 'Sin NgModule obligatorio'],
+            ['q' => '¿Angular vs React enterprise?', 'hint' => 'Batteries included, opinionated'],
+        ],
+    ],
+    'stripe' => [
+        'title' => 'Entrevista Stripe',
+        'questions' => [
+            ['q' => '¿Webhook vs success_url?', 'hint' => 'Fulfillment confiable async'],
+            ['q' => '¿Idempotency key?', 'hint' => 'Evita doble cargo retry'],
+            ['q' => '¿PCI scope con Elements?', 'hint' => 'PAN no toca tu server'],
+            ['q' => '¿Connect vs direct?', 'hint' => 'Marketplace split payments'],
+            ['q' => '¿Strong Customer Authentication?', 'hint' => '3DS Europa PSD2'],
+        ],
+    ],
+    'flutter' => ['title' => 'Entrevista Flutter', 'questions' => [['q' => '¿Widget vs Element?', 'hint' => 'Config inmutable vs render tree'], ['q' => '¿Dart null safety?', 'hint' => 'String? nullable'], ['q' => '¿Riverpod vs Provider?', 'hint' => 'Compile-safe, sin context'], ['q' => '¿Hot reload vs restart?', 'hint' => 'State preserved vs full reset'], ['q' => '¿Flutter vs RN?', 'hint' => 'Skia render vs native bridge']]],
+    'dotnet' => ['title' => 'Entrevista .NET', 'questions' => [['q' => '¿DI scoped vs singleton?', 'hint' => 'Per request vs app lifetime'], ['q' => '¿EF Core migrations?', 'hint' => 'Version schema like Laravel'], ['q' => '¿Minimal APIs vs controllers?', 'hint' => 'Small endpoints vs MVC'], ['q' => '¿async/await C#?', 'hint' => 'Task-based async'], ['q' => '¿.NET vs Java?', 'hint' => 'Microsoft ecosystem vs JVM open']]],
+    'kotlin' => ['title' => 'Entrevista Kotlin', 'questions' => [['q' => '¿Coroutines vs threads?', 'hint' => 'Lightweight suspend'], ['q' => '¿Compose vs XML?', 'hint' => 'Declarative UI official'], ['q' => '¿data class?', 'hint' => 'DTO auto equals/copy'], ['q' => '¿Flow vs LiveData?', 'hint' => 'Cold stream reactive'], ['q' => '¿Kotlin vs Java Android?', 'hint' => 'Null safety, concise']]],
+    'elasticsearch' => ['title' => 'Entrevista Elasticsearch', 'questions' => [['q' => '¿text vs keyword?', 'hint' => 'Analyzed vs exact'], ['q' => '¿ES vs PostgreSQL?', 'hint' => 'Search vs transactions'], ['q' => '¿Shard purpose?', 'hint' => 'Horizontal scale data'], ['q' => '¿Reindex when?', 'hint' => 'Mapping change'], ['q' => '¿ELK stack?', 'hint' => 'Elasticsearch Logstash Kibana']]],
+    'gcp' => ['title' => 'Entrevista GCP', 'questions' => [['q' => '¿Cloud Run vs GKE?', 'hint' => 'Serverless containers vs full K8s'], ['q' => '¿GCS vs S3?', 'hint' => 'Both object storage'], ['q' => '¿BigQuery use case?', 'hint' => 'Analytics OLAP'], ['q' => '¿IAM project level?', 'hint' => 'Billing isolation'], ['q' => '¿Preemptible VMs?', 'hint' => 'Cheap interruptible batch']]],
+    'azure' => ['title' => 'Entrevista Azure', 'questions' => [['q' => '¿Resource Group purpose?', 'hint' => 'Lifecycle container'], ['q' => '¿App Service vs Functions?', 'hint' => 'Always-on web vs event'], ['q' => '¿Entra ID?', 'hint' => 'Azure AD SSO'], ['q' => '¿Deployment slot swap?', 'hint' => 'Blue-green zero downtime'], ['q' => '¿Cosmos DB?', 'hint' => 'Global NoSQL multi-model']]],
+    'helm' => ['title' => 'Entrevista Helm', 'questions' => [['q' => '¿Chart vs Release?', 'hint' => 'Template vs instance'], ['q' => '¿helm upgrade --atomic?', 'hint' => 'Auto rollback fail'], ['q' => '¿Values override order?', 'hint' => 'Later files win'], ['q' => '¿Helm vs raw YAML?', 'hint' => 'Templating + versioning'], ['q' => '¿GitOps with Helm?', 'hint' => 'ArgoCD sync charts']]],
+    'ansible' => ['title' => 'Entrevista Ansible', 'questions' => [['q' => '¿Ansible vs Terraform?', 'hint' => 'Config vs create infra'], ['q' => '¿Idempotency meaning?', 'hint' => 'Second run no changes'], ['q' => '¿Handler vs task?', 'hint' => 'Run once if notified'], ['q' => '¿Dynamic inventory?', 'hint' => 'Cloud auto-discover'], ['q' => '¿Vault encrypt?', 'hint' => 'Secrets in git']]],
+    'webrtc' => ['title' => 'Entrevista WebRTC', 'questions' => [['q' => '¿STUN vs TURN?', 'hint' => 'Discover IP vs relay'], ['q' => '¿Why signaling needed?', 'hint' => 'Exchange SDP/ICE'], ['q' => '¿SFU for group calls?', 'hint' => 'Scale beyond mesh P2P'], ['q' => '¿getStats use?', 'hint' => 'Debug packet loss'], ['q' => '¿WebRTC vs WebSocket?', 'hint' => 'Media UDP vs text TCP']]],
+    'pwa' => ['title' => 'Entrevista PWA', 'questions' => [['q' => '¿Service worker scope?', 'hint' => 'Path registration limits'], ['q' => '¿Cache-first vs network-first?', 'hint' => 'Static vs API data'], ['q' => '¿Install criteria?', 'hint' => 'HTTPS manifest SW'], ['q' => '¿Workbox benefit?', 'hint' => 'SW strategies toolkit'], ['q' => '¿PWA limitations iOS?', 'hint' => 'Check platform support']]],
+    'a11y' => ['title' => 'Entrevista a11y', 'questions' => [['q' => '¿WCAG POUR?', 'hint' => 'Perceivable Operable Understandable Robust'], ['q' => '¿Skip link purpose?', 'hint' => 'Bypass nav keyboard'], ['q' => '¿aria-label vs labelledby?', 'hint' => 'Direct vs reference'], ['q' => '¿Automated test coverage?', 'hint' => '~30% issues'], ['q' => '¿Focus trap modal?', 'hint' => 'Tab cycles inside']]],
+    'wordpress' => ['title' => 'Entrevista WordPress', 'questions' => [['q' => '¿Action vs filter?', 'hint' => 'Event vs modify value'], ['q' => '¿Headless WP?', 'hint' => 'REST + Next frontend'], ['q' => '¿wpdb prepare?', 'hint' => 'SQL injection prevent'], ['q' => '¿Transients?', 'hint' => 'Cache TTL'], ['q' => '¿Nonces WP?', 'hint' => 'CSRF tokens']]],
+    'web3' => ['title' => 'Entrevista Web3', 'questions' => [['q' => '¿Smart contract risk?', 'hint' => 'Immutable bugs costly'], ['q' => '¿Gas optimization why?', 'hint' => 'User pays compute'], ['q' => '¿Reentrancy guard?', 'hint' => 'Checks-effects-interactions'], ['q' => '¿Testnet vs mainnet?', 'hint' => 'Free dev vs real money'], ['q' => '¿Seed phrase rule?', 'hint' => 'Never share ever']]],
+    'playwright' => ['title' => 'Entrevista Playwright', 'questions' => [['q' => '¿getByRole benefit?', 'hint' => 'Resilient a11y selectors'], ['q' => '¿Flaky test fix?', 'hint' => 'Auto-wait isolate state'], ['q' => '¿storageState reuse?', 'hint' => 'Skip login each test'], ['q' => '¿Trace viewer?', 'hint' => 'Debug CI failures'], ['q' => '¿E2E pyramid position?', 'hint' => 'Few critical paths']]],
+    'svelte' => ['title' => 'Entrevista Svelte', 'questions' => [['q' => '¿Svelte vs React VDOM?', 'hint' => 'Compile-time no runtime'], ['q' => '¿$: reactive?', 'hint' => 'Recompute on deps'], ['q' => '¿SvelteKit vs Svelte?', 'hint' => 'Meta-framework routing SSR'], ['q' => '¿Stores vs props?', 'hint' => 'Global vs component state'], ['q' => '¿Form actions?', 'hint' => 'Progressive enhancement']]],
+    'electron' => ['title' => 'Entrevista Electron', 'questions' => [['q' => '¿contextIsolation why?', 'hint' => 'Isolate preload from page'], ['q' => '¿Main process role?', 'hint' => 'Windows native Node'], ['q' => '¿electron-builder?', 'hint' => 'Package dmg exe'], ['q' => '¿Electron vs Tauri?', 'hint' => 'Chromium bundle vs webview'], ['q' => '¿Auto-update?', 'hint' => 'electron-updater']]],
+    'deno' => ['title' => 'Entrevista Deno/Bun', 'questions' => [['q' => '¿Deno vs Node security?', 'hint' => 'Permissions by default'], ['q' => '¿Bun speed why?', 'hint' => 'Zig runtime + bundler'], ['q' => '¿Hono use case?', 'hint' => 'Edge multi-runtime'], ['q' => '¿When stay on Node?', 'hint' => 'Ecosystem maturity npm'], ['q' => '¿Deno Deploy?', 'hint' => 'Edge serverless Deno']]],
+    'supabase' => ['title' => 'Entrevista Supabase', 'questions' => [['q' => '¿RLS purpose?', 'hint' => 'Row-level Postgres security'], ['q' => '¿Supabase vs Firebase?', 'hint' => 'SQL Postgres vs NoSQL'], ['q' => '¿Edge Functions?', 'hint' => 'Deno serverless at edge'], ['q' => '¿Realtime how?', 'hint' => 'Postgres WAL listen'], ['q' => '¿Migrations workflow?', 'hint' => 'supabase db push/diff']]],
+    'prisma' => ['title' => 'Entrevista Prisma', 'questions' => [['q' => '¿migrate vs db push?', 'hint' => 'Versioned vs prototype'], ['q' => '¿include vs select?', 'hint' => 'Eager load vs fields'], ['q' => '¿Serverless pool issue?', 'hint' => 'Connection exhaustion'], ['q' => '¿Prisma vs raw SQL?', 'hint' => '$queryRaw escape hatch'], ['q' => '¿Schema single source?', 'hint' => 'schema.prisma generates client']]],
+    'firebase' => ['title' => 'Entrevista Firebase', 'questions' => [['q' => '¿Firestore vs Realtime DB?', 'hint' => 'Document vs JSON tree'], ['q' => '¿Security rules test?', 'hint' => 'rules-unit-testing CI'], ['q' => '¿Callable vs HTTP function?', 'hint' => 'Auth context auto'], ['q' => '¿Composite index when?', 'hint' => 'Multi-field where+orderBy'], ['q' => '¿When migrate off?', 'hint' => 'Complex SQL joins scale']]],
+    'openapi' => ['title' => 'Entrevista OpenAPI', 'questions' => [['q' => '¿Spec-first benefit?', 'hint' => 'Contract before code'], ['q' => '¿Breaking change semver?', 'hint' => 'Remove field = MAJOR'], ['q' => '¿Spectral purpose?', 'hint' => 'Lint OpenAPI quality'], ['q' => '¿Codegen sync?', 'hint' => 'Types match spec'], ['q' => '¿Try it out prod risk?', 'hint' => 'Disable or auth protect']]],
+    'eventsourcing' => ['title' => 'Entrevista ES/CQRS', 'questions' => [['q' => '¿Event vs command name?', 'hint' => 'Past tense vs imperative'], ['q' => '¿When NOT event sourcing?', 'hint' => 'Simple CRUD YAGNI'], ['q' => '¿Eventual consistency UX?', 'hint' => 'Pending state UI'], ['q' => '¿Saga compensation?', 'hint' => 'Undo on failure'], ['q' => '¿GDPR delete events?', 'hint' => 'Crypto shred complex']]],
+    'phpadvanced' => ['title' => 'Entrevista PHP avanzado', 'questions' => [['q' => '¿readonly class PHP 8.2?', 'hint' => 'Immutable value objects'], ['q' => '¿PHPStan levels?', 'hint' => 'Static analysis strictness'], ['q' => '¿Attributes vs docblocks?', 'hint' => 'Native validated metadata'], ['q' => '¿Fibers vs threads?', 'hint' => 'Cooperative userland'], ['q' => '¿declare strict_types?', 'hint' => 'Strict coercion per file']]],
+    'networking' => ['title' => 'Entrevista Networking', 'questions' => [['q' => '¿TCP vs UDP when?', 'hint' => 'Reliable vs fast loss OK'], ['q' => '¿Connection refused vs timeout?', 'hint' => 'RST closed vs firewall drop'], ['q' => '¿Security group vs NACL?', 'hint' => 'Stateful instance vs subnet'], ['q' => '¿DNS TTL meaning?', 'hint' => 'Cache expiry seconds'], ['q' => '¿Zero trust vs VPN?', 'hint' => 'No flat network trust']]],
+    'product' => ['title' => 'Entrevista Producto', 'questions' => [['q' => '¿PM vs Project Manager?', 'hint' => 'What/why vs how/when'], ['q' => '¿RICE formula?', 'hint' => '(R*I*C)/E score'], ['q' => '¿North star metric?', 'hint' => 'One key outcome metric'], ['q' => '¿MVP real meaning?', 'hint' => 'Minimum to learn'], ['q' => '¿Non-goals in PRD?', 'hint' => 'Scope boundaries']]],
+    'agile' => ['title' => 'Entrevista Agile', 'questions' => [['q' => '¿Scrum vs Kanban?', 'hint' => 'Sprints fixed vs flow WIP'], ['q' => '¿Definition of Done?', 'hint' => 'Team quality checklist'], ['q' => '¿Velocity use?', 'hint' => 'Planning not performance'], ['q' => '¿Retro output?', 'hint' => 'Action items improve'], ['q' => '¿Story points vs hours?', 'hint' => 'Relative sizing']]],
+    'certaws' => ['title' => 'Entrevista AWS cert', 'questions' => [['q' => '¿SAA exam focus?', 'hint' => 'Design resilient cost-opt'], ['q' => '¿Multi-AZ vs Multi-Region?', 'hint' => 'HA vs DR geography'], ['q' => '¿S3 storage classes?', 'hint' => 'Standard IA Glacier'], ['q' => '¿Well-Architected pillars?', 'hint' => 'Security reliability cost...'], ['q' => '¿Shared responsibility?', 'hint' => 'Provider infra customer data']]],
+    'certcka' => ['title' => 'Entrevista CKA', 'questions' => [['q' => '¿CKA exam format?', 'hint' => 'Hands-on kubectl timed'], ['q' => '¿etcd backup why?', 'hint' => 'Cluster state recovery'], ['q' => '¿NetworkPolicy effect?', 'hint' => 'Pod ingress egress filter'], ['q' => '¿Taint toleration?', 'hint' => 'Schedule pods on nodes'], ['q' => '¿Debug CrashLoopBackOff?', 'hint' => 'logs describe events']]],
+    'certazure' => ['title' => 'Entrevista AZ-900', 'questions' => [['q' => '¿IaaS vs PaaS vs SaaS?', 'hint' => 'Manage OS vs runtime vs app'], ['q' => '¿Availability Zone?', 'hint' => 'Separate DCs same region'], ['q' => '¿Azure Policy vs RBAC?', 'hint' => 'Governance vs permissions'], ['q' => '¿total cost calculator?', 'hint' => 'Compare cloud vs on-prem'], ['q' => '¿After AZ-900 developer?', 'hint' => 'AZ-204 path']]],
+    'figma' => ['title' => 'Entrevista Figma', 'questions' => [['q' => '¿Dev Mode purpose?', 'hint' => 'Inspect specs for devs'], ['q' => '¿Design tokens benefit?', 'hint' => 'Single source design-code'], ['q' => '¿Component vs instance?', 'hint' => 'Master vs copy overrides'], ['q' => '¿Auto-layout use?', 'hint' => 'Responsive frames'], ['q' => '¿Handoff best practice?', 'hint' => 'Comments + specs + variants']]],
+    'techwriting' => ['title' => 'Entrevista Technical writing', 'questions' => [['q' => '¿README must sections?', 'hint' => 'Install usage license'], ['q' => '¿ADR documents what?', 'hint' => 'Architecture decisions'], ['q' => '¿Active vs passive voice?', 'hint' => 'Active clearer tech docs'], ['q' => '¿Runbook purpose?', 'hint' => 'Incident response steps'], ['q' => '¿Docs as code means?', 'hint' => 'Version in git PR review']]],
+];

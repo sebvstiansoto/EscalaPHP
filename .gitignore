@@ -1,0 +1,10 @@
+/vendor/
+/database/*.sqlite
+/storage/cache/*
+!/storage/cache/.gitkeep
+/tools/php/
+/tools/php.zip
+/tools/composer.phar
+/tools/composer-setup.php
+.env
+.env.test

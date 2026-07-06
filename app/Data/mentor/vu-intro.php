@@ -1,0 +1,108 @@
+<?php
+
+declare(strict_types=1);
+
+return array (
+  0 => 
+  array (
+    'type' => 'mentor_say',
+    'title' => 'Introducción a Vue 3',
+    'body' => 'Progresivo, Composition API y SFC. Te guío paso a paso con teoría, práctica y validación.',
+    'emoji' => '💚',
+  ),
+  1 => 
+  array (
+    'type' => 'teach',
+    'title' => 'Conceptos clave de esta lección',
+    'body' => 'Antes de practicar, ubica estos términos en el glosario: [vue](/glosario#vue) · [sfc](/glosario#sfc) · [reactivity](/glosario#reactivity)',
+  ),
+  2 => 
+  array (
+    'type' => 'teach',
+    'title' => 'Vue.js',
+    'body' => '**Vue 3** es progresivo: añades interactividad a HTML existente o SPA completa. Composition API es el estándar moderno.',
+  ),
+  3 => 
+  array (
+    'type' => 'teach',
+    'title' => 'SFC',
+    'body' => '.vue = template + script + style en un archivo.',
+    'code' => '<script setup>
+import { ref } from \'vue\'
+const count = ref(0)
+</script>
+<template><button @click="count++">{{ count }}</button></template>',
+  ),
+  4 => 
+  array (
+    'type' => 'teach',
+    'title' => 'Resumen ejecutivo',
+    'body' => '**Objetivo:** Progresivo, Composition API y SFC. Al terminar este módulo deberías poder explicarlo a un compañero sin leer apuntes.',
+  ),
+  5 => 
+  array (
+    'type' => 'mentor_say',
+    'title' => 'En el mundo real',
+    'body' => 'En equipos que usan **Vue.js 3**, esto aparece en code reviews, incidentes y entregas diarias. Progresivo, Composition API y SFC. — no es teoría de manual: es lo que te van a pedir en producción.',
+    'emoji' => '💼',
+  ),
+  6 => 
+  array (
+    'type' => 'live_demo',
+    'title' => 'Mira cómo corre',
+    'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
+    'demo_code' => '<script setup>
+import { ref } from \'vue\'
+const count = ref(0)
+</script>
+<template><button @click="count++">{{ count }}</button></template>',
+    'demo_language' => 'javascript',
+  ),
+  7 => 
+  array (
+    'type' => 'pair',
+    'title' => 'Pair programming — tu turno',
+    'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
+    'lines' => 
+    array (
+      0 => '<script setup>',
+      1 => 'import { ref } from \'vue\'',
+      2 => 'const count = ref(0)',
+      3 => '</script>',
+      4 => '<template><button @click="count++">{{ count }}</button></template>',
+    ),
+  ),
+  8 => 
+  array (
+    'type' => 'teach',
+    'title' => 'Pro tip del mentor',
+    'body' => '💡 **Pro tip:** create-vue scaffolding oficial.',
+  ),
+  9 => 
+  array (
+    'type' => 'exercise',
+    'title' => 'Tu turno — práctica 1',
+    'body' => '**¿Vue 3 API recomendada?** — resuelve con lo aprendido. Si fallas, recibes pistas adaptativas.',
+    'exercise_index' => 0,
+  ),
+  10 => 
+  array (
+    'type' => 'exercise',
+    'title' => 'Tu turno — práctica 2',
+    'body' => '**¿ref() sirve para...?** — resuelve con lo aprendido. Si fallas, recibes pistas adaptativas.',
+    'exercise_index' => 1,
+  ),
+  11 => 
+  array (
+    'type' => 'project',
+    'title' => 'Mini-proyecto',
+    'body' => 'Consolida lo aprendido con un proyecto hands-on validado y XP.',
+  ),
+  12 => 
+  array (
+    'type' => 'complete',
+    'title' => '¡Módulo dominado!',
+    'body' => 'Integraste conceptos reales de JavaScript. Sigue con el siguiente módulo o revisa el glosario si algo no quedó claro.',
+    'emoji' => '🏆',
+  ),
+);

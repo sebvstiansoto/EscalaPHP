@@ -1,0 +1,48 @@
+<?php
+
+declare(strict_types=1);
+
+$cat = 'php';
+
+return [
+    ['slug' => 'php', 'term' => 'PHP', 'category' => $cat, 'definition' => 'Lenguaje para crear webs dinámicas en el servidor. Usado por WordPress, Laravel, Symfony y miles de empresas.'],
+    ['slug' => 'echo', 'term' => 'echo', 'category' => $cat, 'definition' => 'Instrucción de PHP que imprime texto hacia la salida (lo que ve el usuario o el navegador).'],
+    ['slug' => 'str', 'term' => 'str', 'category' => $cat, 'definition' => 'Abreviatura de string en Python. Tipo para texto.'],
+    ['slug' => 'int', 'term' => 'int', 'category' => $cat, 'definition' => 'Abreviatura de integer. Tipo para números enteros.'],
+    ['slug' => 'bool', 'term' => 'bool', 'category' => $cat, 'definition' => 'Abreviatura de boolean. Tipo para true/false.'],
+    ['slug' => 'indentacion', 'term' => 'Indentación', 'category' => $cat, 'definition' => 'En Python, los espacios al inicio de línea definen bloques de código (obligatorio).'],
+    ['slug' => 'sesion', 'term' => 'Sesión', 'category' => $cat, 'definition' => 'Mecanismo PHP para identificar visitantes. EscalaPHP guarda tu progreso por session_id.'],
+    ['slug' => 'session', 'term' => 'Session', 'category' => $cat, 'definition' => 'Estado del usuario entre peticiones HTTP. Se almacena en servidor o Redis.'],
+    ['slug' => 'validacion', 'term' => 'Validación', 'category' => $cat, 'definition' => 'Verificar que los datos del usuario son correctos y seguros antes de procesarlos.'],
+    ['slug' => 'validation', 'term' => 'Validation', 'category' => $cat, 'definition' => 'Proceso de comprobar que los datos cumplen reglas (formato, longitud, tipo) antes de usarlos.'],
+    ['slug' => 'laravel', 'term' => 'Laravel', 'category' => $cat, 'definition' => 'Framework PHP moderno muy usado en empresas. Siguiente paso natural después de aprender PHP básico.'],
+    ['slug' => 'eloquent', 'term' => 'Eloquent', 'category' => $cat, 'definition' => 'ORM de Laravel para interactuar con la base de datos usando objetos PHP en vez de SQL directo.'],
+    ['slug' => 'blade', 'term' => 'Blade', 'category' => $cat, 'definition' => 'Motor de plantillas de Laravel. Similar a las vistas de EscalaPHP pero con más funciones.'],
+    ['slug' => 'artisan', 'term' => 'Artisan', 'category' => $cat, 'definition' => 'CLI de Laravel para ejecutar comandos: migraciones, colas, cache, etc.'],
+    ['slug' => 'routes', 'term' => 'Routes (rutas)', 'category' => $cat, 'definition' => 'Definición de URLs y qué controlador o función las atiende.'],
+    ['slug' => 'ruta', 'term' => 'Ruta', 'category' => $cat, 'definition' => 'URL que tu aplicación reconoce y asocia a una acción o controlador.'],
+    ['slug' => 'route', 'term' => 'Route', 'category' => $cat, 'definition' => 'Equivalente en inglés de ruta. Mapea una URL a un handler.'],
+    ['slug' => 'template', 'term' => 'Template (plantilla)', 'category' => $cat, 'definition' => 'Archivo con HTML y placeholders que se rellenan con datos dinámicos.'],
+    ['slug' => 'layout', 'term' => 'Layout', 'category' => $cat, 'definition' => 'Plantilla base con header, footer y navegación que envuelve el contenido de cada página.'],
+    ['slug' => 'relationship', 'term' => 'Relationship (relación)', 'category' => $cat, 'definition' => 'Vínculo entre modelos Eloquent: hasMany, belongsTo, manyToMany, etc.'],
+    ['slug' => 'migration', 'term' => 'Migration (migración)', 'category' => $cat, 'definition' => 'Archivo versionado que define cambios en el esquema de la base de datos.'],
+    ['slug' => 'seeder', 'term' => 'Seeder', 'category' => $cat, 'definition' => 'Script que inserta datos iniciales o de prueba en la base de datos.'],
+    ['slug' => 'auth', 'term' => 'Auth (autenticación)', 'category' => $cat, 'definition' => 'Sistema para verificar identidad del usuario: login, registro, sesiones.'],
+    ['slug' => 'policy', 'term' => 'Policy', 'category' => $cat, 'definition' => 'Clase Laravel que define quién puede hacer qué (autorización por recurso).'],
+    ['slug' => 'sanctum', 'term' => 'Sanctum', 'category' => $cat, 'definition' => 'Paquete Laravel para autenticación de APIs con tokens.'],
+    ['slug' => 'resource', 'term' => 'Resource (API)', 'category' => $cat, 'definition' => 'Transformador que convierte modelos Eloquent a JSON consistente para APIs.'],
+    ['slug' => 'composer', 'term' => 'Composer', 'category' => $cat, 'definition' => 'Gestor de dependencias de PHP. Instala paquetes desde Packagist.'],
+    ['slug' => 'packagist', 'term' => 'Packagist', 'category' => $cat, 'definition' => 'Repositorio oficial de paquetes PHP para Composer.'],
+    ['slug' => 'autoload', 'term' => 'Autoload', 'category' => $cat, 'definition' => 'Carga automática de clases PHP sin require manual. PSR-4 en Composer.'],
+    ['slug' => 'vendor', 'term' => 'vendor/', 'category' => $cat, 'definition' => 'Carpeta donde Composer instala dependencias de terceros. No se edita manualmente.'],
+    ['slug' => 'symfony', 'term' => 'Symfony', 'category' => $cat, 'definition' => 'Framework PHP empresarial modular. Base de muchos proyectos y de Laravel en partes.'],
+    ['slug' => 'bundle', 'term' => 'Bundle', 'category' => $cat, 'definition' => 'Módulo empaquetado en Symfony que agrupa controladores, servicios y config.'],
+    ['slug' => 'dependency-injection', 'term' => 'Dependency Injection (DI)', 'category' => $cat, 'definition' => 'Patrón donde las dependencias se inyectan desde fuera en vez de crearse dentro de la clase.'],
+    ['slug' => 'di', 'term' => 'DI', 'category' => $cat, 'definition' => 'Abreviatura de Dependency Injection. Usado en FastAPI con Depends().'],
+    ['slug' => 'depends', 'term' => 'Depends()', 'category' => $cat, 'definition' => 'Función de FastAPI para inyectar dependencias en endpoints (DB, auth, servicios).'],
+    ['slug' => 'nginx', 'term' => 'Nginx', 'category' => $cat, 'definition' => 'Servidor web y reverse proxy muy usado en producción con PHP-FPM.'],
+    ['slug' => 'php-fpm', 'term' => 'PHP-FPM', 'category' => $cat, 'definition' => 'Proceso que ejecuta PHP de forma eficiente detrás de Nginx o Apache.'],
+    ['slug' => 'reverse-proxy', 'term' => 'Reverse Proxy', 'category' => $cat, 'definition' => 'Servidor intermedio (Nginx) que recibe peticiones y las reenvía al backend correcto.'],
+    ['slug' => 'pdo', 'term' => 'PDO', 'category' => $cat, 'definition' => 'Extensión PHP para acceder a bases de datos con consultas preparadas seguras.'],
+    ['slug' => 'prepared', 'term' => 'Consulta preparada', 'category' => $cat, 'definition' => 'Query SQL con placeholders que previene inyección SQL al separar datos de la consulta.'],
+];

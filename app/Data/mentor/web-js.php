@@ -1,0 +1,96 @@
+<?php
+
+declare(strict_types=1);
+
+return array (
+  0 => 
+  array (
+    'type' => 'mentor_say',
+    'title' => 'JavaScript en el navegador',
+    'body' => 'Variables, funciones, console.log y manipular el DOM. Te guío paso a paso con teoría, práctica y validación.',
+    'emoji' => '🌐',
+  ),
+  1 => 
+  array (
+    'type' => 'teach',
+    'title' => 'Conceptos clave de esta lección',
+    'body' => 'Antes de practicar, ubica estos términos en el glosario: [JavaScript](/glosario#javascript) · [DOM](/glosario#dom) · [Console](/glosario#console)',
+  ),
+  2 => 
+  array (
+    'type' => 'teach',
+    'title' => 'JS da vida a la web',
+    'body' => 'JavaScript corre **en el navegador**. Reacciona a clics, valida formularios y consume APIs.',
+  ),
+  3 => 
+  array (
+    'type' => 'teach',
+    'title' => 'console.log',
+    'body' => 'Para mostrar valores usas `console.log()`. Aquí ejecutamos tu JS de verdad en el navegador.',
+    'code' => 'console.log(\'Hola JavaScript\')',
+  ),
+  4 => 
+  array (
+    'type' => 'teach',
+    'title' => 'Resumen ejecutivo',
+    'body' => '**Objetivo:** Variables, funciones, console.log y manipular el DOM. Al terminar este módulo deberías poder explicarlo a un compañero sin leer apuntes.',
+  ),
+  5 => 
+  array (
+    'type' => 'mentor_say',
+    'title' => 'En el mundo real',
+    'body' => 'En equipos que usan **HTML, CSS y JavaScript**, esto aparece en code reviews, incidentes y entregas diarias. Variables, funciones, console.log y manipular el DOM. — no es teoría de manual: es lo que te van a pedir en producción.',
+    'emoji' => '💼',
+  ),
+  6 => 
+  array (
+    'type' => 'live_demo',
+    'title' => 'Mira cómo corre',
+    'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
+    'demo_code' => 'console.log(\'Hola JavaScript\')',
+    'demo_language' => 'javascript',
+  ),
+  7 => 
+  array (
+    'type' => 'pair',
+    'title' => 'Pair programming — tu turno',
+    'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
+    'lines' => 
+    array (
+      0 => 'console.log(\'Hola JavaScript\')',
+    ),
+  ),
+  8 => 
+  array (
+    'type' => 'teach',
+    'title' => 'Pro tip del mentor',
+    'body' => '💡 **Pro tip:** console.log es tu mejor amigo para depurar. Ábrelo con F12 en cualquier web.',
+  ),
+  9 => 
+  array (
+    'type' => 'exercise',
+    'title' => 'Tu turno — práctica 1',
+    'body' => '**Escribe código que imprima exactamente: Hola JS** — resuelve con lo aprendido. Si fallas, recibes pistas adaptativas.',
+    'exercise_index' => 0,
+  ),
+  10 => 
+  array (
+    'type' => 'exercise',
+    'title' => 'Tu turno — práctica 2',
+    'body' => '**Suma: declara let a = 5, let b = 7 e imprime a + b** — resuelve con lo aprendido. Si fallas, recibes pistas adaptativas.',
+    'exercise_index' => 1,
+  ),
+  11 => 
+  array (
+    'type' => 'project',
+    'title' => 'Mini-proyecto',
+    'body' => 'Consolida lo aprendido con un proyecto hands-on validado y XP.',
+  ),
+  12 => 
+  array (
+    'type' => 'complete',
+    'title' => '¡Módulo dominado!',
+    'body' => 'Integraste conceptos reales de JavaScript. Sigue con el siguiente módulo o revisa el glosario si algo no quedó claro.',
+    'emoji' => '🏆',
+  ),
+);
