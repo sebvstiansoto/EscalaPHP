@@ -57,7 +57,14 @@ return array_merge($defaults, [
     'debug' => filter_var($env['APP_DEBUG'] ?? $defaults['debug'], FILTER_VALIDATE_BOOLEAN),
     'app_url' => $appUrl,
     'db_driver' => strtolower((string) ($env['DB_DRIVER'] ?? $defaults['db_driver'])),
-    'database' => $env['DB_PATH'] ?? $defaults['database'],
+    'database' => (static function () use ($env, $defaults): string {
+        $path = (string) ($env['DB_PATH'] ?? $defaults['database']);
+        if ($path !== '' && $path[0] !== '/' && !preg_match('/^[A-Za-z]:[\\\\\\/]/', $path)) {
+            return dirname(__DIR__) . '/' . ltrim($path, '/');
+        }
+
+        return $path;
+    })(),
     'db_host' => $env['DB_HOST'] ?? 'localhost',
     'db_port' => $env['DB_PORT'] ?? '5432',
     'db_name' => $env['DB_NAME'] ?? 'escala',

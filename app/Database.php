@@ -124,6 +124,31 @@ class Database
 
         $migrator = new \App\Database\Migrator($this->pdo, dirname(__DIR__) . '/database/migrations');
         $migrator->run();
+        $this->ensurePlatformTables();
+    }
+
+    private function ensurePlatformTables(): void
+    {
+        $this->pdo->exec(<<<'SQL'
+            CREATE TABLE IF NOT EXISTS notifications (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER,
+                session_id TEXT,
+                type TEXT NOT NULL,
+                title TEXT NOT NULL,
+                body TEXT NOT NULL,
+                read_at TEXT,
+                created_at TEXT NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS learner_paths (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER,
+                session_id TEXT NOT NULL,
+                path_slug TEXT NOT NULL,
+                selected_at TEXT NOT NULL
+            );
+        SQL);
     }
 
     private function ensureColumn(string $table, string $column, string $definition): void
