@@ -123,6 +123,8 @@ class Database
         $this->pdo->exec('CREATE UNIQUE INDEX IF NOT EXISTS idx_achievements_user ON achievements(user_id, achievement_id) WHERE user_id IS NOT NULL');
         $this->pdo->exec('CREATE UNIQUE INDEX IF NOT EXISTS idx_projects_user ON project_completions(user_id, lesson_slug) WHERE user_id IS NOT NULL');
 
+        $this->ensurePlatformTables();
+
         $migrator = new \App\Database\Migrator($this->pdo, dirname(__DIR__) . '/database/migrations');
         $migrator->run();
         $this->ensurePlatformTables();
@@ -282,6 +284,99 @@ class Database
                 minutes INTEGER NOT NULL DEFAULT 15,
                 lesson_slug TEXT,
                 created_at TEXT NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS user_totp (
+                user_id INTEGER PRIMARY KEY,
+                secret TEXT NOT NULL,
+                enabled INTEGER NOT NULL DEFAULT 0
+            );
+
+            CREATE TABLE IF NOT EXISTS oauth_accounts (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER NOT NULL,
+                provider TEXT NOT NULL,
+                provider_id TEXT NOT NULL,
+                created_at TEXT NOT NULL,
+                UNIQUE(provider, provider_id)
+            );
+
+            CREATE TABLE IF NOT EXISTS certificate_codes (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER,
+                session_id TEXT,
+                course_slug TEXT NOT NULL,
+                verify_code TEXT NOT NULL UNIQUE,
+                issued_at TEXT NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS teams (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT NOT NULL,
+                slug TEXT NOT NULL UNIQUE,
+                seats INTEGER NOT NULL DEFAULT 10,
+                owner_id INTEGER NOT NULL,
+                created_at TEXT NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS team_members (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                team_id INTEGER NOT NULL,
+                user_id INTEGER NOT NULL,
+                role TEXT NOT NULL DEFAULT 'member',
+                joined_at TEXT NOT NULL,
+                UNIQUE(team_id, user_id)
+            );
+
+            CREATE TABLE IF NOT EXISTS api_keys (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER NOT NULL,
+                name TEXT NOT NULL,
+                key_hash TEXT NOT NULL UNIQUE,
+                last_used_at TEXT,
+                created_at TEXT NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS course_overrides (
+                slug TEXT PRIMARY KEY,
+                status TEXT,
+                featured INTEGER,
+                title TEXT,
+                updated_at TEXT NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS capstone_submissions (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER,
+                session_id TEXT NOT NULL,
+                capstone_slug TEXT NOT NULL,
+                code TEXT NOT NULL,
+                status TEXT NOT NULL DEFAULT 'pending',
+                score INTEGER,
+                feedback TEXT,
+                created_at TEXT NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS interview_scores (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER,
+                session_id TEXT NOT NULL,
+                stack TEXT NOT NULL,
+                score INTEGER NOT NULL DEFAULT 0,
+                total INTEGER NOT NULL DEFAULT 0,
+                created_at TEXT NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS lesson_overrides (
+                course_slug TEXT NOT NULL,
+                lesson_slug TEXT NOT NULL,
+                title TEXT,
+                summary TEXT,
+                exercises_json TEXT,
+                status TEXT NOT NULL DEFAULT 'published',
+                version INTEGER NOT NULL DEFAULT 1,
+                updated_at TEXT NOT NULL,
+                PRIMARY KEY (course_slug, lesson_slug)
             );
         SQL);
     }

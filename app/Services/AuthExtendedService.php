@@ -105,10 +105,14 @@ class AuthExtendedService
 
     public function requiresTotp(int $userId): bool
     {
-        $stmt = $this->pdo->prepare('SELECT enabled FROM user_totp WHERE user_id = ?');
-        $stmt->execute([$userId]);
+        try {
+            $stmt = $this->pdo->prepare('SELECT enabled FROM user_totp WHERE user_id = ?');
+            $stmt->execute([$userId]);
 
-        return (int) ($stmt->fetchColumn() ?: 0) === 1;
+            return (int) ($stmt->fetchColumn() ?: 0) === 1;
+        } catch (\PDOException) {
+            return false;
+        }
     }
 
     public function verifyTotpCode(int $userId, string $code): bool

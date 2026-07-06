@@ -18,7 +18,7 @@ class Migrator
 
         $this->repairIncomplete([
             '001_platform_tables' => ['notifications'],
-            '002_max_platform' => ['daily_missions', 'password_resets'],
+            '002_max_platform' => ['daily_missions', 'password_resets', 'user_totp'],
             '003_product_max' => ['user_sessions', 'comments', 'job_queue', 'learner_goals'],
         ]);
 
