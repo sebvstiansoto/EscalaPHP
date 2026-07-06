@@ -81,22 +81,14 @@ data:
     'title' => 'Pro tip del mentor',
     'body' => '💡 **Pro tip:** Por eso Docker es curso transversal en esta plataforma.',
   ),
-  9 => 
+  11 => 
+  array (
   array (
     'type' => 'exercise',
     'title' => 'Tu turno — práctica 1',
-    'body' => '**¿Docker sirve solo para PHP?** — resuelve con lo aprendido. Si fallas, recibes pistas adaptativas.',
+    'body' => '¿Docker sirve solo para PHP?',
     'exercise_index' => 0,
   ),
-  10 => 
-  array (
-    'type' => 'exercise',
-    'title' => 'Tu turno — práctica 2',
-    'body' => '**¿Cuál es la mejor siguiente acción tras completar este módulo?** — resuelve con lo aprendido. Si fallas, recibes pistas adaptativas.',
-    'exercise_index' => 1,
-  ),
-  11 => 
-  array (
     'type' => 'project',
     'title' => 'Mini-proyecto',
     'body' => 'Consolida lo aprendido con un proyecto hands-on validado y XP.',

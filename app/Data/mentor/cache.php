@@ -9,6 +9,7 @@ return [
     ['type' => 'live_demo', 'title' => 'Analogía: restaurante', 'body' => 'Sin caché = cocinar cada plato desde cero. Con caché = plato pre-preparado listo para servir.', 'demo_code' => "echo 'Sin caché: 800ms. Con caché: 12ms.';"],
     ['type' => 'mentor_say', 'title' => 'Cuándo cachear', 'body' => 'Datos que cambian poco y se leen mucho: catálogos, configuración, listados públicos.', 'emoji' => '🎯'],
     ['type' => 'exercise', 'title' => 'Tu turno — caché', 'body' => '¿Qué problema resuelve principalmente la caché?', 'exercise_index' => 0],
+    ['type' => 'exercise', 'title' => 'Tu turno — Redis', 'body' => '¿Qué sistema suele usarse como caché en memoria en PHP?', 'exercise_index' => 1],
     ['type' => 'project', 'title' => 'Mini-proyecto: Prueba la caché', 'body' => 'Lee app/Cache.php y piensa qué datos de EscalaPHP cachearías.'],
     ['type' => 'complete', 'title' => '¡Caché dominada!', 'body' => 'Respondes 10x más rápido. Siguiente: colas de trabajo.', 'emoji' => '🚀'],
 ];

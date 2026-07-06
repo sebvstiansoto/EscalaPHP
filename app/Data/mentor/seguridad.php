@@ -9,6 +9,7 @@ return [
     ['type' => 'teach', 'title' => 'Consultas preparadas', 'body' => 'PDO separa SQL de datos del usuario. Es tu escudo contra SQL injection.', 'code' => "\$stmt = \$pdo->prepare('SELECT * FROM users WHERE id = ?');\n\$stmt->execute([\$userId]);"],
     ['type' => 'mentor_say', 'title' => 'Sesiones', 'body' => 'session_start() identifica al visitante. Tu progreso se guarda por session_id sin login.', 'emoji' => '🔑'],
     ['type' => 'exercise', 'title' => 'Tu turno — SQL injection', 'body' => '¿Cómo prevenir SQL injection en PHP?', 'exercise_index' => 0],
+    ['type' => 'exercise', 'title' => 'Tu turno — contraseñas', 'body' => '¿Cómo debes guardar contraseñas de usuarios?', 'exercise_index' => 1],
     ['type' => 'project', 'title' => 'Mini-proyecto: Audita EscalaPHP', 'body' => 'Encuentra 3 prácticas de seguridad ya implementadas en esta app.'],
     ['type' => 'complete', 'title' => '¡Seguridad básica lista!', 'body' => 'Piensas como un profesional. Siguiente: tu graduación.', 'emoji' => '🔒'],
 ];

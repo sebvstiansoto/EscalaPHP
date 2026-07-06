@@ -8,6 +8,7 @@ return [
     ['type' => 'mentor_say', 'title' => 'Analogía: restaurante otra vez', 'body' => 'El mesero toma tu pedido (HTTP), lo pasa a cocina (cola), y sigue atendiendo. La cocina (worker) prepara cuando puede.', 'emoji' => '🍳'],
     ['type' => 'teach', 'title' => 'Componentes', 'body' => '**Job** = tarea. **Queue** = lista de espera. **Worker** = proceso que ejecuta jobs.', 'code' => "// En Laravel:\nSendWelcomeEmail::dispatch(\$user);\n// HTTP responde al instante\n// Worker envía el email después"],
     ['type' => 'exercise', 'title' => 'Tu turno — worker', 'body' => '¿Qué hace un worker en una cola?', 'exercise_index' => 0],
+    ['type' => 'exercise', 'title' => 'Tu turno — emails', 'body' => '¿Por qué encolar el envío de un email en vez de hacerlo en la petición HTTP?', 'exercise_index' => 1],
     ['type' => 'project', 'title' => 'Mini-proyecto: Diseña una cola', 'body' => 'En papel, diseña qué jobs encolarías al registrar un usuario.'],
     ['type' => 'complete', 'title' => '¡Colas dominadas!', 'body' => 'Tu app responde al instante aunque el trabajo sea pesado. Siguiente: APIs.', 'emoji' => '📨'],
 ];

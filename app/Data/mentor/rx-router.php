@@ -66,22 +66,14 @@ return array (
     'title' => 'Pro tip del mentor',
     'body' => '💡 **Pro tip:** React, Vue y Angular construyen SPAs. Astro las combina con SSG.',
   ),
-  9 => 
+  11 => 
+  array (
   array (
     'type' => 'exercise',
     'title' => 'Tu turno — práctica 1',
-    'body' => '**¿Qué es una SPA?** — resuelve con lo aprendido. Si fallas, recibes pistas adaptativas.',
+    'body' => '¿Qué es una SPA?',
     'exercise_index' => 0,
   ),
-  10 => 
-  array (
-    'type' => 'exercise',
-    'title' => 'Tu turno — práctica 2',
-    'body' => '**¿Cuál es la mejor siguiente acción tras completar este módulo?** — resuelve con lo aprendido. Si fallas, recibes pistas adaptativas.',
-    'exercise_index' => 1,
-  ),
-  11 => 
-  array (
     'type' => 'project',
     'title' => 'Mini-proyecto',
     'body' => 'Consolida lo aprendido con un proyecto hands-on validado y XP.',

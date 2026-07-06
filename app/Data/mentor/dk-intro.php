@@ -87,22 +87,14 @@ data:
     'title' => 'Pro tip del mentor',
     'body' => '💡 **Pro tip:** Docker Hub es como npm/Packagist pero para imágenes.',
   ),
-  9 => 
+  11 => 
+  array (
   array (
     'type' => 'exercise',
     'title' => 'Tu turno — práctica 1',
-    'body' => '**¿Qué es una imagen Docker?** — resuelve con lo aprendido. Si fallas, recibes pistas adaptativas.',
+    'body' => '¿Qué es una imagen Docker?',
     'exercise_index' => 0,
   ),
-  10 => 
-  array (
-    'type' => 'exercise',
-    'title' => 'Tu turno — práctica 2',
-    'body' => '**¿Cuál es la mejor siguiente acción tras completar este módulo?** — resuelve con lo aprendido. Si fallas, recibes pistas adaptativas.',
-    'exercise_index' => 1,
-  ),
-  11 => 
-  array (
     'type' => 'project',
     'title' => 'Mini-proyecto',
     'body' => 'Consolida lo aprendido con un proyecto hands-on validado y XP.',

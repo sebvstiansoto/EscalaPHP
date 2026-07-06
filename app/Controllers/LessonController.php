@@ -57,13 +57,14 @@ class LessonController
         }
 
         $stepIndex = max(0, min(count($steps) - 1, $stepIndex));
+        $completed = $this->ensureLessonCompleteIfOnFinishStep($lesson, $steps, $stepIndex);
         $userProgress = $this->progress->allForCourse($courseSlug)[$slug] ?? null;
 
         View::show('lesson-mentor', $this->viewData(
             lesson: $lesson,
             steps: $steps,
             stepIndex: $stepIndex,
-            completed: (int) ($userProgress['completed'] ?? 0) === 1,
+            completed: $completed,
             feedback: null,
             exerciseSolved: $this->isStepSolved($slug, $steps, $stepIndex, $userProgress),
         ));
@@ -80,7 +81,9 @@ class LessonController
         $slug = $lesson['slug'];
         $steps = $this->mentor->stepsFor($slug);
         $current = $this->mentor->currentStepIndex($slug);
-        $this->mentor->setStepIndex($slug, min($current + 1, count($steps) - 1));
+        $next = min($current + 1, count($steps) - 1);
+        $this->mentor->setStepIndex($slug, $next);
+        $this->ensureLessonCompleteIfOnFinishStep($lesson, $steps, $next);
 
         $this->redirect($this->lessonUrl($lesson));
     }
@@ -179,6 +182,37 @@ class LessonController
             exerciseSolved: (bool) $result['ok'],
             answer: $answer,
         ));
+    }
+
+    /**
+     * Al llegar al paso final del mentor, marca la lección como completada.
+     * Cubre módulos donde el flujo del mentor no exige todos los ejercicios del catálogo.
+     *
+     * @param list<array<string, mixed>> $steps
+     */
+    private function ensureLessonCompleteIfOnFinishStep(array $lesson, array $steps, int $stepIndex): bool
+    {
+        $courseSlug = (string) $lesson['course'];
+        $slug = (string) $lesson['slug'];
+        $step = $steps[$stepIndex] ?? [];
+
+        if (($step['type'] ?? '') !== 'complete') {
+            return $this->progress->isLessonCompleted($courseSlug, $slug);
+        }
+
+        if ($this->progress->isLessonCompleted($courseSlug, $slug)) {
+            return true;
+        }
+
+        $exercises = (array) ($lesson['exercises'] ?? []);
+        $lastIndex = max(0, count($exercises) - 1);
+        $this->progress->markExercise($courseSlug, $slug, $lastIndex, true);
+        $this->gamification->addXp(100, 'Lección completada');
+        $this->missions->complete('lesson');
+        $this->spacedRepetition->scheduleAfterCompletion($courseSlug, $slug);
+        $this->achievements->checkAndAward();
+
+        return true;
     }
 
     /** @param array<string, mixed> $lesson */
@@ -316,7 +350,19 @@ class LessonController
 
         if (!$this->progress->isLessonUnlocked($course, $slug, (int) $lesson['order'])) {
             http_response_code(403);
-            View::show('errors/locked', ['lesson' => $lesson, 'config' => $this->config]);
+            $previousLesson = null;
+            foreach (LessonCatalog::all($course) as $candidate) {
+                if ((int) $candidate['order'] === (int) $lesson['order'] - 1) {
+                    $previousLesson = $candidate;
+                    break;
+                }
+            }
+            View::show('errors/locked', [
+                'lesson' => $lesson,
+                'config' => $this->config,
+                'previousLesson' => $previousLesson,
+                'courseSlug' => $course,
+            ]);
             return null;
         }
 

@@ -9,6 +9,7 @@ return [
     ['type' => 'teach', 'title' => 'Arrays — listas de datos', 'body' => 'Todo lo que viene de una BD o API llega como array. Domínalo.', 'code' => "<?php\n\$metricas = ['requests' => 12000, 'errores' => 3];\necho \$metricas['requests'];"],
     ['type' => 'live_demo', 'title' => 'Array en acción', 'body' => 'Accede a un valor por su clave.', 'demo_code' => "\$m = ['requests' => 12000, 'errores' => 3];\necho \$m['requests'];"],
     ['type' => 'exercise', 'title' => 'Tu turno — función duplicar', 'body' => 'Crea function duplicar($n) que retorne $n*2 y haz echo de duplicar(21).', 'exercise_index' => 0],
+    ['type' => 'exercise', 'title' => 'Tu turno — arrays', 'body' => '¿Cómo se define un array en PHP?', 'exercise_index' => 1],
     ['type' => 'project', 'title' => 'Mini-proyecto: Calculadora de descuento', 'body' => 'Crea una función que aplique descuentos a precios.'],
     ['type' => 'complete', 'title' => '¡Funciones listas!', 'body' => 'Ya reutilizas lógica como un profesional. Siguiente: HTTP.', 'emoji' => '⚡'],
 ];

@@ -17,13 +17,20 @@ class MentorService
             /** @var list<array<string, mixed>> $steps */
             $steps = require $custom;
             if (!AcademicMentorBuilder::isHandcrafted($steps, $slug) && AcademicMentorBuilder::isThin($steps)) {
-                return AcademicMentorBuilder::build($slug);
+                return AcademicMentorBuilder::normalizeExerciseSteps(
+                    $slug,
+                    AcademicMentorBuilder::build($slug),
+                );
             }
 
-            return $steps;
+            return AcademicMentorBuilder::normalizeExerciseSteps($slug, $steps);
         }
 
-        return AcademicMentorBuilder::build($slug) ?: $this->buildFallbackSteps($slug);
+        $built = AcademicMentorBuilder::build($slug);
+
+        return $built !== []
+            ? AcademicMentorBuilder::normalizeExerciseSteps($slug, $built)
+            : $this->buildFallbackSteps($slug);
     }
 
     public function currentStepIndex(string $slug): int

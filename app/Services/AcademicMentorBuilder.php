@@ -308,4 +308,93 @@ class AcademicMentorBuilder
 
         return '';
     }
+
+    /**
+     * Alinea pasos de ejercicio del mentor con el catálogo: quita sobrantes e inserta faltantes.
+     *
+     * @param list<array<string, mixed>> $steps
+     * @return list<array<string, mixed>>
+     */
+    public static function normalizeExerciseSteps(string $slug, array $steps): array
+    {
+        $lesson = LessonCatalog::find($slug);
+        if ($lesson === null) {
+            return $steps;
+        }
+
+        $max = count((array) ($lesson['exercises'] ?? []));
+        $filtered = [];
+
+        foreach ($steps as $step) {
+            if (($step['type'] ?? '') === 'exercise') {
+                $index = (int) ($step['exercise_index'] ?? -1);
+                if ($index < 0 || $index >= $max) {
+                    continue;
+                }
+            }
+            $filtered[] = $step;
+        }
+
+        return self::mergeMissingExercises($slug, $filtered);
+    }
+
+    /**
+     * Inserta en el flujo del mentor los ejercicios del catálogo que falten.
+     *
+     * @param list<array<string, mixed>> $steps
+     * @return list<array<string, mixed>>
+     */
+    public static function mergeMissingExercises(string $slug, array $steps): array
+    {
+        $lesson = LessonCatalog::find($slug);
+        if ($lesson === null) {
+            return $steps;
+        }
+
+        $exercises = (array) ($lesson['exercises'] ?? []);
+        if ($exercises === []) {
+            return $steps;
+        }
+
+        $present = [];
+        foreach ($steps as $step) {
+            if (($step['type'] ?? '') === 'exercise') {
+                $present[(int) ($step['exercise_index'] ?? -1)] = true;
+            }
+        }
+
+        $missing = [];
+        foreach ($exercises as $i => $exercise) {
+            if (isset($present[$i])) {
+                continue;
+            }
+
+            $question = (string) ($exercise['question'] ?? '');
+            $missing[] = [
+                'type' => 'exercise',
+                'title' => 'Tu turno — práctica ' . ($i + 1),
+                'body' => $question !== ''
+                    ? $question
+                    : 'Aplica lo aprendido con lo visto en esta lección.',
+                'exercise_index' => $i,
+            ];
+        }
+
+        if ($missing === []) {
+            return $steps;
+        }
+
+        $insertAt = count($steps);
+        foreach ($steps as $idx => $step) {
+            $type = (string) ($step['type'] ?? '');
+            if ($type === 'project' || $type === 'complete') {
+                $insertAt = $idx;
+                break;
+            }
+        }
+
+        array_splice($steps, $insertAt, 0, $missing);
+
+        return $steps;
+    }
 }

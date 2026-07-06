@@ -80,22 +80,14 @@ echo \'Practica: ep-cicd\';',
     'title' => 'Cómo encaja con el resto',
     'body' => 'Este tema se conecta con otros conceptos. Revisa el mapa en [/conexiones#conn-ci](/conexiones#conn-ci).',
   ),
-  10 => 
+  12 => 
+  array (
   array (
     'type' => 'exercise',
     'title' => 'Tu turno — práctica 1',
-    'body' => '**¿Qué significa CI?** — resuelve con lo aprendido. Si fallas, recibes pistas adaptativas.',
+    'body' => '¿Qué significa CI?',
     'exercise_index' => 0,
   ),
-  11 => 
-  array (
-    'type' => 'exercise',
-    'title' => 'Tu turno — práctica 2',
-    'body' => '**¿Cuál es la mejor siguiente acción tras completar este módulo?** — resuelve con lo aprendido. Si fallas, recibes pistas adaptativas.',
-    'exercise_index' => 1,
-  ),
-  12 => 
-  array (
     'type' => 'project',
     'title' => 'Mini-proyecto',
     'body' => 'Consolida lo aprendido con un proyecto hands-on validado y XP.',
