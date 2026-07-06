@@ -10,6 +10,7 @@
     <link rel="canonical" href="<?= htmlspecialchars($canonical . ($_SERVER['REQUEST_URI'] ?? '/')) ?>">
     <?php endif; ?>
     <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/favicon.ico" type="image/svg+xml">
     <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/assets/icon-192.png">
     <title><?= htmlspecialchars($title ?? ($config['name'] ?? 'Escala')) ?></title>

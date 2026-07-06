@@ -79,6 +79,12 @@ use App\Controllers\SecurityController;
 
 $app->router->get('/health', fn () => (new HealthController($app->database))->check());
 
+$app->router->get('/favicon.ico', static function (): void {
+    header('Content-Type: image/svg+xml');
+    header('Cache-Control: public, max-age=604800');
+    readfile(dirname(__DIR__) . '/public/assets/icon.svg');
+});
+
 $seo = fn () => new SeoController($app->config);
 $app->router->get('/robots.txt', fn () => $seo()->robots());
 $app->router->get('/sitemap.xml', fn () => $seo()->sitemap());
