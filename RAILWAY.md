@@ -43,10 +43,18 @@ En el servicio → **Variables** → **RAW Editor**, pega desde `.env.railway.ex
 
 Sin volumen, la base de datos SQLite se borra en cada redeploy.
 
-1. Servicio → **Settings** → **Volumes**
-2. **Add Volume**
-3. Mount path: `/var/www/html/database`
-4. Añade otro volumen: `/var/www/html/storage`
+Railway (plan gratuito) permite **un volumen por servicio**. Monta:
+
+1. Servicio → **Settings** → **Volumes** → **Add Volume**
+2. Mount path: `/var/www/html/database`
+
+El entrypoint enlaza `storage/*` dentro del volumen (`database/backups`, `database/logs`, etc.), así backups y logs también persisten sin un segundo volumen.
+
+En Windows con CLI:
+
+```bash
+MSYS_NO_PATHCONV=1 railway volume add --mount-path '/var/www/html/database'
+```
 
 ### 5. Dominio público
 

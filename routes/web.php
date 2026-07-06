@@ -36,8 +36,6 @@ use App\Controllers\LeaderboardController;
 
 use App\Controllers\LessonController;
 
-use App\Controllers\LegalController;
-
 use App\Controllers\NotificationController;
 
 use App\Controllers\OnboardingController;
@@ -259,7 +257,7 @@ $app->router->post('/proyectos/completar', fn () => $projectsController()->compl
 
 
 
-$certController = fn () => new CertificateController($app->progress, $app->achievements, $app->gamification, $app->certificateVerify, $app->config);
+$certController = fn () => new CertificateController($app->progress, $app->achievements, $app->gamification, $app->certificateVerify, $app->learningPaths, $app->config);
 
 $app->router->get('/certificado', fn () => $certController()->show());
 
@@ -343,9 +341,9 @@ $app->router->post('/notificaciones/leer-todas', fn () => $notif()->markAllRead(
 
 
 
-$app->router->get('/rutas', fn () => (new PathController($app->learningPaths, $app->context, $app->config))->index());
+$app->router->get('/rutas', fn () => (new PathController($app->learningPaths, $app->context, $app->progress, $app->config))->index());
 
-$app->router->post('/rutas', fn () => (new PathController($app->learningPaths, $app->context, $app->config))->select());
+$app->router->post('/rutas', fn () => (new PathController($app->learningPaths, $app->context, $app->progress, $app->config))->select());
 
 $app->router->get('/entrevista', fn () => (new InterviewController($app->context, $app->config))->index());
 $app->router->post('/entrevista', fn () => (new InterviewController($app->context, $app->config))->submit());
@@ -391,7 +389,7 @@ $app->router->get('/dashboard', fn () => $dashboard()->index());
 $app->router->post('/dashboard/meta', fn () => $dashboard()->setGoal());
 $app->router->post('/dashboard/estudio', fn () => $dashboard()->logStudy());
 
-$exams = fn () => new ExamController($app->exams, $app->context, $app->config);
+$exams = fn () => new ExamController($app->exams, $app->context, $app->achievements, $app->config);
 $app->router->get('/examenes', fn () => $exams()->index());
 $app->router->get('/examenes/{slug}', fn (string $slug) => $exams()->show($slug));
 $app->router->post('/examenes', fn () => $exams()->submit());
