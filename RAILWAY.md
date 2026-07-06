@@ -128,14 +128,16 @@ Volúmenes: configúralos en el dashboard (paso 4 de Opción A).
 
 ## Worker (emails en background)
 
-Crea un **segundo servicio** en el mismo proyecto:
+Crea servicios adicionales en el mismo proyecto (plan gratis: 3 servicios máx. típico):
 
-| Servicio | Start Command | Config |
-|----------|---------------|--------|
-| `EscalaPHP-worker` | `while true; do php tools/cron.php worker; sleep 60; done` | `railway.worker.toml` |
-| `EscalaPHP-cron` | `php tools/cron.php backup` + Cron `0 3 * * *` | `railway.cron.toml` |
+| Servicio | Variable | Comportamiento |
+|----------|----------|----------------|
+| `EscalaPHP-worker` | `ESCALA_ROLE=worker` | Llama `/cron?task=worker` cada 60s |
+| `EscalaPHP-cron` | `ESCALA_ROLE=cron` | Backup vía `/cron?task=backup` |
 
-Mismas variables de entorno y volúmenes que el servicio web.
+Ambos necesitan `CRON_SECRET` (mismo valor que el servicio web). No requieren volumen propio: operan contra el servicio web.
+
+Para backup programado en `EscalaPHP-cron`: Settings → **Config file** → `/railway.cron.toml` (cron `0 3 * * *`).
 
 ## Variables recomendadas
 

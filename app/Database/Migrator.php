@@ -16,6 +16,12 @@ class Migrator
     {
         $this->pdo->exec('CREATE TABLE IF NOT EXISTS schema_migrations (version TEXT PRIMARY KEY, applied_at TEXT NOT NULL)');
 
+        $this->repairIncomplete([
+            '001_platform_tables' => 'notifications',
+            '002_max_platform' => 'daily_missions',
+            '003_product_max' => 'user_sessions',
+        ]);
+
         $applied = $this->appliedVersions();
         $files = glob($this->migrationsPath . '/*.php') ?: [];
         sort($files);
@@ -33,6 +39,35 @@ class Migrator
             $stmt = $this->pdo->prepare('INSERT INTO schema_migrations (version, applied_at) VALUES (?, ?)');
             $stmt->execute([$version, date('c')]);
         }
+    }
+
+    /** @param array<string, string> $sentinels */
+    private function repairIncomplete(array $sentinels): void
+    {
+        foreach ($sentinels as $version => $table) {
+            if ($this->tableExists($table)) {
+                continue;
+            }
+
+            $stmt = $this->pdo->prepare('DELETE FROM schema_migrations WHERE version = ?');
+            $stmt->execute([$version]);
+        }
+    }
+
+    private function tableExists(string $table): bool
+    {
+        $driver = $this->pdo->getAttribute(PDO::ATTR_DRIVER_NAME);
+        if ($driver === 'pgsql') {
+            $stmt = $this->pdo->prepare('SELECT to_regclass(?) IS NOT NULL');
+            $stmt->execute([$table]);
+
+            return (bool) $stmt->fetchColumn();
+        }
+
+        $stmt = $this->pdo->prepare("SELECT name FROM sqlite_master WHERE type = 'table' AND name = ?");
+        $stmt->execute([$table]);
+
+        return (bool) $stmt->fetchColumn();
     }
 
     /** @return list<string> */
