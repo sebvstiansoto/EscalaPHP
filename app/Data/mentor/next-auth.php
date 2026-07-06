@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Middleware',
     'body' => 'middleware.ts intercepta requests — redirige a /login si no hay sesión.',
+    'code' => 'console.log(\'Practica: next-auth\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Auth',
     'body' => 'NextAuth.js / Auth.js es el estándar — OAuth, credentials, JWT en cookies httpOnly.',
+    'code' => 'console.log(\'Practica: next-auth\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: next-auth\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: next-auth\');',
     ),
   ),
   8 => 

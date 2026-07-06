@@ -31,6 +31,13 @@ $defaults = [
     'google_client_id' => '',
     'google_client_secret' => '',
     'backup_path' => __DIR__ . '/../storage/backups',
+    'cron_secret' => '',
+    'analytics_domain' => '',
+    'smtp_host' => '',
+    'smtp_port' => 587,
+    'smtp_user' => '',
+    'smtp_pass' => '',
+    'resend_api_key' => '',
 ];
 
 $env = Env::load(dirname(__DIR__) . '/.env', []);
@@ -73,4 +80,11 @@ return array_merge($defaults, [
     'google_client_id' => $env['GOOGLE_CLIENT_ID'] ?? '',
     'google_client_secret' => $env['GOOGLE_CLIENT_SECRET'] ?? '',
     'backup_path' => $env['BACKUP_PATH'] ?? $defaults['backup_path'],
+    'cron_secret' => $env['CRON_SECRET'] ?? '',
+    'analytics_domain' => $env['ANALYTICS_DOMAIN'] ?? '',
+    'smtp_host' => $env['SMTP_HOST'] ?? '',
+    'smtp_port' => (int) ($env['SMTP_PORT'] ?? 587),
+    'smtp_user' => $env['SMTP_USER'] ?? '',
+    'smtp_pass' => $env['SMTP_PASS'] ?? '',
+    'resend_api_key' => $env['RESEND_API_KEY'] ?? '',
 ]);

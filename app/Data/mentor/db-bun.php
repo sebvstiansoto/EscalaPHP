@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Bun',
     'body' => 'bun run index.ts — compatible Node APIs, bundler, test runner, package manager.',
+    'code' => 'console.log(\'Practica: db-bun\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'bun:sqlite',
     'body' => 'SQLite embedded sin driver externo — scripts y prototipos rápidos.',
+    'code' => 'console.log(\'Practica: db-bun\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: db-bun\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: db-bun\');',
     ),
   ),
   8 => 

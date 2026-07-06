@@ -30,6 +30,8 @@ return array (
     'type' => 'teach',
     'title' => 'Layouts',
     'body' => '@extends y @section evitan duplicar header/footer en cada vista.',
+    'code' => '@foreach($items as $item)
+@endforeach',
   ),
   4 => 
   array (

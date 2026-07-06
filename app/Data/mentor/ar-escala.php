@@ -21,12 +21,20 @@ return array (
     'type' => 'teach',
     'title' => 'Horizontal',
     'body' => 'Más servidores detrás de load balancer — stateless app + Redis sessions.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: ar-escala\';',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Read replicas',
     'body' => 'PostgreSQL primary escribe, réplicas leen — separa carga reporting.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: ar-escala\';',
   ),
   4 => 
   array (
@@ -47,7 +55,9 @@ return array (
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
     'demo_code' => '<?php
-echo \'Hola desde PHP\';',
+declare(strict_types=1);
+
+echo \'Practica: ar-escala\';',
     'demo_language' => 'php',
   ),
   7 => 
@@ -57,8 +67,9 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '<?php',
+      1 => 'declare(strict_types=1);',
+      2 => 'echo \'Practica: ar-escala\';',
     ),
   ),
   8 => 

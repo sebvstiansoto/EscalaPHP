@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Spring Boot',
     'body' => 'Convención sobre configuración — embedded Tomcat, health checks, métricas out of the box.',
+    'code' => '@RestController public class UserController',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'application.properties',
     'body' => 'spring.datasource.url, server.port — externaliza config como .env en otros stacks.',
+    'code' => '@RestController public class UserController',
   ),
   4 => 
   array (
@@ -46,9 +48,8 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => '@RestController public class UserController',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +58,7 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '@RestController public class UserController',
     ),
   ),
   8 => 

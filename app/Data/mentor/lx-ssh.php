@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'SSH',
     'body' => 'ssh user@servidor.com — terminal remota segura. Claves ed25519 mejor que contraseña.',
+    'code' => 'ssh usuario@192.168.1.10',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'scp y rsync',
     'body' => 'Copiar archivos al servidor: scp archivo.txt user@host:/var/www/',
+    'code' => 'ssh usuario@192.168.1.10',
   ),
   4 => 
   array (
@@ -46,9 +48,8 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => 'ssh usuario@192.168.1.10',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +58,7 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => 'ssh usuario@192.168.1.10',
     ),
   ),
   8 => 

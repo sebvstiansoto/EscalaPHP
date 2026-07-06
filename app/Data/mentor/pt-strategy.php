@@ -30,6 +30,10 @@ return array (
     'type' => 'teach',
     'title' => 'Observer',
     'body' => 'Sujeto notifica a observadores — Laravel Events/Listeners es Observer a escala.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: pt-strategy\';',
   ),
   4 => 
   array (

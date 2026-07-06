@@ -30,6 +30,10 @@ event(new OrderPlaced($order));
     'type' => 'teach',
     'title' => 'Colas',
     'body' => 'Redis/RabbitMQ procesan async — usuario no espera email SMTP lento.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: ar-eventos\';',
   ),
   4 => 
   array (

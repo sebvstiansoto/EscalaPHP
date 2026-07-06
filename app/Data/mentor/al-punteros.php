@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Two pointers',
     'body' => 'Izquierda y derecha en array ordenado — suma objetivo sin O(n²).',
+    'code' => 'console.log("aba" === "aba".split("").reverse().join(""));',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Sliding window',
     'body' => 'Ventana [L,R] que crece/decrece — subcadena más larga, máximo suma k elementos.',
+    'code' => 'console.log("aba" === "aba".split("").reverse().join(""));',
   ),
   4 => 
   array (

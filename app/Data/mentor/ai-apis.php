@@ -31,6 +31,7 @@ return array (
     'type' => 'teach',
     'title' => 'Streaming',
     'body' => 'stream: true — SSE chunks — UX respuesta progresiva.',
+    'code' => '{"role": "user", "content": "..."}',
   ),
   4 => 
   array (

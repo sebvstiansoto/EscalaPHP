@@ -21,6 +21,10 @@ return array (
     'type' => 'teach',
     'title' => 'Monolito vs microservicios',
     'body' => 'Empieza con **monolito modular** (Laravel bien organizado). Microservicios cuando el equipo y tráfico lo exigen.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: ep-arquitectura\';',
   ),
   3 => 
   array (
@@ -53,7 +57,9 @@ return array (
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
     'demo_code' => '<?php
-echo \'Hola desde PHP\';',
+declare(strict_types=1);
+
+echo \'Practica: ep-arquitectura\';',
     'demo_language' => 'php',
   ),
   8 => 
@@ -63,8 +69,9 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '<?php',
+      1 => 'declare(strict_types=1);',
+      2 => 'echo \'Practica: ep-arquitectura\';',
     ),
   ),
   9 => 

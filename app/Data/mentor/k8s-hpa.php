@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'HPA',
     'body' => '**Horizontal Pod Autoscaler** aumenta réplicas cuando CPU > umbral y las reduce cuando baja la carga.',
+    'code' => 'kind: HorizontalPodAutoscaler',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Métricas',
     'body' => 'CPU, memoria y custom metrics (cola Redis, RPS). Requiere metrics-server en el cluster.',
+    'code' => 'kind: HorizontalPodAutoscaler',
   ),
   4 => 
   array (
@@ -46,9 +48,8 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => 'kind: HorizontalPodAutoscaler',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +58,7 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => 'kind: HorizontalPodAutoscaler',
     ),
   ),
   8 => 

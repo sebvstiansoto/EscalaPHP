@@ -32,6 +32,7 @@ return array (
     'type' => 'teach',
     'title' => 'Estado',
     'body' => 'messages en useState — lista que crece con cada onmessage.',
+    'code' => 'console.log(\'Practica: ws-react\');',
   ),
   4 => 
   array (

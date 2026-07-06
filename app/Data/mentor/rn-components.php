@@ -30,6 +30,7 @@ return array (
     'type' => 'teach',
     'title' => 'Interactividad',
     'body' => 'Pressable / TouchableOpacity — onPress en lugar de onClick.',
+    'code' => 'StyleSheet.create({ ... })',
   ),
   4 => 
   array (

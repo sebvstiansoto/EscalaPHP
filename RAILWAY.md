@@ -120,14 +120,23 @@ Volúmenes: configúralos en el dashboard (paso 4 de Opción A).
 
 ## Worker (emails en background)
 
-Opcional — segundo servicio para la cola de trabajos:
+Crea un **segundo servicio** en el mismo proyecto:
 
-1. En el proyecto Railway → **New Service** → mismo repo
-2. **Settings** → Start Command: `php tools/worker.php`
-3. Mismas variables de entorno que el servicio web
-4. Monta volumen en `/var/www/html/database` y `/var/www/html/storage`
+| Servicio | Start Command | Config |
+|----------|---------------|--------|
+| `EscalaPHP-worker` | `while true; do php tools/cron.php worker; sleep 60; done` | `railway.worker.toml` |
+| `EscalaPHP-cron` | `php tools/cron.php backup` + Cron `0 3 * * *` | `railway.cron.toml` |
 
-O usa `railway.worker.toml` como referencia.
+Mismas variables de entorno y volúmenes que el servicio web.
+
+## Variables recomendadas
+
+| Variable | Uso |
+|----------|-----|
+| `CRON_SECRET` | Protege `/cron?task=backup&token=...` |
+| `ANALYTICS_DOMAIN` | Plausible analytics (sin `https://`) |
+| `MAIL_DRIVER` | `log`, `resend` o `smtp` |
+| `RESEND_API_KEY` | Si usas Resend (gratis 100 emails/día) |
 
 ---
 

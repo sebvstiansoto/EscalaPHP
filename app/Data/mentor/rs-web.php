@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Tokio',
     'body' => 'Runtime async — #[tokio::main] async fn main().',
+    'code' => 'async fn health() -> impl IntoResponse',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Axum',
     'body' => 'Router::new().route("/health", get(health)) — ergonómico sobre hyper.',
+    'code' => 'async fn health() -> impl IntoResponse',
   ),
   4 => 
   array (
@@ -46,9 +48,8 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => 'async fn health() -> impl IntoResponse',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +58,7 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => 'async fn health() -> impl IntoResponse',
     ),
   ),
   8 => 

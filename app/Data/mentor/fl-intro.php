@@ -21,6 +21,7 @@ return array (
     'type' => 'teach',
     'title' => 'Flutter',
     'body' => '**Flutter** de Google: UI con **widgets** en **Dart** — compila a nativo ARM en iOS/Android y también web/desktop.',
+    'code' => 'console.log(\'Practica: fl-intro\');',
   ),
   3 => 
   array (
@@ -47,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'void main() => runApp(MaterialApp(home: Scaffold(body: Center(child: Text(\'Hola Flutter\')))));',
+    'demo_code' => 'console.log(\'Practica: fl-intro\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -57,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'void main() => runApp(MaterialApp(home: Scaffold(body: Center(child: Text(\'Hola Flutter\')))));',
+      0 => 'console.log(\'Practica: fl-intro\');',
     ),
   ),
   8 => 

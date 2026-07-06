@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Drivers',
     'body' => '**pg** para PostgreSQL, **mysql2** para MySQL, **better-sqlite3** para SQLite — como PDO en PHP.',
+    'code' => 'SELECT * FROM users WHERE id = $1',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'ORM',
     'body' => 'Prisma o Drizzle generan queries tipadas — similar a Eloquent en Laravel.',
+    'code' => 'SELECT * FROM users WHERE id = $1',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'SELECT * FROM users WHERE id = $1',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'SELECT * FROM users WHERE id = $1',
     ),
   ),
   8 => 

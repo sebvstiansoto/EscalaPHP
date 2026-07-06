@@ -21,6 +21,7 @@ return array (
     'type' => 'teach',
     'title' => '.NET',
     'body' => '**C#** + **.NET** — cross-platform (Windows, Linux, macOS). Web, APIs, games (Unity), enterprise Microsoft.',
+    'code' => 'app.MapGet("/", () => "Hola");',
   ),
   3 => 
   array (
@@ -50,10 +51,7 @@ app.Run();',
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
-app.MapGet("/", () => "Hola .NET");
-app.Run();',
+    'demo_code' => 'app.MapGet("/", () => "Hola");',
     'demo_language' => 'shell',
   ),
   7 => 
@@ -63,10 +61,7 @@ app.Run();',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'var builder = WebApplication.CreateBuilder(args);',
-      1 => 'var app = builder.Build();',
-      2 => 'app.MapGet("/", () => "Hola .NET");',
-      3 => 'app.Run();',
+      0 => 'app.MapGet("/", () => "Hola");',
     ),
   ),
   8 => 

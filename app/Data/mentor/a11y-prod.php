@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Design system',
     'body' => 'Radix, Headless UI, MUI — primitives accesibles — no reinventar focus trap.',
+    'code' => 'console.log(\'Practica: a11y-prod\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Process',
     'body' => 'a11y acceptance criteria en tickets — shift-left no audit final only.',
+    'code' => 'console.log(\'Practica: a11y-prod\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: a11y-prod\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: a11y-prod\');',
     ),
   ),
   8 => 

@@ -21,6 +21,10 @@ return array (
     'type' => 'teach',
     'title' => '¿Qué es React?',
     'body' => 'React construye interfaces con **componentes** reutilizables. Cada componente es una función que retorna JSX (HTML dentro de JS).',
+    'code' => 'function Saludo() {
+  return \'Hola React\';
+}
+console.log(Saludo());',
   ),
   3 => 
   array (
@@ -50,8 +54,9 @@ return array (
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
     'demo_code' => 'function Saludo() {
-  return <h1>Hola React</h1>;
-}',
+  return \'Hola React\';
+}
+console.log(Saludo());',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -62,8 +67,9 @@ return array (
     'lines' => 
     array (
       0 => 'function Saludo() {',
-      1 => '  return <h1>Hola React</h1>;',
+      1 => '  return \'Hola React\';',
       2 => '}',
+      3 => 'console.log(Saludo());',
     ),
   ),
   8 => 

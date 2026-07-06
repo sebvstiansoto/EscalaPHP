@@ -21,18 +21,21 @@ return array (
     'type' => 'teach',
     'title' => 'SQLi ofensiva',
     'body' => 'Atacante prueba `\' OR 1=1--` en login — por eso **prepared statements** son obligatorios.',
+    'code' => '\' OR 1=1--',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'XSS ofensiva',
     'body' => 'Inyecta script que roba cookie — defensa: escape + CSP + httpOnly cookies.',
+    'code' => '\' OR 1=1--',
   ),
   4 => 
   array (
     'type' => 'teach',
     'title' => 'IDOR',
     'body' => 'Cambiar `/api/users/1` a `/api/users/2` sin autorización — defensa: policies y checks de ownership.',
+    'code' => '\' OR 1=1--',
   ),
   5 => 
   array (
@@ -46,9 +49,8 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => '\' OR 1=1--',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +59,7 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '\' OR 1=1--',
     ),
   ),
   8 => 

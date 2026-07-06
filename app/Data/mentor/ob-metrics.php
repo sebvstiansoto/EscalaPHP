@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Prometheus',
     'body' => 'Pull metrics HTTP /metrics — PromQL queries: rate(http_requests_total[5m]).',
+    'code' => 'rate(http_requests_total[5m])',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Grafana',
     'body' => 'Dashboards visuales — alertas cuando p99 latency > 500ms.',
+    'code' => 'rate(http_requests_total[5m])',
   ),
   4 => 
   array (
@@ -46,9 +48,8 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => 'rate(http_requests_total[5m])',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +58,7 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => 'rate(http_requests_total[5m])',
     ),
   ),
   8 => 

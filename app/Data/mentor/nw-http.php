@@ -21,12 +21,18 @@ return array (
     'type' => 'teach',
     'title' => 'HTTP',
     'body' => 'Request method path headers body — response status headers — keep-alive connection reuse.',
+    'code' => '# Practica: nw-http
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'TLS',
     'body' => 'HTTPS encrypt transport — cert chain Let\'s Encrypt — HSTS force HTTPS.',
+    'code' => '# Practica: nw-http
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   4 => 
   array (
@@ -46,9 +52,10 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => '# Practica: nw-http
+echo "Listo"
+# Reemplaza con tu comando',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +64,9 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '# Practica: nw-http',
+      1 => 'echo "Listo"',
+      2 => '# Reemplaza con tu comando',
     ),
   ),
   8 => 

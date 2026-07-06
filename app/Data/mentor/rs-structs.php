@@ -31,6 +31,9 @@ return array (
     'type' => 'teach',
     'title' => 'match',
     'body' => 'Pattern matching exhaustivo — compiler exige cubrir todos casos enum.',
+    'code' => '# Practica: rs-structs
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   4 => 
   array (

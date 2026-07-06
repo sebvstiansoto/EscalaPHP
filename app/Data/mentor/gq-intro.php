@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'GraphQL',
     'body' => 'Lenguaje de consulta — el **cliente pide exactamente** los campos que necesita en un POST /graphql.',
+    'code' => 'console.log(\'Practica: gq-intro\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'vs REST',
     'body' => 'REST = muchos endpoints (/users, /posts). GraphQL = un schema, muchas queries.',
+    'code' => 'console.log(\'Practica: gq-intro\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: gq-intro\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: gq-intro\');',
     ),
   ),
   8 => 

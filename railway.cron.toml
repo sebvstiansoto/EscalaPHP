@@ -1,0 +1,11 @@
+# Backup diario — servicio cron en Railway (servicio separado)
+# Settings → Cron Schedule: 0 3 * * *
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile.railway"
+
+[deploy]
+startCommand = "php tools/cron.php backup"
+cronSchedule = "0 3 * * *"
+restartPolicyType = "ON_FAILURE"

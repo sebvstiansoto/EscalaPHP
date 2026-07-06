@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Ethereum',
     'body' => 'EOA wallets + contract accounts — gas paga compute — gwei price fluctuates.',
+    'code' => 'console.log(\'Practica: w3-eth\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Networks',
     'body' => 'Mainnet real money; Sepolia/Goerli testnets free ETH faucets — **never mainnet until audited**.',
+    'code' => 'console.log(\'Practica: w3-eth\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: w3-eth\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: w3-eth\');',
     ),
   ),
   8 => 

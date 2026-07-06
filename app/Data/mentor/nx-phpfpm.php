@@ -32,6 +32,7 @@ return array (
     'type' => 'teach',
     'title' => 'Pools',
     'body' => 'pm.max_children controla cuántos requests PHP paralelos — tuning de producción.',
+    'code' => 'fastcgi_pass unix:...',
   ),
   4 => 
   array (

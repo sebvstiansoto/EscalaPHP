@@ -21,12 +21,18 @@ return array (
     'type' => 'teach',
     'title' => 'Cache-aside',
     'body' => '1) Busca en Redis. 2) Si miss, lee BD. 3) Guarda en Redis. 4) Devuelve dato.',
+    'code' => '# Practica: rd-cache
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Invalidación',
     'body' => 'Al actualizar BD, borra clave Redis (DEL) o usa TTL corto. Consistencia > velocidad ciega.',
+    'code' => '# Practica: rd-cache
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   4 => 
   array (
@@ -46,9 +52,10 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => '# Practica: rd-cache
+echo "Listo"
+# Reemplaza con tu comando',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +64,9 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '# Practica: rd-cache',
+      1 => 'echo "Listo"',
+      2 => '# Reemplaza con tu comando',
     ),
   ),
   8 => 

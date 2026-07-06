@@ -21,6 +21,8 @@ return array (
     'type' => 'teach',
     'title' => '¿Qué es Git?',
     'body' => 'Git guarda **snapshots** de tu código. Cada commit es un punto en el historial al que puedes volver.',
+    'code' => 'git add .
+git commit -m "inicio"',
   ),
   3 => 
   array (
@@ -49,7 +51,7 @@ git commit -m "feat: login de usuarios"',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
     'demo_code' => 'git add .
-git commit -m "feat: login de usuarios"',
+git commit -m "inicio"',
     'demo_language' => 'shell',
   ),
   7 => 
@@ -60,7 +62,7 @@ git commit -m "feat: login de usuarios"',
     'lines' => 
     array (
       0 => 'git add .',
-      1 => 'git commit -m "feat: login de usuarios"',
+      1 => 'git commit -m "inicio"',
     ),
   ),
   8 => 

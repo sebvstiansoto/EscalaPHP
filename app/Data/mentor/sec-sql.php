@@ -21,6 +21,10 @@ return array (
     'type' => 'teach',
     'title' => 'El ataque',
     'body' => 'Input malicioso como `\' OR 1=1 --` manipula tu query y puede leer o borrar datos.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: sec-sql\';',
   ),
   3 => 
   array (
@@ -48,8 +52,10 @@ $stmt->execute([$email]);',
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '$stmt = $pdo->prepare(\'SELECT * FROM users WHERE email = ?\');
-$stmt->execute([$email]);',
+    'demo_code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: sec-sql\';',
     'demo_language' => 'php',
   ),
   7 => 
@@ -59,8 +65,9 @@ $stmt->execute([$email]);',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '$stmt = $pdo->prepare(\'SELECT * FROM users WHERE email = ?\');',
-      1 => '$stmt->execute([$email]);',
+      0 => '<?php',
+      1 => 'declare(strict_types=1);',
+      2 => 'echo \'Practica: sec-sql\';',
     ),
   ),
   8 => 

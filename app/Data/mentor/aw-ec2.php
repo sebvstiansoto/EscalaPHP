@@ -28,6 +28,9 @@ return array (
     'type' => 'teach',
     'title' => 'Security Group',
     'body' => 'Solo puertos 22 (SSH), 80, 443 abiertos — el resto bloqueado.',
+    'code' => '# Practica: aw-ec2
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   4 => 
   array (

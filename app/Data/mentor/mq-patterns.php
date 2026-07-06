@@ -21,18 +21,30 @@ return array (
     'type' => 'teach',
     'title' => 'Retry',
     'body' => 'Exponential backoff — 1s, 2s, 4s antes de fallar definitivamente.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: mq-patterns\';',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'DLQ',
     'body' => 'Dead Letter Queue — mensajes que fallaron N veces van a cola especial para revisión manual.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: mq-patterns\';',
   ),
   4 => 
   array (
     'type' => 'teach',
     'title' => 'Idempotencia',
     'body' => 'Mismo mensaje dos veces no debe cobrar dos veces — usa id único de mensaje.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: mq-patterns\';',
   ),
   5 => 
   array (
@@ -47,7 +59,9 @@ return array (
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
     'demo_code' => '<?php
-echo \'Hola desde PHP\';',
+declare(strict_types=1);
+
+echo \'Practica: mq-patterns\';',
     'demo_language' => 'php',
   ),
   7 => 
@@ -57,8 +71,9 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '<?php',
+      1 => 'declare(strict_types=1);',
+      2 => 'echo \'Practica: mq-patterns\';',
     ),
   ),
   8 => 

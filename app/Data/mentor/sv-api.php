@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Form actions',
     'body' => 'export actions = { default: async ({ request }) => { } } — works without JS.',
+    'code' => 'console.log(\'Practica: sv-api\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => '+server.ts',
     'body' => 'export GET/POST — API endpoints SvelteKit.',
+    'code' => 'console.log(\'Practica: sv-api\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: sv-api\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: sv-api\');',
     ),
   ),
   8 => 

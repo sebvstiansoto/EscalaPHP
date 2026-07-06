@@ -21,6 +21,8 @@ return array (
     'type' => 'teach',
     'title' => 'PostgreSQL',
     'body' => 'BD relacional open source, robusta, con JSONB, full-text search y extensiones. Estándar en startups y enterprise.',
+    'code' => 'SELECT version();
+-- PostgreSQL 16.x on x86_64',
   ),
   3 => 
   array (
@@ -46,7 +48,8 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'SELECT 1 AS ok;',
+    'demo_code' => 'SELECT version();
+-- PostgreSQL 16.x on x86_64',
     'demo_language' => 'sql',
   ),
   7 => 
@@ -56,7 +59,8 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'SELECT 1 AS ok;',
+      0 => 'SELECT version();',
+      1 => '-- PostgreSQL 16.x on x86_64',
     ),
   ),
   8 => 

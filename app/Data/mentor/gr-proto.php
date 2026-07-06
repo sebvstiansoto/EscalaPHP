@@ -30,6 +30,7 @@ return array (
     'type' => 'teach',
     'title' => 'Codegen',
     'body' => 'protoc genera stubs Go/Java/PHP — cliente y servidor tipados.',
+    'code' => 'rpc MethodName (Request) returns (Response);',
   ),
   4 => 
   array (

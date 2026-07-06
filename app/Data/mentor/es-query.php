@@ -31,6 +31,7 @@ return array (
     'type' => 'teach',
     'title' => 'Filter vs query',
     'body' => 'Filter no scoring — cacheable, más rápido para facets.',
+    'code' => 'console.log(\'Practica: es-query\');',
   ),
   4 => 
   array (

@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Migraciones',
     'body' => 'Cada cambio de esquema es un archivo versionado — up/down reversible.',
+    'code' => 'user_id INTEGER REFERENCES users(id)',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Integridad',
     'body' => 'FOREIGN KEY, ON DELETE CASCADE, CHECK constraints — la BD defiende tus reglas.',
+    'code' => 'user_id INTEGER REFERENCES users(id)',
   ),
   4 => 
   array (
@@ -52,7 +54,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'SELECT 1 AS ok;',
+    'demo_code' => 'user_id INTEGER REFERENCES users(id)',
     'demo_language' => 'sql',
   ),
   8 => 
@@ -62,7 +64,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'SELECT 1 AS ok;',
+      0 => 'user_id INTEGER REFERENCES users(id)',
     ),
   ),
   9 => 

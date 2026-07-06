@@ -32,6 +32,7 @@ return array (
     'type' => 'teach',
     'title' => 'Install',
     'body' => 'beforeinstallprompt event — custom install button UX.',
+    'code' => '"start_url": "/"',
   ),
   4 => 
   array (

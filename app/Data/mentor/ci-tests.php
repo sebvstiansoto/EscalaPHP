@@ -21,6 +21,9 @@ return array (
     'type' => 'teach',
     'title' => 'Integración Continua',
     'body' => '**CI** ejecuta tests automáticamente en cada push. Si fallan, el merge se bloquea.',
+    'code' => 'on: [push]
+jobs:
+  test:',
   ),
   3 => 
   array (
@@ -55,15 +58,9 @@ jobs:
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'name: CI
-on: [push]
+    'demo_code' => 'on: [push]
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: composer install
-      - run: vendor/bin/phpunit',
+  test:',
     'demo_language' => 'shell',
   ),
   7 => 
@@ -73,15 +70,9 @@ jobs:
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'name: CI',
-      1 => 'on: [push]',
-      2 => 'jobs:',
-      3 => '  test:',
-      4 => '    runs-on: ubuntu-latest',
-      5 => '    steps:',
-      6 => '      - uses: actions/checkout@v4',
-      7 => '      - run: composer install',
-      8 => '      - run: vendor/bin/phpunit',
+      0 => 'on: [push]',
+      1 => 'jobs:',
+      2 => '  test:',
     ),
   ),
   8 => 

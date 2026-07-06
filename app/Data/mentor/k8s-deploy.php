@@ -33,6 +33,9 @@ spec:
     'type' => 'teach',
     'title' => 'Service',
     'body' => 'Un **Service** expone pods con una IP estable dentro del cluster.',
+    'code' => 'kind: Deployment
+spec:
+  replicas: 3',
   ),
   4 => 
   array (

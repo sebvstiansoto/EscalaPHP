@@ -250,6 +250,16 @@ class Application
 
                 (string) ($config['mail_path'] ?? __DIR__ . '/../storage/mail'),
 
+                (string) ($config['smtp_host'] ?? ''),
+
+                (int) ($config['smtp_port'] ?? 587),
+
+                (string) ($config['smtp_user'] ?? ''),
+
+                (string) ($config['smtp_pass'] ?? ''),
+
+                (string) ($config['resend_api_key'] ?? ''),
+
             ),
 
             (string) ($config['app_url'] ?? 'http://localhost:8000'),
@@ -313,11 +323,11 @@ class Application
         $this->comments = new CommentService($pdo, $this->context, $this->gamification);
         $this->exams = new ExamService();
         $this->capstones = new CapstoneService();
-        $this->jobs = new JobQueueService($pdo, $this->mailer);
         $this->backup = new BackupService(
             (string) ($config['database'] ?? __DIR__ . '/../database/escala.sqlite'),
-            __DIR__ . '/../storage/backups',
+            (string) ($config['backup_path'] ?? __DIR__ . '/../storage/backups'),
         );
+        $this->jobs = new JobQueueService($pdo, $this->mailer, $this->backup);
     }
 }
 

@@ -21,6 +21,9 @@ return array (
     'type' => 'teach',
     'title' => 'Kotlin',
     'body' => '**Kotlin** — lenguaje oficial **Android**, interop Java, conciso. También backend con **Ktor** y Spring.',
+    'code' => '# Practica: kt-intro
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   3 => 
   array (
@@ -50,10 +53,9 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'fun main() {
-    val name: String = "Ana"
-    println("Hola $name")
-}',
+    'demo_code' => '# Practica: kt-intro
+echo "Listo"
+# Reemplaza con tu comando',
     'demo_language' => 'shell',
   ),
   7 => 
@@ -63,10 +65,9 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'fun main() {',
-      1 => '    val name: String = "Ana"',
-      2 => '    println("Hola $name")',
-      3 => '}',
+      0 => '# Practica: kt-intro',
+      1 => 'echo "Listo"',
+      2 => '# Reemplaza con tu comando',
     ),
   ),
   8 => 

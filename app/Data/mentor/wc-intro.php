@@ -21,12 +21,17 @@ return array (
     'type' => 'teach',
     'title' => 'WebRTC',
     'body' => '**WebRTC** — audio/video **peer-to-peer** en browser — videollamadas, screen share, gaming.',
+    'code' => 'console.log(\'Practica: wc-intro\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Componentes',
     'body' => 'getUserMedia, RTCPeerConnection, RTCDataChannel.',
+    'code' => 'function App() {
+  return <h1>Hola React</h1>;
+}
+export default App;',
   ),
   4 => 
   array (
@@ -46,7 +51,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: wc-intro\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +61,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: wc-intro\');',
     ),
   ),
   8 => 

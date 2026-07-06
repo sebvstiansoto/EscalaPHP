@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Attributes',
     'body' => '#[Route("/api/users")] — replace docblock annotations — reflection read runtime.',
+    'code' => '#[\\Attribute]',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Frameworks',
     'body' => 'Symfony routes validation — custom attributes DDD markers.',
+    'code' => '#[\\Attribute]',
   ),
   4 => 
   array (
@@ -46,8 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
+    'demo_code' => '#[\\Attribute]',
     'demo_language' => 'php',
   ),
   7 => 
@@ -57,8 +58,7 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '#[\\Attribute]',
     ),
   ),
   8 => 

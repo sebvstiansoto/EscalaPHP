@@ -21,12 +21,20 @@ return array (
     'type' => 'teach',
     'title' => 'OAuth 2.0',
     'body' => '**Autorización** delegada — "Login con Google" sin compartir password. Roles: Resource Owner, Client, Authorization Server, Resource Server.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: oa-intro\';',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'OIDC',
     'body' => 'OpenID Connect = OAuth2 + **identidad** — id_token JWT con claims del usuario.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: oa-intro\';',
   ),
   4 => 
   array (
@@ -47,7 +55,9 @@ return array (
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
     'demo_code' => '<?php
-echo \'Hola desde PHP\';',
+declare(strict_types=1);
+
+echo \'Practica: oa-intro\';',
     'demo_language' => 'php',
   ),
   7 => 
@@ -57,8 +67,9 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '<?php',
+      1 => 'declare(strict_types=1);',
+      2 => 'echo \'Practica: oa-intro\';',
     ),
   ),
   8 => 

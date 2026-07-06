@@ -30,6 +30,7 @@ assert response.status_code == 200',
     'type' => 'teach',
     'title' => 'Deploy',
     'body' => 'Docker + uvicorn/gunicorn + .env. Mismo patrón que Python deploy del curso base.',
+    'code' => 'client = TestClient(app)',
   ),
   4 => 
   array (

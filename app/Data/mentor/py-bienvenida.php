@@ -21,6 +21,7 @@ return array (
     'type' => 'teach',
     'title' => '¿Qué es Python?',
     'body' => 'Python es un lenguaje **interpretado**, legible y usado en backend (FastAPI, Django), data science, automatización y IA.',
+    'code' => 'print(\'Aprendiendo Python\')',
   ),
   3 => 
   array (
@@ -47,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'print(\'Hola, Python\')',
+    'demo_code' => 'print(\'Aprendiendo Python\')',
     'demo_language' => 'python',
   ),
   7 => 
@@ -57,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'print(\'Hola, Python\')',
+      0 => 'print(\'Aprendiendo Python\')',
     ),
   ),
   8 => 

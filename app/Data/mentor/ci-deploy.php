@@ -21,12 +21,24 @@ return array (
     'type' => 'teach',
     'title' => 'Entrega Continua',
     'body' => '**CD** despliega automáticamente cuando CI pasa. Staging primero, producción con aprobación.',
+    'code' => 'apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ci-deploy
+data:
+  APP_ENV: production',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Secrets',
     'body' => 'Nunca pongas contraseñas en el YAML. Usa **GitHub Secrets** para credenciales.',
+    'code' => 'apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ci-deploy
+data:
+  APP_ENV: production',
   ),
   4 => 
   array (
@@ -46,9 +58,13 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => 'apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ci-deploy
+data:
+  APP_ENV: production',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +73,12 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => 'apiVersion: v1',
+      1 => 'kind: ConfigMap',
+      2 => 'metadata:',
+      3 => '  name: ci-deploy',
+      4 => 'data:',
+      5 => '  APP_ENV: production',
     ),
   ),
   8 => 

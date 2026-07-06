@@ -21,12 +21,20 @@ return array (
     'type' => 'teach',
     'title' => 'Ingress',
     'body' => '**Ingress** enruta tráfico HTTP/S externo hacia Services internos. Es el "Nginx del cluster".',
+    'code' => 'kind: Ingress
+spec:
+  rules:
+    - host: api.ejemplo.com',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'TLS',
     'body' => 'Certificados HTTPS con **cert-manager** o el proveedor cloud. Nunca HTTP plano en producción.',
+    'code' => 'kind: Ingress
+spec:
+  rules:
+    - host: api.ejemplo.com',
   ),
   4 => 
   array (
@@ -46,9 +54,11 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => 'kind: Ingress
+spec:
+  rules:
+    - host: api.ejemplo.com',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +67,10 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => 'kind: Ingress',
+      1 => 'spec:',
+      2 => '  rules:',
+      3 => '    - host: api.ejemplo.com',
     ),
   ),
   8 => 

@@ -29,6 +29,7 @@ $response->assertStatus(200)->assertJsonStructure([\'data\']);',
     'type' => 'teach',
     'title' => 'Autenticación',
     'body' => 'actingAs($user) prueba rutas protegidas.',
+    'code' => '$response->assertStatus(201);',
   ),
   4 => 
   array (

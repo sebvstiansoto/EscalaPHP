@@ -32,6 +32,7 @@ return array (
     'type' => 'teach',
     'title' => 'bind:',
     'body' => 'bind:value input two-way — simpler than React controlled.',
+    'code' => 'export let title;',
   ),
   4 => 
   array (

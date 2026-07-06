@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Tracks',
     'body' => 'pc.addTrack(videoTrack, stream) — mute/unmute sin renegociar siempre.',
+    'code' => 'console.log(\'Practica: wc-media\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'DataChannel',
     'body' => 'Arbitrary data P2P — gaming state, chat binary — baja latencia.',
+    'code' => 'console.log(\'Practica: wc-media\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: wc-media\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: wc-media\');',
     ),
   ),
   8 => 

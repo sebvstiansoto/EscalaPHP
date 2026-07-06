@@ -21,12 +21,20 @@ return array (
     'type' => 'teach',
     'title' => 'Privacidad',
     'body' => 'No envíes PII a APIs públicas sin DPA — anonimiza, redacta, on-prem Llama si regulated.',
+    'code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'ai-ethics\'}
+
+print(handler())',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Eval',
     'body' => 'Golden dataset + métricas — regression tests para prompts como para código.',
+    'code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'ai-ethics\'}
+
+print(handler())',
   ),
   4 => 
   array (
@@ -46,7 +54,10 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'print(\'Hola desde Python\')',
+    'demo_code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'ai-ethics\'}
+
+print(handler())',
     'demo_language' => 'python',
   ),
   7 => 
@@ -56,7 +67,9 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'print(\'Hola desde Python\')',
+      0 => 'def handler():',
+      1 => '    return {\'status\': \'ok\', \'lesson\': \'ai-ethics\'}',
+      2 => 'print(handler())',
     ),
   ),
   8 => 

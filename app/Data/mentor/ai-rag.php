@@ -21,12 +21,20 @@ return array (
     'type' => 'teach',
     'title' => 'RAG pipeline',
     'body' => '1) Chunk docs 2) Embed 3) Store vector DB 4) Query similar 5) LLM con contexto recuperado.',
+    'code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'ai-rag\'}
+
+print(handler())',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Vector DBs',
     'body' => 'Pinecone, pgvector, Chroma — búsqueda semántica por similitud coseno.',
+    'code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'ai-rag\'}
+
+print(handler())',
   ),
   4 => 
   array (
@@ -46,7 +54,10 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'print(\'Hola desde Python\')',
+    'demo_code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'ai-rag\'}
+
+print(handler())',
     'demo_language' => 'python',
   ),
   7 => 
@@ -56,7 +67,9 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'print(\'Hola desde Python\')',
+      0 => 'def handler():',
+      1 => '    return {\'status\': \'ok\', \'lesson\': \'ai-rag\'}',
+      2 => 'print(handler())',
     ),
   ),
   8 => 

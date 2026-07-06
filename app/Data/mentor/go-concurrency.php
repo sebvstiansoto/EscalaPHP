@@ -30,6 +30,9 @@ msg := <-ch',
     'type' => 'teach',
     'title' => 'Select',
     'body' => 'select espera múltiples channels — timeout, cancelación, fan-in.',
+    'code' => '# Practica: go-concurrency
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   4 => 
   array (

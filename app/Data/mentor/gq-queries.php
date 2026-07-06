@@ -34,6 +34,7 @@ return array (
     'type' => 'teach',
     'title' => 'Resolver',
     'body' => 'Función que devuelve dato para cada campo — conecta schema con BD.',
+    'code' => 'query { user { name } }',
   ),
   4 => 
   array (

@@ -30,6 +30,10 @@ return array (
     'type' => 'teach',
     'title' => 'Container',
     'body' => 'Symfony y Laravel resuelven dependencias automáticamente en constructores.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: pt-di\';',
   ),
   4 => 
   array (

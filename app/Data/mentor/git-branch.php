@@ -21,6 +21,7 @@ return array (
     'type' => 'teach',
     'title' => '¿Por qué ramas?',
     'body' => 'Las ramas aíslan tu trabajo. `main` queda estable mientras desarrollas en `feature/login`.',
+    'code' => 'git merge feature/login',
   ),
   3 => 
   array (
@@ -48,8 +49,7 @@ git merge feature/login',
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'git checkout -b feature/login
-git merge feature/login',
+    'demo_code' => 'git merge feature/login',
     'demo_language' => 'shell',
   ),
   7 => 
@@ -59,8 +59,7 @@ git merge feature/login',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'git checkout -b feature/login',
-      1 => 'git merge feature/login',
+      0 => 'git merge feature/login',
     ),
   ),
   8 => 

@@ -21,6 +21,9 @@ return array (
     'type' => 'teach',
     'title' => 'rwx',
     'body' => '**r**ead, **w**rite, **e**xecute para owner, group y others. `ls -l` los muestra como drwxr-xr-x.',
+    'code' => '# Practica: lx-perms
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   3 => 
   array (
@@ -48,8 +51,9 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'chmod +x deploy.sh
-./deploy.sh',
+    'demo_code' => '# Practica: lx-perms
+echo "Listo"
+# Reemplaza con tu comando',
     'demo_language' => 'shell',
   ),
   7 => 
@@ -59,8 +63,9 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'chmod +x deploy.sh',
-      1 => './deploy.sh',
+      0 => '# Practica: lx-perms',
+      1 => 'echo "Listo"',
+      2 => '# Reemplaza con tu comando',
     ),
   ),
   8 => 

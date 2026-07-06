@@ -29,6 +29,7 @@ db.products.updateOne({ _id: 1 }, { $set: { stock: 50 } })',
     'type' => 'teach',
     'title' => 'Filtros',
     'body' => 'Operadores: $gt, $in, $regex — query language rica en documentos.',
+    'code' => 'db.users.insertOne({ name: "Ana" })',
   ),
   4 => 
   array (

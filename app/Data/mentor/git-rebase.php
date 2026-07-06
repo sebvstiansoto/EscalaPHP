@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Rebase',
     'body' => 'Reaplica tus commits encima de otra rama — historial más limpio que merge.',
+    'code' => 'git rebase main',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Regla de oro',
     'body' => '**Nunca rebase commits ya pusheados** que otros usan. Solo en ramas locales o feature tuyas.',
+    'code' => 'git rebase main',
   ),
   4 => 
   array (
@@ -46,9 +48,8 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => 'git rebase main',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +58,7 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => 'git rebase main',
     ),
   ),
   8 => 

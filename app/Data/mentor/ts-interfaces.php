@@ -32,6 +32,10 @@ return array (
     'type' => 'teach',
     'title' => 'type vs interface',
     'body' => 'Ambos modelan formas. `type` también sirve para uniones: `type ID = string | number`.',
+    'code' => 'interface Product {
+  id: number;
+  name: string;
+}',
   ),
   4 => 
   array (

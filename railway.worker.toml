@@ -1,12 +1,10 @@
-# Railway — servicio worker (cola de emails/tareas)
-# Crear un SEGUNDO servicio en el mismo proyecto y apuntar a este archivo
-# o configurar Start Command: php tools/worker.php
+# Worker — cola de emails (servicio separado en Railway)
+# Start Command: while true; do php tools/cron.php worker; sleep 60; done
 
 [build]
 builder = "DOCKERFILE"
 dockerfilePath = "Dockerfile.railway"
 
 [deploy]
-startCommand = "php tools/worker.php"
+startCommand = "while true; do php tools/cron.php worker; sleep 60; done"
 restartPolicyType = "ON_FAILURE"
-restartPolicyMaxRetries = 10

@@ -21,12 +21,18 @@ return array (
     'type' => 'teach',
     'title' => 'IP addressing',
     'body' => '10.0.0.0/8, 172.16/12, 192.168/16 private — CIDR notation host count.',
+    'code' => '# Practica: nw-ip
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'NAT',
     'body' => 'Private IPs internet via NAT gateway — Docker bridge networks similar concept.',
+    'code' => '# Practica: nw-ip
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   4 => 
   array (
@@ -46,9 +52,10 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => '# Practica: nw-ip
+echo "Listo"
+# Reemplaza con tu comando',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +64,9 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '# Practica: nw-ip',
+      1 => 'echo "Listo"',
+      2 => '# Reemplaza con tu comando',
     ),
   ),
   8 => 

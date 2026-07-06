@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Índices',
     'body' => 'CREATE INDEX idx_users_email ON users(email); — acelera WHERE y JOIN en esas columnas.',
+    'code' => 'CREATE INDEX idx_email ON users(email)',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'EXPLAIN ANALYZE',
     'body' => 'Muestra si Postgres hace Seq Scan (malo en tablas grandes) o Index Scan (bueno).',
+    'code' => 'CREATE INDEX idx_email ON users(email)',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'SELECT 1 AS ok;',
+    'demo_code' => 'CREATE INDEX idx_email ON users(email)',
     'demo_language' => 'sql',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'SELECT 1 AS ok;',
+      0 => 'CREATE INDEX idx_email ON users(email)',
     ),
   ),
   8 => 

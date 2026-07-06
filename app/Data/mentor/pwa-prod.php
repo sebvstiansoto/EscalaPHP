@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Lighthouse',
     'body' => 'PWA checklist + performance — aim 90+ performance, 100 PWA.',
+    'code' => 'console.log(\'Practica: pwa-prod\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Updates',
     'body' => 'Notify user new SW waiting — skipWaiting user gesture refresh.',
+    'code' => 'console.log(\'Practica: pwa-prod\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: pwa-prod\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: pwa-prod\');',
     ),
   ),
   8 => 

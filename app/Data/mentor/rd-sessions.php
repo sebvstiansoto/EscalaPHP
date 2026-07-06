@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Sesiones en Redis',
     'body' => 'Varios servidores PHP comparten sesiones vía Redis — escalado horizontal sin sticky sessions.',
+    'code' => 'INCR rate:login:192.168.1.1',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Rate limiting',
     'body' => 'INCR rate:ip:1.2.3.4 + EXPIRE 60 — cuenta requests por minuto. Bloquea brute force.',
+    'code' => 'INCR rate:login:192.168.1.1',
   ),
   4 => 
   array (
@@ -46,9 +48,8 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => 'INCR rate:login:192.168.1.1',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +58,7 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => 'INCR rate:login:192.168.1.1',
     ),
   ),
   8 => 

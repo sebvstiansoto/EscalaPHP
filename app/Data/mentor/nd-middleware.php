@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Middleware',
     'body' => 'Funciones (req, res, next) que procesan la petición antes del handler final.',
+    'code' => 'console.log(\'Practica: nd-middleware\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'CORS',
     'body' => 'Permite que tu React en localhost:5173 llame a la API en localhost:3000.',
+    'code' => 'console.log(\'Practica: nd-middleware\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: nd-middleware\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: nd-middleware\');',
     ),
   ),
   8 => 

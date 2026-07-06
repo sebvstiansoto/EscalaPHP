@@ -21,6 +21,9 @@ return array (
     'type' => 'teach',
     'title' => '¿Por qué conflictos?',
     'body' => 'Dos personas editaron las mismas líneas. Git no puede decidir solo — tú eliges.',
+    'code' => '# Practica: git-conflict
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   3 => 
   array (
@@ -49,9 +52,9 @@ git commit',
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '# Edita el archivo, quita marcadores, deja la versión correcta
-git add archivo.php
-git commit',
+    'demo_code' => '# Practica: git-conflict
+echo "Listo"
+# Reemplaza con tu comando',
     'demo_language' => 'shell',
   ),
   7 => 
@@ -61,9 +64,9 @@ git commit',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '# Edita el archivo, quita marcadores, deja la versión correcta',
-      1 => 'git add archivo.php',
-      2 => 'git commit',
+      0 => '# Practica: git-conflict',
+      1 => 'echo "Listo"',
+      2 => '# Reemplaza con tu comando',
     ),
   ),
   8 => 

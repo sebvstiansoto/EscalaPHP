@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Emulators',
     'body' => 'firebase emulators — local Auth Firestore Functions — CI tests free.',
+    'code' => 'console.log(\'Practica: fb-prod\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Billing',
     'body' => 'Spark free tier limits — Blaze pay-as-you-go prod — monitor usage alerts.',
+    'code' => 'console.log(\'Practica: fb-prod\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: fb-prod\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: fb-prod\');',
     ),
   ),
   8 => 

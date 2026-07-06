@@ -21,6 +21,7 @@ return array (
     'type' => 'teach',
     'title' => 'File-based routing',
     'body' => 'Cada archivo en `src/pages/` es una ruta. `blog/[slug].astro` genera páginas dinámicas.',
+    'code' => 'console.log(\'Practica: as-routing\');',
   ),
   3 => 
   array (
@@ -49,9 +50,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'export function getStaticPaths() {
-  return [{ params: { slug: \'hola\' } }];
-}',
+    'demo_code' => 'console.log(\'Practica: as-routing\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -61,9 +60,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'export function getStaticPaths() {',
-      1 => '  return [{ params: { slug: \'hola\' } }];',
-      2 => '}',
+      0 => 'console.log(\'Practica: as-routing\');',
     ),
   ),
   8 => 

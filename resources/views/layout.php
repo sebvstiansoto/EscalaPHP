@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#4f7cff">
     <meta name="description" content="Aprende PHP, Python, React, Docker y más con mentor interactivo.">
+    <?php $canonical = rtrim((string) ($config['app_url'] ?? ''), '/'); ?>
+    <?php if ($canonical !== ''): ?>
+    <link rel="canonical" href="<?= htmlspecialchars($canonical . ($_SERVER['REQUEST_URI'] ?? '/')) ?>">
+    <?php endif; ?>
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/assets/icon-192.png">
     <title><?= htmlspecialchars($title ?? ($config['name'] ?? 'Escala')) ?></title>
-    <link rel="stylesheet" href="/assets/style.css?v=15">
+    <link rel="stylesheet" href="/assets/style.css?v=16">
     <script src="/assets/app.js?v=9" defer></script>
+    <?php if (!empty($config['analytics_domain'])): ?>
+    <script defer data-domain="<?= htmlspecialchars((string) $config['analytics_domain']) ?>" src="https://plausible.io/js/script.js"></script>
+    <?php endif; ?>
 </head>
 <body>
     <a href="#main" class="skip-link">Saltar al contenido</a>
@@ -108,6 +115,7 @@
                 <a href="/glosario">Glosario</a> ·
                 <a href="/developer">Guía developer</a> ·
                 <a href="/precios">Planes</a> ·
+                <a href="/privacidad">Privacidad</a> ·
                 <a href="/health">Status</a>
             </p>
         </div>

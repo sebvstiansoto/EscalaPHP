@@ -30,6 +30,7 @@ await expect(page.getByText(\'Welcome\')).toBeVisible();',
     'type' => 'teach',
     'title' => 'Auto-wait',
     'body' => 'Playwright retries until timeout — menos flaky que sleep manual.',
+    'code' => 'page.getByRole(\'button\')',
   ),
   4 => 
   array (

@@ -31,9 +31,12 @@ use App\Controllers\HomeController;
 
 use App\Controllers\InterviewController;
 
+use App\Controllers\LegalController;
 use App\Controllers\LeaderboardController;
 
 use App\Controllers\LessonController;
+
+use App\Controllers\LegalController;
 
 use App\Controllers\NotificationController;
 
@@ -55,12 +58,15 @@ use App\Controllers\ReviewController;
 
 use App\Controllers\SearchController;
 
+use App\Controllers\SeoController;
+
 use App\Controllers\SettingsController;
 
 use App\Controllers\TeamController;
 
 use App\Controllers\CapstoneController;
 use App\Controllers\CommentController;
+use App\Controllers\CronController;
 use App\Controllers\DashboardController;
 use App\Controllers\ExamController;
 use App\Controllers\FaqController;
@@ -74,6 +80,15 @@ use App\Controllers\SecurityController;
 
 
 $app->router->get('/health', fn () => (new HealthController($app->database))->check());
+
+$seo = fn () => new SeoController($app->config);
+$app->router->get('/robots.txt', fn () => $seo()->robots());
+$app->router->get('/sitemap.xml', fn () => $seo()->sitemap());
+
+$legal = fn () => new LegalController($app->config);
+$app->router->get('/privacidad', fn () => $legal()->privacy());
+
+$app->router->get('/cron', fn () => (new CronController($app->config))->run());
 
 
 

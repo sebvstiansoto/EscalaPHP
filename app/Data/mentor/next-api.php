@@ -30,6 +30,7 @@ return array (
     'type' => 'teach',
     'title' => 'Server Actions',
     'body' => '"use server" — funciones que el cliente invoca, corren en servidor.',
+    'code' => 'export async function GET() { ... }',
   ),
   4 => 
   array (

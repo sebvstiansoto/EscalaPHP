@@ -21,6 +21,11 @@ return array (
     'type' => 'teach',
     'title' => 'Normalización',
     'body' => 'Evita duplicar datos: usuarios en una tabla, pedidos en otra, conectados por FK.',
+    'code' => 'CREATE TABLE orders (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id),
+  total NUMERIC(10,2) NOT NULL
+);',
   ),
   3 => 
   array (
@@ -46,7 +51,11 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'SELECT 1 AS ok;',
+    'demo_code' => 'CREATE TABLE orders (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id),
+  total NUMERIC(10,2) NOT NULL
+);',
     'demo_language' => 'sql',
   ),
   7 => 
@@ -56,7 +65,11 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'SELECT 1 AS ok;',
+      0 => 'CREATE TABLE orders (',
+      1 => '  id SERIAL PRIMARY KEY,',
+      2 => '  user_id INTEGER NOT NULL REFERENCES users(id),',
+      3 => '  total NUMERIC(10,2) NOT NULL',
+      4 => ');',
     ),
   ),
   8 => 

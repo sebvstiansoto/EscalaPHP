@@ -21,6 +21,7 @@ return array (
     'type' => 'teach',
     'title' => 'Red Docker',
     'body' => 'Contenedores en la misma red se llaman por **nombre de servicio** — `db`, `redis`, `app`.',
+    'code' => 'ports:\\n  - "8000:8000"',
   ),
   3 => 
   array (
@@ -47,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'DATABASE_URL=postgres://user:pass@db:5432/mydb',
+    'demo_code' => 'ports:\\n  - "8000:8000"',
     'demo_language' => 'shell',
   ),
   7 => 
@@ -57,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'DATABASE_URL=postgres://user:pass@db:5432/mydb',
+      0 => 'ports:\\n  - "8000:8000"',
     ),
   ),
   8 => 

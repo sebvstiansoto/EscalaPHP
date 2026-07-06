@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Blockchain',
     'body' => 'Ledger **distribuido** inmutable — Bitcoin pagos, Ethereum **smart contracts** programables.',
+    'code' => 'console.log(\'Practica: w3-intro\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Web3',
     'body' => 'Apps descentralizadas (dApps) — wallet firma transacciones — **entender riesgos**: scams, irreversibilidad, regulación.',
+    'code' => 'console.log(\'Practica: w3-intro\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: w3-intro\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: w3-intro\');',
     ),
   ),
   8 => 

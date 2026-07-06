@@ -32,6 +32,10 @@ class Product {
     'type' => 'teach',
     'title' => 'Migraciones',
     'body' => 'php bin/console make:migration && doctrine:migrations:migrate',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: sf-doctrine\';',
   ),
   4 => 
   array (

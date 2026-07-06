@@ -21,12 +21,20 @@ return array (
     'type' => 'teach',
     'title' => 'Capas',
     'body' => '**Domain** (reglas negocio) → **Application** (casos uso) → **Infrastructure** (BD, HTTP).',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: ar-capa\';',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Hexagonal',
     'body' => 'Ports & adapters — el dominio no conoce Laravel ni PostgreSQL directamente.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: ar-capa\';',
   ),
   4 => 
   array (
@@ -47,7 +55,9 @@ return array (
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
     'demo_code' => '<?php
-echo \'Hola desde PHP\';',
+declare(strict_types=1);
+
+echo \'Practica: ar-capa\';',
     'demo_language' => 'php',
   ),
   7 => 
@@ -57,8 +67,9 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '<?php',
+      1 => 'declare(strict_types=1);',
+      2 => 'echo \'Practica: ar-capa\';',
     ),
   ),
   8 => 

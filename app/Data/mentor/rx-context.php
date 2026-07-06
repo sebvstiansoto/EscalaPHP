@@ -21,6 +21,7 @@ return array (
     'type' => 'teach',
     'title' => 'Prop drilling',
     'body' => 'Pasar props por 5 niveles es doloroso. **Context** comparte datos (tema, usuario, idioma) a todo el árbol.',
+    'code' => 'console.log(\'Practica: rx-context\');',
   ),
   3 => 
   array (
@@ -48,8 +49,7 @@ const theme = useContext(ThemeContext);',
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'const ThemeContext = createContext(\'light\');
-const theme = useContext(ThemeContext);',
+    'demo_code' => 'console.log(\'Practica: rx-context\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -59,8 +59,7 @@ const theme = useContext(ThemeContext);',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'const ThemeContext = createContext(\'light\');',
-      1 => 'const theme = useContext(ThemeContext);',
+      0 => 'console.log(\'Practica: rx-context\');',
     ),
   ),
   8 => 

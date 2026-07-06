@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Firebase',
     'body' => '**Google BaaS** — Auth, Firestore, Realtime DB, Storage, Functions, Hosting — mobile/web rapid prototype.',
+    'code' => 'console.log(\'Practica: fb-intro\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'vs Supabase',
     'body' => 'Firebase NoSQL first; Supabase Postgres SQL — choose per project curso supabase compare.',
+    'code' => 'console.log(\'Practica: fb-intro\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: fb-intro\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: fb-intro\');',
     ),
   ),
   8 => 

@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Índices',
     'body' => 'Un **índice** es como el índice de un libro: encuentra filas sin escanear toda la tabla.',
+    'code' => 'CREATE INDEX idx_users_city ON users(city)',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'EXPLAIN',
     'body' => '`EXPLAIN QUERY PLAN` muestra cómo SQLite ejecutará tu consulta.',
+    'code' => 'CREATE INDEX idx_users_city ON users(city)',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'SELECT 1 AS ok;',
+    'demo_code' => 'CREATE INDEX idx_users_city ON users(city)',
     'demo_language' => 'sql',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'SELECT 1 AS ok;',
+      0 => 'CREATE INDEX idx_users_city ON users(city)',
     ),
   ),
   8 => 

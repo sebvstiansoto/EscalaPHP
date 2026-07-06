@@ -21,12 +21,16 @@ return array (
     'type' => 'teach',
     'title' => 'API',
     'body' => 'request.post("/api/login", { data: { email, pass } }) — test API without UI.',
+    'code' => 'const res = await fetch(\'/api/users\');
+const data = await res.json();
+console.log(data);',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'route.fulfill',
     'body' => 'Mock API responses — test edge cases sin backend real.',
+    'code' => 'console.log(\'Practica: pl-api\');',
   ),
   4 => 
   array (
@@ -46,7 +50,9 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'const res = await fetch(\'/api/users\');
+const data = await res.json();
+console.log(data);',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +62,9 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'const res = await fetch(\'/api/users\');',
+      1 => 'const data = await res.json();',
+      2 => 'console.log(data);',
     ),
   ),
   8 => 

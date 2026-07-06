@@ -28,6 +28,7 @@ return array (
     'type' => 'teach',
     'title' => 'EscalaPHP',
     'body' => 'Esta plataforma ya tiene tema claro/oscuro — Tailwind dark: es el mismo concepto.',
+    'code' => 'dark:bg-gray-900',
   ),
   4 => 
   array (

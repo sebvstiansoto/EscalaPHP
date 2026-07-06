@@ -21,12 +21,20 @@ return array (
     'type' => 'teach',
     'title' => 'Técnicas',
     'body' => 'Few-shot examples en prompt — mejora formato salida. CoT: "piensa paso a paso" para razonamiento.',
+    'code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'ai-prompts\'}
+
+print(handler())',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Structured output',
     'body' => 'JSON mode / response_format — parseable sin regex frágil.',
+    'code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'ai-prompts\'}
+
+print(handler())',
   ),
   4 => 
   array (
@@ -46,7 +54,10 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'print(\'Hola desde Python\')',
+    'demo_code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'ai-prompts\'}
+
+print(handler())',
     'demo_language' => 'python',
   ),
   7 => 
@@ -56,7 +67,9 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'print(\'Hola desde Python\')',
+      0 => 'def handler():',
+      1 => '    return {\'status\': \'ok\', \'lesson\': \'ai-prompts\'}',
+      2 => 'print(handler())',
     ),
   ),
   8 => 

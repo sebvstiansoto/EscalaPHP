@@ -30,6 +30,7 @@ return array (
     'type' => 'teach',
     'title' => 'En la práctica',
     'body' => 'fetch<User>("/api/user"), useState<number>(0), Promise<string> — genéricos everywhere.',
+    'code' => 'function id<T>(x: T): T { return x; }',
   ),
   4 => 
   array (

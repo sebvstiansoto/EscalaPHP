@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Electron',
     'body' => '**Electron** — **Chromium** + **Node.js** — VS Code, Slack, Discord — HTML/CSS/JS desktop cross-platform.',
+    'code' => 'console.log(\'Practica: el-intro\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Procesos',
     'body' => 'Main process (Node) + Renderer processes (browser windows) — IPC comunicación.',
+    'code' => 'console.log(\'Practica: el-intro\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: el-intro\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: el-intro\');',
     ),
   ),
   8 => 

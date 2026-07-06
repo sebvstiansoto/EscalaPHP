@@ -21,6 +21,7 @@ return array (
     'type' => 'teach',
     'title' => 'Vue.js',
     'body' => '**Vue 3** es progresivo: añades interactividad a HTML existente o SPA completa. Composition API es el estándar moderno.',
+    'code' => 'console.log(\'Practica: vu-intro\');',
   ),
   3 => 
   array (
@@ -51,11 +52,7 @@ const count = ref(0)
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<script setup>
-import { ref } from \'vue\'
-const count = ref(0)
-</script>
-<template><button @click="count++">{{ count }}</button></template>',
+    'demo_code' => 'console.log(\'Practica: vu-intro\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -65,11 +62,7 @@ const count = ref(0)
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<script setup>',
-      1 => 'import { ref } from \'vue\'',
-      2 => 'const count = ref(0)',
-      3 => '</script>',
-      4 => '<template><button @click="count++">{{ count }}</button></template>',
+      0 => 'console.log(\'Practica: vu-intro\');',
     ),
   ),
   8 => 

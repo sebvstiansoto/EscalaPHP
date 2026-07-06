@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Service Worker',
     'body' => 'Proxy entre app y network — offline, cache, push — separate thread.',
+    'code' => 'console.log(\'Practica: pwa-sw\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Lifecycle',
     'body' => 'install → activate → fetch — skipWaiting clients.claim updates.',
+    'code' => 'console.log(\'Practica: pwa-sw\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: pwa-sw\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: pwa-sw\');',
     ),
   ),
   8 => 

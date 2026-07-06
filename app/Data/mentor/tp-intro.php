@@ -21,6 +21,7 @@ return array (
     'type' => 'teach',
     'title' => '¿Por qué tests?',
     'body' => 'Tests automatizados detectan regresiones antes de producción. Refactorizas con confianza.',
+    'code' => '$this->assertEquals(4, 2 + 2);',
   ),
   3 => 
   array (
@@ -49,9 +50,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'public function test_suma(): void {
-    $this->assertEquals(4, 2 + 2);
-}',
+    'demo_code' => '$this->assertEquals(4, 2 + 2);',
     'demo_language' => 'php',
   ),
   7 => 
@@ -61,9 +60,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'public function test_suma(): void {',
-      1 => '    $this->assertEquals(4, 2 + 2);',
-      2 => '}',
+      0 => '$this->assertEquals(4, 2 + 2);',
     ),
   ),
   8 => 

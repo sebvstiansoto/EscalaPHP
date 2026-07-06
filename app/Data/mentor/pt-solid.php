@@ -21,12 +21,20 @@ return array (
     'type' => 'teach',
     'title' => 'SOLID',
     'body' => '**S**ingle responsibility, **O**pen/closed, **L**iskov, **I**nterface segregation, **D**ependency inversion.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: pt-solid\';',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'SRP en práctica',
     'body' => 'Una clase = una razón para cambiar. Controller no envía emails — delega a Listener.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: pt-solid\';',
   ),
   4 => 
   array (
@@ -47,7 +55,9 @@ return array (
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
     'demo_code' => '<?php
-echo \'Hola desde PHP\';',
+declare(strict_types=1);
+
+echo \'Practica: pt-solid\';',
     'demo_language' => 'php',
   ),
   7 => 
@@ -57,8 +67,9 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '<?php',
+      1 => 'declare(strict_types=1);',
+      2 => 'echo \'Practica: pt-solid\';',
     ),
   ),
   8 => 

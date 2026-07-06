@@ -30,6 +30,7 @@ ws.onmessage = (e) => console.log(JSON.parse(e.data));',
     'type' => 'teach',
     'title' => 'wss://',
     'body' => 'Siempre WSS en producción — WS plano es inseguro.',
+    'code' => 'console.log(JSON.parse(\'{"ok":true}\').ok);',
   ),
   4 => 
   array (

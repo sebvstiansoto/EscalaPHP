@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Big O',
     'body' => 'Describe cómo crece el tiempo **en el peor caso** cuando aumentan los datos. No es segundos exactos — es tendencia.',
+    'code' => 'console.log(\'Practica: al-complejidad\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Comunes',
     'body' => 'O(1) acceso hash map. O(n) recorrer array. O(n²) bucles anidados. O(log n) búsqueda binaria.',
+    'code' => 'console.log(\'Practica: al-complejidad\');',
   ),
   4 => 
   array (
@@ -52,7 +54,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: al-complejidad\');',
     'demo_language' => 'javascript',
   ),
   8 => 
@@ -62,7 +64,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: al-complejidad\');',
     ),
   ),
   9 => 

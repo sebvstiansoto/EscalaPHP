@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'tsconfig.json',
     'body' => 'module, target, outDir, strict — configura cómo compila tu backend.',
+    'code' => '"strict": true',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => '@types',
     'body' => 'npm install -D @types/node @types/express — tipos para librerías JS.',
+    'code' => '"strict": true',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => '"strict": true',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => '"strict": true',
     ),
   ),
   8 => 

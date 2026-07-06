@@ -31,6 +31,9 @@ public User getUser(@PathVariable Long id) {
     'type' => 'teach',
     'title' => 'Validación',
     'body' => '@Valid + @NotBlank, @Email en DTOs — Bean Validation (JSR-380).',
+    'code' => '# Practica: jv-rest
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   4 => 
   array (

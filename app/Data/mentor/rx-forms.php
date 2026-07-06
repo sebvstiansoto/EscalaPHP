@@ -29,6 +29,7 @@ return array (
     'type' => 'teach',
     'title' => 'Submit',
     'body' => 'onSubmit con preventDefault() evita recarga. Envías estado al backend con fetch POST.',
+    'code' => 'let v = "";\\nv = "test@mail.com";\\nconsole.log(v);',
   ),
   4 => 
   array (

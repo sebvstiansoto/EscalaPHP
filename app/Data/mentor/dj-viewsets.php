@@ -29,6 +29,10 @@ return array (
     'type' => 'teach',
     'title' => 'Router',
     'body' => 'DefaultRouter genera URLs REST estándar — menos boilerplate.',
+    'code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'dj-viewsets\'}
+
+print(handler())',
   ),
   4 => 
   array (

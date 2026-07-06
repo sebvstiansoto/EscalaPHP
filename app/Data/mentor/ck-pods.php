@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Pods',
     'body' => 'kubectl run --image=nginx --dry-run=client -o yaml — edit — apply -f pod.yaml',
+    'code' => 'kubectl get pods -A',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Resources',
     'body' => 'requests/limits CPU memory — OOMKilled si exceed memory limit.',
+    'code' => 'kubectl get pods -A',
   ),
   4 => 
   array (
@@ -46,9 +48,8 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => 'kubectl get pods -A',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +58,7 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => 'kubectl get pods -A',
     ),
   ),
   8 => 

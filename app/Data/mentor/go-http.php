@@ -31,6 +31,7 @@ http.ListenAndServe(":8080", nil)',
     'type' => 'teach',
     'title' => 'JSON',
     'body' => 'json.NewEncoder(w).Encode(user) — Content-Type application/json.',
+    'code' => 'http.ListenAndServe(":8080", nil)',
   ),
   4 => 
   array (

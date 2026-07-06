@@ -32,6 +32,7 @@ return array (
     'type' => 'teach',
     'title' => 'Variables',
     'body' => 'variable "region" { default = "us-east-1" } — tfvars por entorno.',
+    'code' => 'resource "tipo" "nombre" { ... }',
   ),
   4 => 
   array (

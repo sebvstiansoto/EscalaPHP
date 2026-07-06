@@ -21,6 +21,9 @@ return array (
     'type' => 'teach',
     'title' => 'Islas de interactividad',
     'body' => 'El 95% de la página es HTML estático. Solo un **botón**, un **carrusel** o un **formulario** llevan JS — son las "islas".',
+    'code' => 'let n = 0;
+n++;
+console.log(n);',
   ),
   3 => 
   array (
@@ -48,8 +51,9 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'import Contador from \'../components/Contador.jsx\';
-<Contador client:load />',
+    'demo_code' => 'let n = 0;
+n++;
+console.log(n);',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -59,8 +63,9 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'import Contador from \'../components/Contador.jsx\';',
-      1 => '<Contador client:load />',
+      0 => 'let n = 0;',
+      1 => 'n++;',
+      2 => 'console.log(n);',
     ),
   ),
   8 => 

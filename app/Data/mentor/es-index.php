@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Mapping',
     'body' => 'Define tipos: text (full-text), keyword (exact), date, nested.',
+    'code' => 'PUT /products',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Analyzers',
     'body' => 'Tokenizer + filters — stemming, lowercase para búsqueda inteligente.',
+    'code' => 'PUT /products',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'PUT /products',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'PUT /products',
     ),
   ),
   8 => 

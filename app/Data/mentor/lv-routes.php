@@ -28,6 +28,7 @@ return array (
     'type' => 'teach',
     'title' => 'Controladores',
     'body' => 'php artisan make:controller UserController — separas HTTP de lógica de negocio.',
+    'code' => 'Route::get(\'/hola\', fn () => \'Hola\');',
   ),
   4 => 
   array (

@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Mock',
     'body' => 'Objeto falso que verifica que llamaste métodos esperados — aísla email, APIs, pagos.',
+    'code' => '$this->createMock(SomeClass::class)',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'createMock',
     'body' => '$mailer = $this->createMock(Mailer::class); — controlas qué devuelve sin enviar emails reales.',
+    'code' => '$this->createMock(SomeClass::class)',
   ),
   4 => 
   array (
@@ -46,8 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
+    'demo_code' => '$this->createMock(SomeClass::class)',
     'demo_language' => 'php',
   ),
   7 => 
@@ -57,8 +58,7 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '$this->createMock(SomeClass::class)',
     ),
   ),
   8 => 

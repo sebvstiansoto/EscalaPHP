@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Permisos',
     'body' => 'deno run --allow-net --allow-read app.ts — security by default.',
+    'code' => 'Deno.serve((req) => new Response("OK"))',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'APIs web',
     'body' => 'Deno.serve handler — fetch, WebCrypto, WebSocket built-in.',
+    'code' => 'Deno.serve((req) => new Response("OK"))',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'Deno.serve((req) => new Response("OK"))',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'Deno.serve((req) => new Response("OK"))',
     ),
   ),
   8 => 

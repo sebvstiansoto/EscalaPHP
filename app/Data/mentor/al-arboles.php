@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Árbol',
     'body' => 'Nodo raíz, hijos, sin ciclos. DOM, JSON anidado, carpetas — árboles everywhere.',
+    'code' => 'console.log(\'Practica: al-arboles\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'BFS vs DFS',
     'body' => 'BFS = cola, nivel por nivel. DFS = pila/recursión, profundidad primero.',
+    'code' => 'console.log(\'Practica: al-arboles\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: al-arboles\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: al-arboles\');',
     ),
   ),
   8 => 

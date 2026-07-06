@@ -21,6 +21,7 @@ return array (
     'type' => 'teach',
     'title' => '¿Qué es Astro?',
     'body' => 'Astro genera **HTML estático** en build time. Carga casi cero JavaScript por defecto — ideal para blogs, landings y docs.',
+    'code' => 'console.log(\'Practica: as-intro\');',
   ),
   3 => 
   array (
@@ -50,10 +51,7 @@ const titulo = \'Hola Astro\';
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '---
-const titulo = \'Hola Astro\';
----
-<h1>{titulo}</h1>',
+    'demo_code' => 'console.log(\'Practica: as-intro\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -63,10 +61,7 @@ const titulo = \'Hola Astro\';
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '---',
-      1 => 'const titulo = \'Hola Astro\';',
-      2 => '---',
-      3 => '<h1>{titulo}</h1>',
+      0 => 'console.log(\'Practica: as-intro\');',
     ),
   ),
   8 => 

@@ -31,6 +31,7 @@ return array (
     'type' => 'teach',
     'title' => 'Divide & conquer',
     'body' => 'Parte problema en mitades (merge sort, binary search) — O(log n) o O(n log n).',
+    'code' => 'function f(n){return n<=1?1:n*f(n-1);}\\nconsole.log(f(4));',
   ),
   4 => 
   array (

@@ -21,12 +21,20 @@ return array (
     'type' => 'teach',
     'title' => 'Authorization Code + PKCE',
     'body' => 'Flujo estándar SPAs y mobile — code_verifier evita interceptación del code.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: oa-oauth2\';',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Client Credentials',
     'body' => 'M2M — servicio a servicio sin usuario humano.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: oa-oauth2\';',
   ),
   4 => 
   array (
@@ -47,7 +55,9 @@ return array (
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
     'demo_code' => '<?php
-echo \'Hola desde PHP\';',
+declare(strict_types=1);
+
+echo \'Practica: oa-oauth2\';',
     'demo_language' => 'php',
   ),
   7 => 
@@ -57,8 +67,9 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '<?php',
+      1 => 'declare(strict_types=1);',
+      2 => 'echo \'Practica: oa-oauth2\';',
     ),
   ),
   8 => 

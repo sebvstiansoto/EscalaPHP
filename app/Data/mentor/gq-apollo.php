@@ -30,6 +30,7 @@ return data.users.map(u => u.name);',
     'type' => 'teach',
     'title' => 'Cache',
     'body' => 'Apollo normaliza por id — actualizar un user refresca UI automáticamente.',
+    'code' => 'console.log(\'Practica: gq-apollo\');',
   ),
   4 => 
   array (

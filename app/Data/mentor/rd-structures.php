@@ -29,6 +29,9 @@ HGET product:42 price',
     'type' => 'teach',
     'title' => 'List y Set',
     'body' => 'LPUSH cola:emails job1 — colas FIFO. SADD tags:php redis docker — conjuntos únicos.',
+    'code' => '# Practica: rd-structures
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   4 => 
   array (

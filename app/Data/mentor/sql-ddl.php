@@ -31,6 +31,7 @@ return array (
     'type' => 'teach',
     'title' => 'Migraciones',
     'body' => 'En Laravel/Symfony las migraciones versionan el esquema como Git versiona código.',
+    'code' => 'CREATE TABLE products (id INTEGER PRIMARY KEY)',
   ),
   4 => 
   array (

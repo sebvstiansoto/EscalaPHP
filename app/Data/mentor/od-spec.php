@@ -33,6 +33,7 @@ return array (
     'type' => 'teach',
     'title' => 'Schemas',
     'body' => 'type object properties required — reusable components/schemas/User.',
+    'code' => 'openapi: 3.0.3',
   ),
   4 => 
   array (

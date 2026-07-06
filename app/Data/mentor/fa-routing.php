@@ -30,6 +30,7 @@ def get_user(user_id: int):
     'type' => 'teach',
     'title' => 'Query y body',
     'body' => 'Parámetros de función = query string. Pydantic model = JSON body en POST.',
+    'code' => '@app.get(\'/items/{item_id}\')',
   ),
   4 => 
   array (

@@ -30,6 +30,7 @@ return array (
     'type' => 'teach',
     'title' => 'Service Layer',
     'body' => 'UserRegistrationService orquesta validación, repo y email — el controller solo delega.',
+    'code' => 'interface UserRepository { public function findById(int $id); }',
   ),
   4 => 
   array (

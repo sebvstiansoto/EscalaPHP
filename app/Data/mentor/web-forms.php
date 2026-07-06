@@ -29,6 +29,7 @@ return array (
     'type' => 'teach',
     'title' => 'Validación JS',
     'body' => 'Antes de enviar, valida en JavaScript: longitud, formato email, contraseñas coincidentes.',
+    'code' => 'console.log(\'Practica: web-forms\');',
   ),
   4 => 
   array (
@@ -38,18 +39,12 @@ return array (
   ),
   5 => 
   array (
-    'type' => 'teach',
-    'title' => 'Vocabulario',
-    'body' => 'Términos de esta lección: **Forms (formularios)**, **Validation**, **Accesibilidad (a11y)**. Búscalos en el [/glosario](/glosario) si necesitas repaso.',
-  ),
-  6 => 
-  array (
     'type' => 'mentor_say',
     'title' => 'En el mundo real',
     'body' => 'En equipos que usan **HTML, CSS y JavaScript**, esto aparece en code reviews, incidentes y entregas diarias. Inputs, labels, accesibilidad y validación en el cliente. — no es teoría de manual: es lo que te van a pedir en producción.',
     'emoji' => '💼',
   ),
-  7 => 
+  6 => 
   array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
@@ -58,7 +53,7 @@ return array (
 <input id="email" type="email" required>',
     'demo_language' => 'javascript',
   ),
-  8 => 
+  7 => 
   array (
     'type' => 'pair',
     'title' => 'Pair programming — tu turno',
@@ -69,33 +64,33 @@ return array (
       1 => '<input id="email" type="email" required>',
     ),
   ),
-  9 => 
+  8 => 
   array (
     'type' => 'teach',
     'title' => 'Pro tip del mentor',
     'body' => '💡 **Pro tip:** Siempre asocia label con for/id — accesibilidad básica.',
   ),
-  10 => 
+  9 => 
   array (
     'type' => 'exercise',
     'title' => 'Tu turno — práctica 1',
     'body' => '**¿Qué atributo HTML marca un campo obligatorio?** — resuelve con lo aprendido. Si fallas, recibes pistas adaptativas.',
     'exercise_index' => 0,
   ),
-  11 => 
+  10 => 
   array (
     'type' => 'exercise',
     'title' => 'Tu turno — práctica 2',
     'body' => '**¿Qué type de input es para correo electrónico?** — resuelve con lo aprendido. Si fallas, recibes pistas adaptativas.',
     'exercise_index' => 1,
   ),
-  12 => 
+  11 => 
   array (
     'type' => 'project',
     'title' => 'Mini-proyecto',
     'body' => 'Consolida lo aprendido con un proyecto hands-on validado y XP.',
   ),
-  13 => 
+  12 => 
   array (
     'type' => 'complete',
     'title' => '¡Módulo dominado!',

@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'pytest',
     'body' => 'Escribes `def test_algo(): assert 1+1==2`. Sin clases obligatorias — simple y poderoso.',
+    'code' => 'def test_suma():\\n    assert 2 + 2 == 4',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'fixtures',
     'body' => '@pytest.fixture provee datos reutilizables (BD de test, cliente HTTP).',
+    'code' => 'def test_suma():\\n    assert 2 + 2 == 4',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'print(\'Hola desde Python\')',
+    'demo_code' => 'def test_suma():\\n    assert 2 + 2 == 4',
     'demo_language' => 'python',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'print(\'Hola desde Python\')',
+      0 => 'def test_suma():\\n    assert 2 + 2 == 4',
     ),
   ),
   8 => 

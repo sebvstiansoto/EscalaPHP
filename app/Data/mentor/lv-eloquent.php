@@ -30,6 +30,10 @@ return array (
     'type' => 'teach',
     'title' => 'Relaciones',
     'body' => 'hasMany, belongsTo, belongsToMany — Eloquent expresa JOINs con métodos legibles.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: lv-eloquent\';',
   ),
   4 => 
   array (

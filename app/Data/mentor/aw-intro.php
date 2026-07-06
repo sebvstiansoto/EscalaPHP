@@ -21,12 +21,18 @@ return array (
     'type' => 'teach',
     'title' => 'AWS',
     'body' => 'Amazon Web Services — servidores, BD, storage y más bajo demanda. Pagas lo que usas.',
+    'code' => '# Practica: aw-intro
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Shared responsibility',
     'body' => 'AWS cuida el **hardware**; tú configuras seguridad OS, firewall, datos.',
+    'code' => '# Practica: aw-intro
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   4 => 
   array (
@@ -46,9 +52,10 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => '# Practica: aw-intro
+echo "Listo"
+# Reemplaza con tu comando',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +64,9 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '# Practica: aw-intro',
+      1 => 'echo "Listo"',
+      2 => '# Reemplaza con tu comando',
     ),
   ),
   8 => 

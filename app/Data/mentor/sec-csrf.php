@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'CSRF',
     'body' => 'Sitio malicioso hace que el navegador del usuario envíe request autenticado a tu app (ej. transferir dinero).',
+    'code' => '<form>@csrf</form>',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Defensa',
     'body' => 'Token CSRF único por sesión en formularios POST. Laravel @csrf lo incluye automáticamente.',
+    'code' => '<form>@csrf</form>',
   ),
   4 => 
   array (
@@ -46,8 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
+    'demo_code' => '<form>@csrf</form>',
     'demo_language' => 'php',
   ),
   7 => 
@@ -57,8 +58,7 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '<form>@csrf</form>',
     ),
   ),
   8 => 

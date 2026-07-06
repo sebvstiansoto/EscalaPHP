@@ -31,6 +31,10 @@ except ValueError:
     'type' => 'teach',
     'title' => 'raise',
     'body' => 'Lanzas excepciones propias cuando las reglas de negocio fallan.',
+    'code' => 'try:
+    print(1/0)
+except ZeroDivisionError:
+    print(\'div0\')',
   ),
   4 => 
   array (

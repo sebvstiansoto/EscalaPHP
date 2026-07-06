@@ -2205,3 +2205,8 @@ html[data-theme="light"] {
 @media (max-width: 900px) {
     .learning-pillars-grid { grid-template-columns: 1fr; }
 }
+
+.legal-page { max-width: 720px; margin: 0 auto; }
+.legal-page h1 { margin-bottom: 0.5rem; }
+.legal-page h2 { margin-top: 1.5rem; font-size: 1.05rem; }
+.legal-page ul { line-height: 1.7; color: var(--muted); }

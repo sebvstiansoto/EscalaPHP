@@ -29,6 +29,7 @@ app.whenReady().then(createWindow);',
     'type' => 'teach',
     'title' => 'Security',
     'body' => 'contextIsolation: true, nodeIntegration: false — preload bridge only.',
+    'code' => 'new BrowserWindow({ ... })',
   ),
   4 => 
   array (

@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Botón',
     'body' => '`px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition`',
+    'code' => 'hover:bg-blue-700',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Card',
     'body' => '`bg-white shadow-md rounded-xl p-6 border border-gray-100` — patrón dashboard.',
+    'code' => 'hover:bg-blue-700',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'hover:bg-blue-700',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'hover:bg-blue-700',
     ),
   ),
   8 => 

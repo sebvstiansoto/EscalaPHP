@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => '¿Qué es Node?',
     'body' => 'Node ejecuta JavaScript fuera del navegador con el motor **V8** de Chrome. Ideal para APIs y herramientas.',
+    'code' => 'console.log("Node " + 20);',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Event loop',
     'body' => 'I/O no bloqueante: una sola thread maneja miles de conexiones con callbacks y promesas.',
+    'code' => 'console.log("Node " + 20);',
   ),
   4 => 
   array (

@@ -30,6 +30,10 @@ return array (
     'type' => 'teach',
     'title' => 'CRUD',
     'body' => 'db.add(), db.commit(), db.query(User).filter(...).first()',
+    'code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'fa-db\'}
+
+print(handler())',
   ),
   4 => 
   array (

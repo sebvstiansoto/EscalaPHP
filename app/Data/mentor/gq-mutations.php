@@ -33,6 +33,7 @@ return array (
     'type' => 'teach',
     'title' => 'Input types',
     'body' => 'input CreateUserInput { name: String! email: String! } — agrupa argumentos.',
+    'code' => 'mutation { createPost(...) { id } }',
   ),
   4 => 
   array (

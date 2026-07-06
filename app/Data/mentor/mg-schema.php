@@ -31,6 +31,7 @@ return array (
     'type' => 'teach',
     'title' => 'Refs',
     'body' => 'populate("posts") — simula join cuando necesitas relaciones.',
+    'code' => 'console.log(\'Practica: mg-schema\');',
   ),
   4 => 
   array (

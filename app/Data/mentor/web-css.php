@@ -31,6 +31,7 @@ return array (
     'type' => 'teach',
     'title' => 'Flexbox',
     'body' => '`display: flex` alinea elementos en fila o columna. Es la base del layout moderno.',
+    'code' => 'console.log(\'Practica: web-css\');',
   ),
   4 => 
   array (

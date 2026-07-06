@@ -21,6 +21,7 @@ return array (
     'type' => 'teach',
     'title' => '¿Qué es HTML?',
     'body' => 'HTML define la **estructura** de una página: títulos, párrafos, listas, enlaces. El navegador lo interpreta y muestra.',
+    'code' => 'console.log(\'Practica: web-html\');',
   ),
   3 => 
   array (
@@ -50,10 +51,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<article>
-  <h1>Título</h1>
-  <p>Contenido</p>
-</article>',
+    'demo_code' => 'console.log(\'Practica: web-html\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -63,10 +61,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<article>',
-      1 => '  <h1>Título</h1>',
-      2 => '  <p>Contenido</p>',
-      3 => '</article>',
+      0 => 'console.log(\'Practica: web-html\');',
     ),
   ),
   8 => 

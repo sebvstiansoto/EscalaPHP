@@ -28,6 +28,10 @@ return array (
     'type' => 'teach',
     'title' => 'Sanctum',
     'body' => 'Tokens API para React/Vue/mobile. SPA auth con cookies + CSRF.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: lv-api\';',
   ),
   4 => 
   array (

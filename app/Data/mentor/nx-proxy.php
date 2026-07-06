@@ -33,6 +33,7 @@ location / {
     'type' => 'teach',
     'title' => 'Headers',
     'body' => 'proxy_set_header Host $host; X-Real-IP — el backend ve IP real del cliente.',
+    'code' => 'proxy_pass http://localhost:3000;',
   ),
   4 => 
   array (

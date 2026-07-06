@@ -36,6 +36,7 @@ def read(db: Session = Depends(get_db)): ...',
     'type' => 'teach',
     'title' => 'Ventaja',
     'body' => 'Misma lógica de auth/BD en 50 endpoints sin copiar-pegar.',
+    'code' => 'db: Session = Depends(get_db)',
   ),
   4 => 
   array (

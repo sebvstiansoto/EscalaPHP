@@ -32,6 +32,7 @@ return array (
     'type' => 'teach',
     'title' => 'Actions async',
     'body' => 'await api.login() dentro de action — maneja loading/error en store.',
+    'code' => 'console.log(\'Practica: vu-pinia\');',
   ),
   4 => 
   array (

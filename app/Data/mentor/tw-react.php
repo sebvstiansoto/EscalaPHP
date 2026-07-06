@@ -28,6 +28,7 @@ return array (
     'type' => 'teach',
     'title' => 'Vite',
     'body' => 'npm create vite@latest + tailwind postcss — stack moderno con React.',
+    'code' => 'console.log(\'Practica: tw-react\');',
   ),
   4 => 
   array (

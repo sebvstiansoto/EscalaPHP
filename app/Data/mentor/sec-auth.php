@@ -29,6 +29,7 @@ password_verify($pass, $hash);',
     'type' => 'teach',
     'title' => 'Sesiones',
     'body' => 'session_regenerate_id() tras login. HttpOnly y Secure en cookies.',
+    'code' => 'password_verify($pass, $hash)',
   ),
   4 => 
   array (

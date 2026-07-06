@@ -21,12 +21,24 @@ return array (
     'type' => 'teach',
     'title' => 'CKA',
     'body' => '**CNCF Certified Kubernetes Administrator** — exam **práctico** terminal — 17 tasks, 2h, 66% pass — no multiple choice.',
+    'code' => 'apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ck-intro
+data:
+  APP_ENV: production',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Dominios',
     'body' => 'Storage 10%, Workloads 30%, Networking 20%, Troubleshooting 30%, Cluster 10%.',
+    'code' => 'apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ck-intro
+data:
+  APP_ENV: production',
   ),
   4 => 
   array (
@@ -46,9 +58,13 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => 'apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ck-intro
+data:
+  APP_ENV: production',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +73,12 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => 'apiVersion: v1',
+      1 => 'kind: ConfigMap',
+      2 => 'metadata:',
+      3 => '  name: ck-intro',
+      4 => 'data:',
+      5 => '  APP_ENV: production',
     ),
   ),
   8 => 

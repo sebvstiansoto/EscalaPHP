@@ -21,12 +21,20 @@ return array (
     'type' => 'teach',
     'title' => 'Fibers PHP 8.1',
     'body' => 'Cooperative concurrency — ReactPHP Amp — not threads — I/O concurrent single process.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: pav-async\';',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Octane',
     'body' => 'Laravel Octane Swoole/RoadRunner — keep app booted — reduce request overhead.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: pav-async\';',
   ),
   4 => 
   array (
@@ -47,7 +55,9 @@ return array (
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
     'demo_code' => '<?php
-echo \'Hola desde PHP\';',
+declare(strict_types=1);
+
+echo \'Practica: pav-async\';',
     'demo_language' => 'php',
   ),
   7 => 
@@ -57,8 +67,9 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '<?php',
+      1 => 'declare(strict_types=1);',
+      2 => 'echo \'Practica: pav-async\';',
     ),
   ),
   8 => 

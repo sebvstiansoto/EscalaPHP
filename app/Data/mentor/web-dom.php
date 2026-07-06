@@ -29,6 +29,7 @@ btn.addEventListener(\'click\', () => console.log(\'clic\'));',
     'type' => 'teach',
     'title' => 'Eventos',
     'body' => 'click, submit, input — reaccionas a acciones del usuario sin recargar la página.',
+    'code' => 'const el = { textContent: "Hola" };\\nconsole.log(el.textContent);',
   ),
   4 => 
   array (

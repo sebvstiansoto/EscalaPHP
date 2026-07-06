@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'ARIA',
     'body' => 'First rule: no ARIA if native HTML works. aria-label, aria-expanded, role="dialog".',
+    'code' => 'console.log(\'Practica: a11y-aria\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Live regions',
     'body' => 'aria-live="polite" — anuncia cambios dynamic content screen readers.',
+    'code' => 'console.log(\'Practica: a11y-aria\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: a11y-aria\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: a11y-aria\');',
     ),
   ),
   8 => 

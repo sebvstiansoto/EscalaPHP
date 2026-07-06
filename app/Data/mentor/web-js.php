@@ -21,6 +21,7 @@ return array (
     'type' => 'teach',
     'title' => 'JS da vida a la web',
     'body' => 'JavaScript corre **en el navegador**. Reacciona a clics, valida formularios y consume APIs.',
+    'code' => 'console.log(\'Hola JS\')',
   ),
   3 => 
   array (
@@ -47,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola JavaScript\')',
+    'demo_code' => 'console.log(\'Hola JS\')',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -57,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola JavaScript\')',
+      0 => 'console.log(\'Hola JS\')',
     ),
   ),
   8 => 

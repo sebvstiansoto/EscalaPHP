@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Fixtures',
     'body' => 'test.extend<{ loginPage: LoginPage }> — setup reusable per test.',
+    'code' => 'console.log(\'Practica: pl-fixtures\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Storage state',
     'body' => 'globalSetup login once → save storageState.json — reuse auth tests.',
+    'code' => 'console.log(\'Practica: pl-fixtures\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: pl-fixtures\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: pl-fixtures\');',
     ),
   ),
   8 => 

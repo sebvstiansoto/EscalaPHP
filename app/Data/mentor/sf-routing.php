@@ -29,6 +29,7 @@ public function list(): JsonResponse',
     'type' => 'teach',
     'title' => 'Controller',
     'body' => 'Clases delgadas — inyectas servicios por constructor.',
+    'code' => '#[Route(\'/hello\')]',
   ),
   4 => 
   array (

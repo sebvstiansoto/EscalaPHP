@@ -21,6 +21,7 @@ return array (
     'type' => 'teach',
     'title' => 'Actions',
     'body' => 'add_action("init", "my_function") — ejecuta en punto lifecycle.',
+    'code' => 'add_action(\'init\', \'callback\');',
   ),
   3 => 
   array (
@@ -49,9 +50,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'add_action(\'wp_enqueue_scripts\', function() {
-  wp_enqueue_style(\'my-style\', get_stylesheet_uri());
-});',
+    'demo_code' => 'add_action(\'init\', \'callback\');',
     'demo_language' => 'php',
   ),
   7 => 
@@ -61,9 +60,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'add_action(\'wp_enqueue_scripts\', function() {',
-      1 => '  wp_enqueue_style(\'my-style\', get_stylesheet_uri());',
-      2 => '});',
+      0 => 'add_action(\'init\', \'callback\');',
     ),
   ),
   8 => 

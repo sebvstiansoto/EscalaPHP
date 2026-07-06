@@ -21,6 +21,7 @@ return array (
     'type' => 'teach',
     'title' => 'Pooling',
     'body' => 'PgBouncer o pool de Laravel — reutiliza conexiones; abrir una por request es caro.',
+    'code' => 'DATABASE_URL=postgres://user:pass@pgbouncer:6432/mydb?sslmode=require',
   ),
   3 => 
   array (
@@ -46,7 +47,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'SELECT 1 AS ok;',
+    'demo_code' => 'DATABASE_URL=postgres://user:pass@pgbouncer:6432/mydb?sslmode=require',
     'demo_language' => 'sql',
   ),
   7 => 
@@ -56,7 +57,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'SELECT 1 AS ok;',
+      0 => 'DATABASE_URL=postgres://user:pass@pgbouncer:6432/mydb?sslmode=require',
     ),
   ),
   8 => 

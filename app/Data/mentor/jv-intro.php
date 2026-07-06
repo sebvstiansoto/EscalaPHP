@@ -21,6 +21,9 @@ return array (
     'type' => 'teach',
     'title' => 'Java hoy',
     'body' => '**Java** sigue dominando banca, telecom y grandes empresas. JVM + Spring = stack más contratado en enterprise.',
+    'code' => '# Practica: jv-intro
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   3 => 
   array (
@@ -51,11 +54,9 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hola Java");
-    }
-}',
+    'demo_code' => '# Practica: jv-intro
+echo "Listo"
+# Reemplaza con tu comando',
     'demo_language' => 'shell',
   ),
   7 => 
@@ -65,11 +66,9 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'public class Main {',
-      1 => '    public static void main(String[] args) {',
-      2 => '        System.out.println("Hola Java");',
-      3 => '    }',
-      4 => '}',
+      0 => '# Practica: jv-intro',
+      1 => 'echo "Listo"',
+      2 => '# Reemplaza con tu comando',
     ),
   ),
   8 => 

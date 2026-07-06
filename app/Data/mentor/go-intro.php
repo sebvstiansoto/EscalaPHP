@@ -21,6 +21,7 @@ return array (
     'type' => 'teach',
     'title' => 'Go en la industria',
     'body' => '**Go** (Golang) de Google: compilado, rápido, concurrencia nativa. Usado en Docker, Kubernetes, Terraform y backends de alto tráfico.',
+    'code' => 'package main\\nfunc main() { ... }',
   ),
   3 => 
   array (
@@ -53,13 +54,7 @@ func main() {
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("Hola Go")
-}',
+    'demo_code' => 'package main\\nfunc main() { ... }',
     'demo_language' => 'shell',
   ),
   7 => 
@@ -69,11 +64,7 @@ func main() {
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'package main',
-      1 => 'import "fmt"',
-      2 => 'func main() {',
-      3 => '    fmt.Println("Hola Go")',
-      4 => '}',
+      0 => 'package main\\nfunc main() { ... }',
     ),
   ),
   8 => 

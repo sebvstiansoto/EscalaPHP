@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Document DB',
     'body' => '**MongoDB** guarda **documentos JSON/BSON** flexibles — ideal para catálogos, logs, contenido variable.',
+    'code' => 'console.log(\'Practica: mg-intro\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'SQL vs NoSQL',
     'body' => 'Postgres para transacciones y relaciones fuertes; Mongo para esquema flexible y escala horizontal de lectura.',
+    'code' => 'console.log(\'Practica: mg-intro\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: mg-intro\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: mg-intro\');',
     ),
   ),
   8 => 

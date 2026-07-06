@@ -33,6 +33,7 @@ return array (
     'type' => 'teach',
     'title' => 'Ventaja',
     'body' => 'UI pagos mantenida por Stripe — SCA/3DS incluido en Europa.',
+    'code' => '\'success_url\' => \'https://...\'',
   ),
   4 => 
   array (

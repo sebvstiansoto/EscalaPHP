@@ -30,6 +30,10 @@ def get_current_user(token: str = Depends(oauth2)): ...',
     'type' => 'teach',
     'title' => 'Hashing',
     'body' => 'passlib + bcrypt para passwords — nunca guardes texto plano.',
+    'code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'fa-auth\'}
+
+print(handler())',
   ),
   4 => 
   array (

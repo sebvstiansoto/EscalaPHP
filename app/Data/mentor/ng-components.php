@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Component',
     'body' => '@Component({ selector: "app-user", template: `...`, standalone: true })',
+    'code' => '@Component({ selector: "app-root", ... })',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Binding',
     'body' => 'Interpolation {{ }}, property [disabled], event (click), two-way [(ngModel)].',
+    'code' => '@Component({ selector: "app-root", ... })',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => '@Component({ selector: "app-root", ... })',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => '@Component({ selector: "app-root", ... })',
     ),
   ),
   8 => 

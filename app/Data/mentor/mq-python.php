@@ -32,6 +32,7 @@ send_email.delay(42)',
     'type' => 'teach',
     'title' => 'Workers',
     'body' => 'celery -A proj worker — procesos separados del web server.',
+    'code' => '@app.task\\ndef my_task():',
   ),
   4 => 
   array (

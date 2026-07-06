@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'computed',
     'body' => 'const fullName = computed(() => first.value + " " + last.value) — cache automático.',
+    'code' => 'import { ref } from \'vue\'',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Composables',
     'body' => 'function useFetch(url) { ... return { data, error } } — lógica reutilizable como hooks React.',
+    'code' => 'import { ref } from \'vue\'',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'import { ref } from \'vue\'',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'import { ref } from \'vue\'',
     ),
   ),
   8 => 

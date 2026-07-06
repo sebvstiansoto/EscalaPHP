@@ -33,6 +33,7 @@ fi',
     'type' => 'teach',
     'title' => 'Automatización',
     'body' => 'Scripts de backup, deploy y CI local — lo que hace GitHub Actions pero en tu máquina.',
+    'code' => 'if [ -f archivo.txt ]; then',
   ),
   4 => 
   array (

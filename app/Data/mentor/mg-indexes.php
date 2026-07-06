@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Índices',
     'body' => 'db.users.createIndex({ email: 1 }, { unique: true }) — sin índice, collection scan lento.',
+    'code' => 'console.log(\'Practica: mg-indexes\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Explain',
     'body' => 'db.users.find({ email: "x" }).explain("executionStats") — IXSCAN vs COLLSCAN.',
+    'code' => 'console.log(\'Practica: mg-indexes\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: mg-indexes\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: mg-indexes\');',
     ),
   ),
   8 => 

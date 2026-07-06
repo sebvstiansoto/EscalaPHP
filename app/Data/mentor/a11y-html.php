@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Semántica',
     'body' => '<main>, <nav>, <header>, <article> — screen readers navegan por landmarks.',
+    'code' => 'console.log(\'Practica: a11y-html\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Headings',
     'body' => 'h1→h2→h3 sin saltos — outline lógico documento.',
+    'code' => 'console.log(\'Practica: a11y-html\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: a11y-html\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: a11y-html\');',
     ),
   ),
   8 => 

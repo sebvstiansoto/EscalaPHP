@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Meta y OG',
     'body' => '`<title>`, `description`, `og:image` — cómo se ve tu link en Google y redes sociales.',
+    'code' => '<meta name="description" content="Mi sitio">',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Performance',
     'body' => 'HTML estático + poco JS = LCP y CLS excelentes sin esfuerzo heroico.',
+    'code' => '<meta name="description" content="Mi sitio">',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => '<meta name="description" content="Mi sitio">',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => '<meta name="description" content="Mi sitio">',
     ),
   ),
   8 => 

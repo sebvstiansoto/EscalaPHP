@@ -32,6 +32,7 @@ return array (
     'type' => 'teach',
     'title' => 'location',
     'body' => 'location /api { proxy_pass ... } — enruta por prefijo.',
+    'code' => 'server_name ejemplo.com;',
   ),
   4 => 
   array (

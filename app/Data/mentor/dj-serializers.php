@@ -31,6 +31,7 @@ return array (
     'type' => 'teach',
     'title' => 'Validación',
     'body' => 'validate_email(), is_valid(), errors — rechaza datos malos con 400.',
+    'code' => 'class Meta:\\n    model = User\\n    fields = [...]',
   ),
   4 => 
   array (

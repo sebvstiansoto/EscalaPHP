@@ -21,12 +21,24 @@ return array (
     'type' => 'teach',
     'title' => 'Upgrade',
     'body' => 'helm upgrade myapp ./chart — nueva revision, rolling update recursos.',
+    'code' => 'apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hm-release
+data:
+  APP_ENV: production',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Rollback',
     'body' => 'helm rollback myapp 2 — vuelve revision anterior instant.',
+    'code' => 'apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hm-release
+data:
+  APP_ENV: production',
   ),
   4 => 
   array (
@@ -46,9 +58,13 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => 'apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hm-release
+data:
+  APP_ENV: production',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +73,12 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => 'apiVersion: v1',
+      1 => 'kind: ConfigMap',
+      2 => 'metadata:',
+      3 => '  name: hm-release',
+      4 => 'data:',
+      5 => '  APP_ENV: production',
     ),
   ),
   8 => 

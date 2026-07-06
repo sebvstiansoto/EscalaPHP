@@ -30,6 +30,7 @@ mv viejo.txt nuevo.txt',
     'type' => 'teach',
     'title' => 'Rutas',
     'body' => '. es actual, .. es padre, / es raíz en Linux, ~ es tu home.',
+    'code' => 'cp -r src/ dest/',
   ),
   4 => 
   array (

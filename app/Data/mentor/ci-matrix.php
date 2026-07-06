@@ -30,6 +30,9 @@ return array (
     'type' => 'teach',
     'title' => 'Por qué',
     'body' => 'Detectas incompatibilidades antes de que un usuario en PHP 8.2 reporte el bug.',
+    'code' => 'strategy:
+  matrix:
+    php: [\'8.3\']',
   ),
   4 => 
   array (

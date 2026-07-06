@@ -30,6 +30,7 @@ return array (
     'type' => 'teach',
     'title' => 'Array de dependencias',
     'body' => '`[]` = solo al montar. `[userId]` = cuando userId cambia. Sin array = cada render (cuidado).',
+    'code' => 'const onMount = () => console.log("mounted");\\nonMount();',
   ),
   4 => 
   array (

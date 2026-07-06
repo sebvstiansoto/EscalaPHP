@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Build estático',
     'body' => '`npm run build` genera la carpeta `dist/` con HTML/CSS/JS listo para CDN.',
+    'code' => 'console.log(\'Practica: as-deploy\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Deploy',
     'body' => 'Conectas tu repo a **Vercel** o **Netlify**. Cada push a `main` despliega automáticamente.',
+    'code' => 'console.log(\'Practica: as-deploy\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: as-deploy\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: as-deploy\');',
     ),
   ),
   8 => 

@@ -21,12 +21,18 @@ return array (
     'type' => 'teach',
     'title' => 'Transacciones',
     'body' => 'Una **transacción** agrupa operaciones: o todas se aplican o ninguna (atomicidad).',
+    'code' => 'BEGIN TRANSACTION;
+-- tu SQL
+COMMIT;',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'ACID',
     'body' => '**A**tomicidad, **C**onsistencia, **I**solación, **D**urabilidad — garantías de BD serias.',
+    'code' => 'BEGIN TRANSACTION;
+-- tu SQL
+COMMIT;',
   ),
   4 => 
   array (
@@ -46,7 +52,9 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'SELECT 1 AS ok;',
+    'demo_code' => 'BEGIN TRANSACTION;
+-- tu SQL
+COMMIT;',
     'demo_language' => 'sql',
   ),
   7 => 
@@ -56,7 +64,9 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'SELECT 1 AS ok;',
+      0 => 'BEGIN TRANSACTION;',
+      1 => '-- tu SQL',
+      2 => 'COMMIT;',
     ),
   ),
   8 => 

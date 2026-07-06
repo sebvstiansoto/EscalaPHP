@@ -21,6 +21,10 @@ return array (
     'type' => 'teach',
     'title' => 'Pipeline profesional',
     'body' => 'Cada push corre **PHPUnit**, análisis estático y despliega si pasa. EscalaPHP ya tiene `.github/workflows/ci.yml`.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: ep-cicd\';',
   ),
   3 => 
   array (
@@ -47,7 +51,9 @@ return array (
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
     'demo_code' => '<?php
-echo \'Hola desde PHP\';',
+declare(strict_types=1);
+
+echo \'Practica: ep-cicd\';',
     'demo_language' => 'php',
   ),
   7 => 
@@ -57,8 +63,9 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '<?php',
+      1 => 'declare(strict_types=1);',
+      2 => 'echo \'Practica: ep-cicd\';',
     ),
   ),
   8 => 

@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Migrations',
     'body' => 'npx prisma migrate dev --name init — SQL files prisma/migrations/',
+    'code' => 'console.log(\'Practica: ps-migrate\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Prod',
     'body' => 'prisma migrate deploy — CI/CD apply pending migrations.',
+    'code' => 'console.log(\'Practica: ps-migrate\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: ps-migrate\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: ps-migrate\');',
     ),
   ),
   8 => 

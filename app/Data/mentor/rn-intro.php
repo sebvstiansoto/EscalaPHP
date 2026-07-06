@@ -21,12 +21,17 @@ return array (
     'type' => 'teach',
     'title' => 'React Native',
     'body' => '**React Native** usa React + componentes nativos (View, Text) — no WebView. Un equipo, dos stores.',
+    'code' => 'function App() {
+  return <h1>Hola React</h1>;
+}
+export default App;',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Expo',
     'body' => 'Expo simplifica dev: npx create-expo-app, hot reload, builds en cloud.',
+    'code' => 'console.log(\'Practica: rn-intro\');',
   ),
   4 => 
   array (
@@ -46,7 +51,10 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'function App() {
+  return <h1>Hola React</h1>;
+}
+export default App;',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +64,10 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'function App() {',
+      1 => '  return <h1>Hola React</h1>;',
+      2 => '}',
+      3 => 'export default App;',
     ),
   ),
   8 => 

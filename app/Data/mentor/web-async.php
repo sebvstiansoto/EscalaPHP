@@ -21,6 +21,7 @@ return array (
     'type' => 'teach',
     'title' => 'Promesas',
     'body' => 'Una **Promise** representa un valor futuro: éxito (resolve) o error (reject).',
+    'code' => 'Promise.resolve(42).then(n => console.log(n));',
   ),
   3 => 
   array (
@@ -50,10 +51,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'async function cargar() {
-  const r = await fetch(\'/api\');
-  return r.json();
-}',
+    'demo_code' => 'Promise.resolve(42).then(n => console.log(n));',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -63,10 +61,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'async function cargar() {',
-      1 => '  const r = await fetch(\'/api\');',
-      2 => '  return r.json();',
-      3 => '}',
+      0 => 'Promise.resolve(42).then(n => console.log(n));',
     ),
   ),
   8 => 

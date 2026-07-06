@@ -28,6 +28,7 @@ return array (
     'type' => 'teach',
     'title' => 'Breakpoints',
     'body' => 'sm 640px, md 768px, lg 1024px, xl 1280px — prefijo antes de la utilidad.',
+    'code' => 'grid grid-cols-1 md:grid-cols-3',
   ),
   4 => 
   array (

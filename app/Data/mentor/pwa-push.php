@@ -21,12 +21,16 @@ return array (
     'type' => 'teach',
     'title' => 'Push',
     'body' => 'Notification.requestPermission → PushManager.subscribe → server sends via FCM/Mozilla.',
+    'code' => 'console.log(\'Practica: pwa-push\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'VAPID',
     'body' => 'Voluntary Application Server Identification — auth push server keys.',
+    'code' => 'const res = await fetch(\'/api/users\');
+const data = await res.json();
+console.log(data);',
   ),
   4 => 
   array (
@@ -46,7 +50,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: pwa-push\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +60,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: pwa-push\');',
     ),
   ),
   8 => 

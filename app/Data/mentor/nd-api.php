@@ -30,6 +30,7 @@ return array (
     'type' => 'teach',
     'title' => 'Códigos HTTP',
     'body' => '200 OK, 201 Created, 400 Bad Request, 404 Not Found, 500 Error.',
+    'code' => 'console.log(JSON.stringify([{id:1}]));',
   ),
   4 => 
   array (

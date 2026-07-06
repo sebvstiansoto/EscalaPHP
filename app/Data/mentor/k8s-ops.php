@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'kubectl esencial',
     'body' => '`kubectl get pods`, `kubectl logs`, `kubectl describe pod` — tu tríada de debugging.',
+    'code' => 'kubectl rollout undo deployment/mi-app',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Rollouts',
     'body' => '`kubectl rollout status` y `rollout undo` revierten deploys malos en segundos.',
+    'code' => 'kubectl rollout undo deployment/mi-app',
   ),
   4 => 
   array (
@@ -46,9 +48,8 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => 'kubectl rollout undo deployment/mi-app',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +58,7 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => 'kubectl rollout undo deployment/mi-app',
     ),
   ),
   8 => 

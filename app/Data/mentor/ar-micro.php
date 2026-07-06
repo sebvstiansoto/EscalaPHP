@@ -21,12 +21,20 @@ return array (
     'type' => 'teach',
     'title' => 'Microservicios',
     'body' => 'Servicios independientes, deploy separado, BD por servicio (idealmente).',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: ar-micro\';',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Coste',
     'body' => 'Red, observabilidad, consistencia eventual, DevOps — no es gratis.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: ar-micro\';',
   ),
   4 => 
   array (
@@ -53,7 +61,9 @@ return array (
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
     'demo_code' => '<?php
-echo \'Hola desde PHP\';',
+declare(strict_types=1);
+
+echo \'Practica: ar-micro\';',
     'demo_language' => 'php',
   ),
   8 => 
@@ -63,8 +73,9 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '<?php',
+      1 => 'declare(strict_types=1);',
+      2 => 'echo \'Practica: ar-micro\';',
     ),
   ),
   9 => 

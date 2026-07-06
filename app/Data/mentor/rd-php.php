@@ -28,6 +28,9 @@ return array (
     'type' => 'teach',
     'title' => 'Colas',
     'body' => 'QUEUE_CONNECTION=redis — jobs en background con `php artisan queue:work`.',
+    'code' => '# Practica: rd-php
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   4 => 
   array (

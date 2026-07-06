@@ -21,12 +21,24 @@ return array (
     'type' => 'teach',
     'title' => 'Stacks',
     'body' => 'ELK (Elasticsearch, Logstash, Kibana) self-hosted vs Datadog/New Relic SaaS.',
+    'code' => 'apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ob-prod
+data:
+  APP_ENV: production',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Cost control',
     'body' => 'Sampling traces, retention logs 7d hot / 90d cold — observability cara a escala.',
+    'code' => 'apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ob-prod
+data:
+  APP_ENV: production',
   ),
   4 => 
   array (
@@ -46,9 +58,13 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => 'apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ob-prod
+data:
+  APP_ENV: production',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +73,12 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => 'apiVersion: v1',
+      1 => 'kind: ConfigMap',
+      2 => 'metadata:',
+      3 => '  name: ob-prod',
+      4 => 'data:',
+      5 => '  APP_ENV: production',
     ),
   ),
   8 => 

@@ -21,18 +21,36 @@ return array (
     'type' => 'teach',
     'title' => '¿Qué es Kubernetes?',
     'body' => '**K8s** orquesta contenedores a escala: despliega, escala y autorrepara apps en un cluster.',
+    'code' => 'apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: k8s-intro
+data:
+  APP_ENV: production',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Jerarquía',
     'body' => '**Cluster** → **Nodes** (máquinas) → **Pods** (uno o más contenedores).',
+    'code' => 'apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: k8s-intro
+data:
+  APP_ENV: production',
   ),
   4 => 
   array (
     'type' => 'teach',
     'title' => '¿Cuándo K8s?',
     'body' => '1 app = Docker Compose basta. 20+ microservicios con alta disponibilidad = K8s tiene sentido.',
+    'code' => 'apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: k8s-intro
+data:
+  APP_ENV: production',
   ),
   5 => 
   array (
@@ -46,9 +64,13 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => 'apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: k8s-intro
+data:
+  APP_ENV: production',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +79,12 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => 'apiVersion: v1',
+      1 => 'kind: ConfigMap',
+      2 => 'metadata:',
+      3 => '  name: k8s-intro',
+      4 => 'data:',
+      5 => '  APP_ENV: production',
     ),
   ),
   8 => 

@@ -21,12 +21,20 @@ return array (
     'type' => 'teach',
     'title' => 'Filtros',
     'body' => '?category=books&ordering=-price — django-filter backends.',
+    'code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'dj-filters\'}
+
+print(handler())',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Paginación',
     'body' => 'DEFAULT_PAGINATION_CLASS evita devolver 100k filas de golpe.',
+    'code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'dj-filters\'}
+
+print(handler())',
   ),
   4 => 
   array (
@@ -46,7 +54,10 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'print(\'Hola desde Python\')',
+    'demo_code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'dj-filters\'}
+
+print(handler())',
     'demo_language' => 'python',
   ),
   7 => 
@@ -56,7 +67,9 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'print(\'Hola desde Python\')',
+      0 => 'def handler():',
+      1 => '    return {\'status\': \'ok\', \'lesson\': \'dj-filters\'}',
+      2 => 'print(handler())',
     ),
   ),
   8 => 

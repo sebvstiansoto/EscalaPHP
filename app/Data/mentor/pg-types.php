@@ -32,6 +32,7 @@ return array (
     'type' => 'teach',
     'title' => 'JSONB',
     'body' => 'Guarda JSON indexable — flexible sin schema rígido para metadata.',
+    'code' => 'meta JSONB',
   ),
   4 => 
   array (

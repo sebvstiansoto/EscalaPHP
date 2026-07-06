@@ -6296,5 +6296,278 @@ Ana|Laptop|1200',
     'type' => 'honor',
   ),
 ),
+    'dk-security' => array (
+  'title' => 'Práctica: Seguridad de contenedores',
+  'description' => 'Consolida «Seguridad de contenedores» con un ejercicio hands-on.',
+  'reward_xp' => 50,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'k8s-probes' => array (
+  'title' => 'Práctica: Health probes',
+  'description' => 'Consolida «Health probes» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'livenessProbe',
+    ),
+  ),
+),
+    'k8s-rbac' => array (
+  'title' => 'Práctica: RBAC y seguridad',
+  'description' => 'Consolida «RBAC y seguridad» con un ejercicio hands-on.',
+  'reward_xp' => 50,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'lv-testing' => array (
+  'title' => 'Práctica: Testing en Laravel',
+  'description' => 'Consolida «Testing en Laravel» con un ejercicio hands-on.',
+  'reward_xp' => 50,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'assertStatus',
+    ),
+  ),
+),
+    'lv-events' => array (
+  'title' => 'Práctica: Events y listeners',
+  'description' => 'Consolida «Events y listeners» con un ejercicio hands-on.',
+  'reward_xp' => 50,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'desacopla',
+    ),
+  ),
+),
+    'pg-backups' => array (
+  'title' => 'Práctica: Backups y restore',
+  'description' => 'Consolida «Backups y restore» con un ejercicio hands-on.',
+  'reward_xp' => 50,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'pg_dump',
+    ),
+  ),
+),
+    'pg-performance' => array (
+  'title' => 'Práctica: Performance tuning',
+  'description' => 'Consolida «Performance tuning» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'considerar',
+    ),
+  ),
+),
+    'py-typing' => array (
+  'title' => 'Práctica: Type hints y mypy',
+  'description' => 'Consolida «Type hints y mypy» con un ejercicio hands-on.',
+  'reward_xp' => 60,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => '->',
+      1 => 'float',
+    ),
+  ),
+),
+    'py-packaging' => array (
+  'title' => 'Práctica: Packaging y publicación',
+  'description' => 'Consolida «Packaging y publicación» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => '[project]',
+    ),
+  ),
+),
+    'fa-background' => array (
+  'title' => 'Práctica: Background tasks y WebSockets',
+  'description' => 'Consolida «Background tasks y WebSockets» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'BackgroundTasks',
+    ),
+  ),
+),
+    'fa-openapi' => array (
+  'title' => 'Práctica: OpenAPI y documentación',
+  'description' => 'Consolida «OpenAPI y documentación» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => '/docs',
+    ),
+  ),
+),
+    'sd-microservices' => array (
+  'title' => 'Práctica: Microservicios vs monolito',
+  'description' => 'Consolida «Microservicios vs monolito» con un ejercicio hands-on.',
+  'reward_xp' => 50,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'sd-reliability' => array (
+  'title' => 'Práctica: Confiabilidad y CAP',
+  'description' => 'Consolida «Confiabilidad y CAP» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'ai-finetuning' => array (
+  'title' => 'Práctica: Fine-tuning vs RAG',
+  'description' => 'Consolida «Fine-tuning vs RAG» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'rag',
+    ),
+  ),
+),
+    'ai-prod' => array (
+  'title' => 'Práctica: LLM en producción',
+  'description' => 'Consolida «LLM en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'reuse',
+    ),
+  ),
+),
+    'rd-streams' => array (
+  'title' => 'Práctica: Redis Streams',
+  'description' => 'Consolida «Redis Streams» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'XREADGROUP',
+    ),
+  ),
+),
+    'rd-cluster' => array (
+  'title' => 'Práctica: Redis en cluster y HA',
+  'description' => 'Consolida «Redis en cluster y HA» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'next-middleware' => array (
+  'title' => 'Práctica: Middleware, edge y seguridad',
+  'description' => 'Consolida «Middleware, edge y seguridad» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'matcher',
+      1 => '/dashboard/:path*',
+    ),
+  ),
+),
+    'next-performance' => array (
+  'title' => 'Práctica: Performance y observabilidad',
+  'description' => 'Consolida «Performance y observabilidad» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'carga',
+    ),
+  ),
+),
+    'rn-native-modules' => array (
+  'title' => 'Práctica: Native modules y bridge',
+  'description' => 'Consolida «Native modules y bridge» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'sdk',
+    ),
+  ),
+),
+    'rn-performance' => array (
+  'title' => 'Práctica: Performance mobile',
+  'description' => 'Consolida «Performance mobile» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'evita',
+    ),
+  ),
+),
+    'kf-schema' => array (
+  'title' => 'Práctica: Schema Registry y contratos',
+  'description' => 'Consolida «Schema Registry y contratos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'kf-connect' => array (
+  'title' => 'Práctica: Kafka Connect y CDC',
+  'description' => 'Consolida «Kafka Connect y CDC» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
 ];
 ;

@@ -30,6 +30,8 @@ EXPIRE user:1:name 3600',
     'type' => 'teach',
     'title' => 'TTL',
     'body' => 'EXPIRE o SET con EX — la clave desaparece sola. Perfecto para caché con caducidad.',
+    'code' => 'SET cache:home "html"
+EXPIRE cache:home 60',
   ),
   4 => 
   array (

@@ -21,12 +21,17 @@ return array (
     'type' => 'teach',
     'title' => 'Reactive forms',
     'body' => 'FormBuilder group + validators — más testeable que template-driven.',
+    'code' => 'function App() {
+  return <h1>Hola React</h1>;
+}
+export default App;',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Signals',
     'body' => 'signal(), computed(), effect() — reactividad fine-grained moderna en Angular.',
+    'code' => 'console.log(\'Practica: ng-prod\');',
   ),
   4 => 
   array (
@@ -46,7 +51,10 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'function App() {
+  return <h1>Hola React</h1>;
+}
+export default App;',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +64,10 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'function App() {',
+      1 => '  return <h1>Hola React</h1>;',
+      2 => '}',
+      3 => 'export default App;',
     ),
   ),
   8 => 

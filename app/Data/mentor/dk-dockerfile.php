@@ -21,6 +21,12 @@ return array (
     'type' => 'teach',
     'title' => 'Anatomía',
     'body' => '```dockerfile\\nFROM php:8.3-cli\\nWORKDIR /app\\nCOPY . .\\nCMD ["php", "-S", "0.0.0.0:8000", "-t", "public"]\\n```',
+    'code' => 'apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dk-dockerfile
+data:
+  APP_ENV: production',
   ),
   3 => 
   array (
@@ -46,9 +52,13 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => 'apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dk-dockerfile
+data:
+  APP_ENV: production',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +67,12 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => 'apiVersion: v1',
+      1 => 'kind: ConfigMap',
+      2 => 'metadata:',
+      3 => '  name: dk-dockerfile',
+      4 => 'data:',
+      5 => '  APP_ENV: production',
     ),
   ),
   8 => 

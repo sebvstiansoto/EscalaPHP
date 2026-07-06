@@ -32,6 +32,7 @@ function suma(a: number, b: number): number {
     'type' => 'teach',
     'title' => 'Inferencia',
     'body' => 'TypeScript infiere tipos cuando asignas un valor — no siempre hace falta anotar.',
+    'code' => 'console.log(typeof 10);',
   ),
   4 => 
   array (

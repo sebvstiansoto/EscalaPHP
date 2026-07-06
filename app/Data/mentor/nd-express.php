@@ -31,6 +31,7 @@ app.listen(3000);',
     'type' => 'teach',
     'title' => 'req y res',
     'body' => 'Request trae query, body, headers. Response envía status, JSON o HTML.',
+    'code' => 'app.listen(3000);',
   ),
   4 => 
   array (

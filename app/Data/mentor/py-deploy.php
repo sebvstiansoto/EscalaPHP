@@ -21,12 +21,20 @@ return array (
     'type' => 'teach',
     'title' => 'De local a producción',
     'body' => 'En desarrollo usas `uvicorn --reload`. En producción: **Gunicorn** + workers, detrás de Nginx, en Docker.',
+    'code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'py-deploy\'}
+
+print(handler())',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Dockerfile Python',
     'body' => '```dockerfile\\nFROM python:3.12-slim\\nWORKDIR /app\\nCOPY requirements.txt .\\nRUN pip install -r requirements.txt\\nCOPY . .\\nCMD ["uvicorn", "main:app", "--host", "0.0.0.0"]\\n```',
+    'code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'py-deploy\'}
+
+print(handler())',
   ),
   4 => 
   array (
@@ -46,7 +54,10 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'print(\'Hola desde Python\')',
+    'demo_code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'py-deploy\'}
+
+print(handler())',
     'demo_language' => 'python',
   ),
   7 => 
@@ -56,7 +67,9 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'print(\'Hola desde Python\')',
+      0 => 'def handler():',
+      1 => '    return {\'status\': \'ok\', \'lesson\': \'py-deploy\'}',
+      2 => 'print(handler())',
     ),
   ),
   8 => 

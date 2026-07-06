@@ -32,6 +32,8 @@ return array (
     'type' => 'teach',
     'title' => 'Responsive',
     'body' => 'Con `grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))` las tarjetas se adaptan solas.',
+    'code' => 'display: grid;
+gap: 1rem;',
   ),
   4 => 
   array (

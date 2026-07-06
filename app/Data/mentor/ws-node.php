@@ -32,6 +32,7 @@ wss.on(\'connection\', (ws) => {
     'type' => 'teach',
     'title' => 'Broadcast',
     'body' => 'Reenviar mensaje a todos los clientes conectados — chat básico.',
+    'code' => 'const { WebSocketServer } = require("ws");',
   ),
   4 => 
   array (

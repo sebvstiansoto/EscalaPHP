@@ -29,6 +29,7 @@ return array (
     'type' => 'teach',
     'title' => 'Horizon',
     'body' => 'Dashboard Redis queues — métricas, workers, retry failed jobs.',
+    'code' => 'SendEmail::dispatch($user);',
   ),
   4 => 
   array (

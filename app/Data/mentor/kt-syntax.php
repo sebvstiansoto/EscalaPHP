@@ -30,6 +30,9 @@ return array (
     'type' => 'teach',
     'title' => 'Extensions',
     'body' => 'fun String.isEmail() — extiende tipos sin herencia.',
+    'code' => '# Practica: kt-syntax
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   4 => 
   array (

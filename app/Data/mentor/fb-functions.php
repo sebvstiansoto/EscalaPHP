@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Functions',
     'body' => 'onDocumentCreated trigger — send email — HTTPS callable from client.',
+    'code' => 'console.log(\'Practica: fb-functions\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Secrets',
     'body' => 'defineSecret — Stripe keys server-side only.',
+    'code' => 'console.log(\'Practica: fb-functions\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: fb-functions\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: fb-functions\');',
     ),
   ),
   8 => 

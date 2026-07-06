@@ -28,6 +28,10 @@ return array (
     'type' => 'teach',
     'title' => 'Garantías',
     'body' => 'ACK manual — si consumer falla, mensaje vuelve a la cola.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: mq-rabbitmq\';',
   ),
   4 => 
   array (

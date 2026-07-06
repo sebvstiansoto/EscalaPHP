@@ -30,6 +30,7 @@ return array (
     'type' => 'teach',
     'title' => 'JSON',
     'body' => 'Las APIs modernas devuelven JSON. `response.json()` lo parsea a objetos JavaScript.',
+    'code' => 'const data = JSON.parse(\'{"ok":true}\');\\nconsole.log(data.ok);',
   ),
   4 => 
   array (

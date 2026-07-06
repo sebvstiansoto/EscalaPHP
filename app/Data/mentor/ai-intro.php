@@ -21,12 +21,20 @@ return array (
     'type' => 'teach',
     'title' => 'GenAI en dev',
     'body' => '**LLMs** (GPT, Claude, Llama) aceleran código, docs, tests y soporte — pero requieren ingeniería responsable.',
+    'code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'ai-intro\'}
+
+print(handler())',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Casos reales',
     'body' => 'Copilot en IDE, chatbots soporte, extracción datos, generación SQL con revisión humana.',
+    'code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'ai-intro\'}
+
+print(handler())',
   ),
   4 => 
   array (
@@ -46,7 +54,10 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'print(\'Hola desde Python\')',
+    'demo_code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'ai-intro\'}
+
+print(handler())',
     'demo_language' => 'python',
   ),
   7 => 
@@ -56,7 +67,9 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'print(\'Hola desde Python\')',
+      0 => 'def handler():',
+      1 => '    return {\'status\': \'ok\', \'lesson\': \'ai-intro\'}',
+      2 => 'print(handler())',
     ),
   ),
   8 => 

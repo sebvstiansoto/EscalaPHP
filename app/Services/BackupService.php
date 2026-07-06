@@ -21,7 +21,20 @@ class BackupService
             throw new \RuntimeException('DB no encontrada');
         }
         copy($this->dbPath, $dest);
+        $this->pruneOld();
 
         return $dest;
+    }
+
+    private function pruneOld(int $keep = 14): void
+    {
+        $files = glob($this->backupDir . '/escala-*.sqlite') ?: [];
+        if (count($files) <= $keep) {
+            return;
+        }
+        usort($files, static fn (string $a, string $b): int => filemtime($b) <=> filemtime($a));
+        foreach (array_slice($files, $keep) as $old) {
+            @unlink($old);
+        }
     }
 }

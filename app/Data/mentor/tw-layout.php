@@ -28,6 +28,7 @@ return array (
     'type' => 'teach',
     'title' => 'Spacing',
     'body' => 'm-*, p-*, mx-auto, space-y-4 — sistema consistente.',
+    'code' => 'class="flex gap-4 p-4"',
   ),
   4 => 
   array (

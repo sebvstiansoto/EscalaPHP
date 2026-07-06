@@ -31,6 +31,7 @@ return array (
     'type' => 'teach',
     'title' => 'useReducer',
     'body' => 'Como useState pero con acciones tipadas — útil para carritos, wizards y estado con muchas transiciones.',
+    'code' => 'const r = (s,a) => s + a;\\nconsole.log(r(10, 5));',
   ),
   4 => 
   array (

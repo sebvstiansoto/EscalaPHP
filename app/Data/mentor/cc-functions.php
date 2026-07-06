@@ -21,12 +21,20 @@ return array (
     'type' => 'teach',
     'title' => 'Funciones',
     'body' => 'Haz una cosa. ~20 líneas max guideline. 0-3 parámetros — más → objeto options.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: cc-functions\';',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Efectos colaterales',
     'body' => 'Función llamada checkPassword no debería crear sesión — sorpresa para quien lee.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: cc-functions\';',
   ),
   4 => 
   array (
@@ -36,64 +44,61 @@ return array (
   ),
   5 => 
   array (
-    'type' => 'teach',
-    'title' => 'Vocabulario',
-    'body' => 'Términos de esta lección: **SRP**, **function**, **abstraction**. Búscalos en el [/glosario](/glosario) si necesitas repaso.',
-  ),
-  6 => 
-  array (
     'type' => 'mentor_say',
     'title' => 'En el mundo real',
     'body' => 'En equipos que usan **Clean Code**, esto aparece en code reviews, incidentes y entregas diarias. Un nivel abstracción, pocos args, sin efectos ocultos. — no es teoría de manual: es lo que te van a pedir en producción.',
     'emoji' => '💼',
   ),
-  7 => 
+  6 => 
   array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
     'demo_code' => '<?php
-echo \'Hola desde PHP\';',
+declare(strict_types=1);
+
+echo \'Practica: cc-functions\';',
     'demo_language' => 'php',
   ),
-  8 => 
+  7 => 
   array (
     'type' => 'pair',
     'title' => 'Pair programming — tu turno',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '<?php',
+      1 => 'declare(strict_types=1);',
+      2 => 'echo \'Practica: cc-functions\';',
     ),
   ),
-  9 => 
+  8 => 
   array (
     'type' => 'teach',
     'title' => 'Pro tip del mentor',
     'body' => '💡 **Pro tip:** Curso patrones diseño: SRP formal.',
   ),
-  10 => 
+  9 => 
   array (
     'type' => 'exercise',
     'title' => 'Tu turno — práctica 1',
     'body' => '**¿Función con 8 parámetros?** — resuelve con lo aprendido. Si fallas, recibes pistas adaptativas.',
     'exercise_index' => 0,
   ),
-  11 => 
+  10 => 
   array (
     'type' => 'exercise',
     'title' => 'Tu turno — práctica 2',
     'body' => '**¿Command-query separation?** — resuelve con lo aprendido. Si fallas, recibes pistas adaptativas.',
     'exercise_index' => 1,
   ),
-  12 => 
+  11 => 
   array (
     'type' => 'project',
     'title' => 'Mini-proyecto',
     'body' => 'Consolida lo aprendido con un proyecto hands-on validado y XP.',
   ),
-  13 => 
+  12 => 
   array (
     'type' => 'complete',
     'title' => '¡Módulo dominado!',

@@ -30,6 +30,7 @@ return array (
     'type' => 'teach',
     'title' => 'useState genérico',
     'body' => 'useState<User | null>(null) — el estado sabe qué forma tiene.',
+    'code' => 'console.log(\'Practica: ts-react\');',
   ),
   4 => 
   array (

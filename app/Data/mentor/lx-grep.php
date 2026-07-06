@@ -21,6 +21,7 @@ return array (
     'type' => 'teach',
     'title' => 'Pipe |',
     'body' => 'La salida de un comando alimenta el siguiente: `cat log.txt | grep ERROR`.',
+    'code' => 'grep -r "TODO" .',
   ),
   3 => 
   array (
@@ -48,8 +49,7 @@ find . -name \'*.php\'',
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'grep -r \'function\' app/
-find . -name \'*.php\'',
+    'demo_code' => 'grep -r "TODO" .',
     'demo_language' => 'shell',
   ),
   7 => 
@@ -59,8 +59,7 @@ find . -name \'*.php\'',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'grep -r \'function\' app/',
-      1 => 'find . -name \'*.php\'',
+      0 => 'grep -r "TODO" .',
     ),
   ),
   8 => 

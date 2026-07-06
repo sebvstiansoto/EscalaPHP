@@ -21,6 +21,7 @@ return array (
     'type' => 'teach',
     'title' => 'ConfigMap',
     'body' => 'Guarda configuración no sensible: URLs, feature flags, `APP_ENV=production`.',
+    'code' => 'kind: ConfigMap',
   ),
   3 => 
   array (
@@ -49,9 +50,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'envFrom:
-  - secretRef:
-      name: db-credentials',
+    'demo_code' => 'kind: ConfigMap',
     'demo_language' => 'shell',
   ),
   7 => 
@@ -61,9 +60,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'envFrom:',
-      1 => '  - secretRef:',
-      2 => '      name: db-credentials',
+      0 => 'kind: ConfigMap',
     ),
   ),
   8 => 

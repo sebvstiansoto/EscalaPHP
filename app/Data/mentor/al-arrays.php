@@ -34,6 +34,7 @@ for (let i = 0; i < nums.length; i++) {
     'type' => 'teach',
     'title' => 'Patrón',
     'body' => '¿Necesitas "¿ya vi este valor?" → hash map.',
+    'code' => 'const m = {};\\nm["a"] = 1;\\nm["a"]++;\\nconsole.log(m["a"]);',
   ),
   4 => 
   array (

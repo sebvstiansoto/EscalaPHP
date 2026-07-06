@@ -21,6 +21,10 @@ return array (
     'type' => 'teach',
     'title' => 'Django vs FastAPI',
     'body' => '**FastAPI** = APIs ultrarrápidas. **Django** = todo en uno (admin, auth, ORM, templates). Instagram y Pinterest usaron Django.',
+    'code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'py-django\'}
+
+print(handler())',
   ),
   3 => 
   array (
@@ -50,10 +54,10 @@ class Product(models.Model):
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '# models.py
-class Product(models.Model):
-    name = models.CharField(max_length=100)
-    price = models.IntegerField()',
+    'demo_code' => 'def handler():
+    return {\'status\': \'ok\', \'lesson\': \'py-django\'}
+
+print(handler())',
     'demo_language' => 'python',
   ),
   7 => 
@@ -63,10 +67,9 @@ class Product(models.Model):
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '# models.py',
-      1 => 'class Product(models.Model):',
-      2 => '    name = models.CharField(max_length=100)',
-      3 => '    price = models.IntegerField()',
+      0 => 'def handler():',
+      1 => '    return {\'status\': \'ok\', \'lesson\': \'py-django\'}',
+      2 => 'print(handler())',
     ),
   ),
   8 => 

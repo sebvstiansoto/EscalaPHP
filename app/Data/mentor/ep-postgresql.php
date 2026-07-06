@@ -21,6 +21,10 @@ return array (
     'type' => 'teach',
     'title' => 'SQLite → PostgreSQL',
     'body' => 'SQLite enseña conceptos; **PostgreSQL** aguanta millones de filas, concurrencia y réplicas.',
+    'code' => '<?php
+$pdo = new PDO(\'sqlite::memory:\');
+$stmt = $pdo->prepare(\'SELECT * FROM users WHERE id = ?\');
+$stmt->execute([1]);',
   ),
   3 => 
   array (
@@ -47,7 +51,9 @@ return array (
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
     'demo_code' => '<?php
-echo \'Hola desde PHP\';',
+$pdo = new PDO(\'sqlite::memory:\');
+$stmt = $pdo->prepare(\'SELECT * FROM users WHERE id = ?\');
+$stmt->execute([1]);',
     'demo_language' => 'php',
   ),
   7 => 
@@ -57,8 +63,10 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '<?php',
+      1 => '$pdo = new PDO(\'sqlite::memory:\');',
+      2 => '$stmt = $pdo->prepare(\'SELECT * FROM users WHERE id = ?\');',
+      3 => '$stmt->execute([1]);',
     ),
   ),
   8 => 

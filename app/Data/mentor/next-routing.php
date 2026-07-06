@@ -30,6 +30,7 @@ return array (
     'type' => 'teach',
     'title' => 'Layouts',
     'body' => 'layout.tsx comparte header/sidebar entre rutas sin re-render completo.',
+    'code' => 'app/blog/[slug]/page.tsx',
   ),
   4 => 
   array (

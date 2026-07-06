@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'DeFi',
     'body' => 'Uniswap AMM — swaps sin order book — impermanent loss, rug pulls — **extreme risk**.',
+    'code' => 'console.log(\'Practica: w3-defi\');',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'NFTs',
     'body' => 'ERC-721 unique tokens — metadata IPFS — scams abundant.',
+    'code' => 'console.log(\'Practica: w3-defi\');',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'console.log(\'Practica: w3-defi\');',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'console.log(\'Practica: w3-defi\');',
     ),
   ),
   8 => 

@@ -8,8 +8,11 @@ use PDO;
 
 class JobQueueService
 {
-    public function __construct(private PDO $pdo, private Mailer $mailer)
-    {
+    public function __construct(
+        private PDO $pdo,
+        private Mailer $mailer,
+        private BackupService $backup,
+    ) {
     }
 
     public function push(string $type, array $payload, ?string $runAt = null): void
@@ -52,7 +55,18 @@ class JobQueueService
                 (string) ($payload['subject'] ?? ''),
                 (string) ($payload['body'] ?? ''),
             ),
+            'backup' => $this->runBackup(),
             default => false,
         };
+    }
+
+    private function runBackup(): bool
+    {
+        try {
+            $this->backup->run();
+            return true;
+        } catch (\Throwable) {
+            return false;
+        }
     }
 }

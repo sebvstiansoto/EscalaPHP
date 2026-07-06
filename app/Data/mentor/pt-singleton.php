@@ -33,6 +33,10 @@ return array (
     'type' => 'teach',
     'title' => 'Factory',
     'body' => 'Factory Method / Abstract Factory crean objetos sin acoplar al tipo concreto.',
+    'code' => '<?php
+declare(strict_types=1);
+
+echo \'Practica: pt-singleton\';',
   ),
   4 => 
   array (

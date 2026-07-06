@@ -21,18 +21,27 @@ return array (
     'type' => 'teach',
     'title' => 'Regla de oro',
     'body' => '**Nunca** pruebes vulnerabilidades en sistemas sin **permiso escrito** explícito. Es ilegal y puede ser delito.',
+    'code' => '# Practica: eh-legal
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Scope',
     'body' => 'Bug bounty y pentest definen dominios/IPs permitidos, técnicas prohibidas y ventana de tiempo.',
+    'code' => '# Practica: eh-legal
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   4 => 
   array (
     'type' => 'teach',
     'title' => 'Entornos legales',
     'body' => 'Labs propios (DVWA, HackTheBox), programas bug bounty, contratos pentest empresa, CTFs.',
+    'code' => '# Practica: eh-legal
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   5 => 
   array (
@@ -46,9 +55,10 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => '# Practica: eh-legal
+echo "Listo"
+# Reemplaza con tu comando',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +67,9 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => '# Practica: eh-legal',
+      1 => 'echo "Listo"',
+      2 => '# Reemplaza con tu comando',
     ),
   ),
   8 => 

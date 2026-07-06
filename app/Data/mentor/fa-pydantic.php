@@ -30,6 +30,8 @@ return array (
     'type' => 'teach',
     'title' => 'Response model',
     'body' => 'response_model=UserOut filtra campos — nunca expongas password_hash.',
+    'code' => 'class Item(BaseModel):
+    name: str',
   ),
   4 => 
   array (

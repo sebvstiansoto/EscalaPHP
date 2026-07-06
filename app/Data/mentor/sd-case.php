@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'API',
     'body' => 'POST /shorten { url } → { short: "abc123" }; GET /abc123 → 302 redirect.',
+    'code' => 'Cache short_code → long_url en Redis',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Storage',
     'body' => 'Base62 encode de ID secuencial o hash — índice en short_code. Redis cache para hot links.',
+    'code' => 'Cache short_code → long_url en Redis',
   ),
   4 => 
   array (
@@ -46,9 +48,8 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => 'Cache short_code → long_url en Redis',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +58,7 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => 'Cache short_code → long_url en Redis',
     ),
   ),
   8 => 

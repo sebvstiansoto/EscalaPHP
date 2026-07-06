@@ -21,12 +21,14 @@ return array (
     'type' => 'teach',
     'title' => 'Models',
     'body' => 'model User { id Int @id @default(autoincrement()) email String @unique posts Post[] }',
+    'code' => 'model User { id Int @id ... }',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Relations',
     'body' => '1-N, N-M implicit join table — @relation fields references.',
+    'code' => 'model User { id Int @id ... }',
   ),
   4 => 
   array (
@@ -46,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'console.log(\'Hola desde JavaScript\');',
+    'demo_code' => 'model User { id Int @id ... }',
     'demo_language' => 'javascript',
   ),
   7 => 
@@ -56,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'console.log(\'Hola desde JavaScript\');',
+      0 => 'model User { id Int @id ... }',
     ),
   ),
   8 => 

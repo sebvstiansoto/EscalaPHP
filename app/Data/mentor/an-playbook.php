@@ -31,6 +31,7 @@ return array (
     'type' => 'teach',
     'title' => 'Idempotencia',
     'body' => 'Segunda run no cambia nada si ya desired state — changed=0.',
+    'code' => '- hosts: webservers',
   ),
   4 => 
   array (

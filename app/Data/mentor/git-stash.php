@@ -21,12 +21,16 @@ return array (
     'type' => 'teach',
     'title' => 'git stash',
     'body' => 'Guardas cambios locales, vuelves a un working tree limpio, cambias de rama, y luego `git stash pop`.',
+    'code' => 'git stash
+git stash pop',
   ),
   3 => 
   array (
     'type' => 'teach',
     'title' => 'Caso real',
     'body' => 'Estás en feature/A pero te piden un hotfix urgente en main — stash, switch, fix, pop.',
+    'code' => 'git stash
+git stash pop',
   ),
   4 => 
   array (
@@ -46,9 +50,9 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => '<?php
-echo \'Hola desde PHP\';',
-    'demo_language' => 'php',
+    'demo_code' => 'git stash
+git stash pop',
+    'demo_language' => 'shell',
   ),
   7 => 
   array (
@@ -57,8 +61,8 @@ echo \'Hola desde PHP\';',
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => '<?php
-echo \'Hola desde PHP\';',
+      0 => 'git stash',
+      1 => 'git stash pop',
     ),
   ),
   8 => 

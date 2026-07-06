@@ -21,6 +21,8 @@ return array (
     'type' => 'teach',
     'title' => 'Volúmenes',
     'body' => 'Los contenedores son efímeros. **Volumes** guardan BD, uploads y logs fuera del filesystem del contenedor.',
+    'code' => 'volumes:
+  - ./app:/var/www/html',
   ),
   3 => 
   array (
@@ -49,7 +51,7 @@ return array (
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
     'demo_code' => 'volumes:
-  - ./data:/var/lib/postgresql/data',
+  - ./app:/var/www/html',
     'demo_language' => 'shell',
   ),
   7 => 
@@ -60,7 +62,7 @@ return array (
     'lines' => 
     array (
       0 => 'volumes:',
-      1 => '  - ./data:/var/lib/postgresql/data',
+      1 => '  - ./app:/var/www/html',
     ),
   ),
   8 => 

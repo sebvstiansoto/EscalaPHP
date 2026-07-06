@@ -31,6 +31,7 @@ async def main():
     'type' => 'teach',
     'title' => 'await',
     'body' => 'Esperas operaciones I/O sin congelar el servidor — miles de requests en un proceso.',
+    'code' => 'async def f():\\n    await algo()',
   ),
   4 => 
   array (

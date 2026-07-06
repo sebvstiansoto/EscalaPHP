@@ -31,6 +31,7 @@ return array (
     'type' => 'teach',
     'title' => 'Seeders',
     'body' => 'Datos de prueba con php artisan db:seed — útil en dev y demos.',
+    'code' => 'Schema::create(\'users\', function (...) { });',
   ),
   4 => 
   array (

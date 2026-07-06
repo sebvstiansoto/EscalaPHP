@@ -21,6 +21,9 @@ return array (
     'type' => 'teach',
     'title' => 'Structs',
     'body' => 'type User struct { ID int; Name string } — composición sobre herencia.',
+    'code' => '# Practica: go-syntax
+echo "Listo"
+# Reemplaza con tu comando',
   ),
   3 => 
   array (
@@ -52,12 +55,9 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'func Divide(a, b float64) (float64, error) {
-    if b == 0 {
-        return 0, fmt.Errorf("division by zero")
-    }
-    return a / b, nil
-}',
+    'demo_code' => '# Practica: go-syntax
+echo "Listo"
+# Reemplaza con tu comando',
     'demo_language' => 'shell',
   ),
   7 => 
@@ -67,12 +67,9 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'func Divide(a, b float64) (float64, error) {',
-      1 => '    if b == 0 {',
-      2 => '        return 0, fmt.Errorf("division by zero")',
-      3 => '    }',
-      4 => '    return a / b, nil',
-      5 => '}',
+      0 => '# Practica: go-syntax',
+      1 => 'echo "Listo"',
+      2 => '# Reemplaza con tu comando',
     ),
   ),
   8 => 

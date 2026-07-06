@@ -21,6 +21,7 @@ return array (
     'type' => 'teach',
     'title' => 'Repositorio remoto',
     'body' => '**origin** apunta a GitHub/GitLab. `git push` sube commits; `git pull` trae cambios del equipo.',
+    'code' => 'git pull origin main',
   ),
   3 => 
   array (
@@ -48,8 +49,7 @@ git push origin feature/login',
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'git pull origin main
-git push origin feature/login',
+    'demo_code' => 'git pull origin main',
     'demo_language' => 'shell',
   ),
   7 => 
@@ -60,7 +60,6 @@ git push origin feature/login',
     'lines' => 
     array (
       0 => 'git pull origin main',
-      1 => 'git push origin feature/login',
     ),
   ),
   8 => 

@@ -21,6 +21,7 @@ return array (
     'type' => 'teach',
     'title' => 'XSS',
     'body' => 'Un atacante inyecta `<script>` que corre en el navegador de otra víctima — roba cookies, sesiones.',
+    'code' => 'htmlspecialchars($x, ENT_QUOTES, \'UTF-8\')',
   ),
   3 => 
   array (
@@ -47,7 +48,7 @@ return array (
     'type' => 'live_demo',
     'title' => 'Mira cómo corre',
     'body' => 'Así se ve en ejecución. Observa la salida antes de intentarlo tú.',
-    'demo_code' => 'echo htmlspecialchars($userInput, ENT_QUOTES, \'UTF-8\');',
+    'demo_code' => 'htmlspecialchars($x, ENT_QUOTES, \'UTF-8\')',
     'demo_language' => 'php',
   ),
   7 => 
@@ -57,7 +58,7 @@ return array (
     'body' => 'Abre el **Laboratorio** y escribe estas líneas. Ejecuta y verifica la salida.',
     'lines' => 
     array (
-      0 => 'echo htmlspecialchars($userInput, ENT_QUOTES, \'UTF-8\');',
+      0 => 'htmlspecialchars($x, ENT_QUOTES, \'UTF-8\')',
     ),
   ),
   8 => 

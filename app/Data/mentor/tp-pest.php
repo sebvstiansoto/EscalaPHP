@@ -30,6 +30,7 @@ return array (
     'type' => 'teach',
     'title' => 'Laravel + Pest',
     'body' => 'php artisan pest:install — el estándar en proyectos Laravel nuevos.',
+    'code' => 'expect(2 + 2)->toBe(4);',
   ),
   4 => 
   array (
