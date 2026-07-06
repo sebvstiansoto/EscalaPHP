@@ -18,8 +18,8 @@ class Migrator
 
         $this->repairIncomplete([
             '001_platform_tables' => ['notifications'],
-            '002_max_platform' => ['daily_missions'],
-            '003_product_max' => ['user_sessions', 'comments', 'job_queue'],
+            '002_max_platform' => ['daily_missions', 'password_resets'],
+            '003_product_max' => ['user_sessions', 'comments', 'job_queue', 'learner_goals'],
         ]);
 
         $applied = $this->appliedVersions();

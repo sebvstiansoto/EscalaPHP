@@ -116,6 +116,7 @@ class Database
         $this->ensureColumn('progress', 'course_slug', "TEXT NOT NULL DEFAULT 'php-fundamentos'");
         $this->ensureColumn('learner', 'lab_uses', 'INTEGER NOT NULL DEFAULT 0');
         $this->ensureColumn('learner', 'goal', 'TEXT');
+        $this->ensureUserColumns();
 
         $this->pdo->exec('CREATE UNIQUE INDEX IF NOT EXISTS idx_progress_session_course_lesson ON progress(session_id, course_slug, lesson_slug)');
         $this->pdo->exec('CREATE UNIQUE INDEX IF NOT EXISTS idx_progress_user_course_lesson ON progress(user_id, course_slug, lesson_slug) WHERE user_id IS NOT NULL');
@@ -181,7 +182,118 @@ class Database
                 run_at TEXT NOT NULL,
                 created_at TEXT NOT NULL
             );
+
+            CREATE TABLE IF NOT EXISTS subscriptions (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER NOT NULL UNIQUE,
+                plan TEXT NOT NULL DEFAULT 'free',
+                stripe_customer_id TEXT,
+                stripe_subscription_id TEXT,
+                status TEXT NOT NULL DEFAULT 'active',
+                current_period_end TEXT,
+                created_at TEXT NOT NULL,
+                updated_at TEXT NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS email_log (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                recipient TEXT NOT NULL,
+                subject TEXT NOT NULL,
+                body TEXT NOT NULL,
+                sent_at TEXT NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS password_resets (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                email TEXT NOT NULL,
+                token TEXT NOT NULL UNIQUE,
+                expires_at TEXT NOT NULL,
+                created_at TEXT NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS email_verifications (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER NOT NULL,
+                token TEXT NOT NULL UNIQUE,
+                verified_at TEXT,
+                created_at TEXT NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS user_sessions (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER NOT NULL,
+                session_token TEXT NOT NULL UNIQUE,
+                ip TEXT,
+                user_agent TEXT,
+                last_seen TEXT NOT NULL,
+                created_at TEXT NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS code_snapshots (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER,
+                session_id TEXT NOT NULL,
+                language TEXT NOT NULL DEFAULT 'php',
+                code TEXT NOT NULL,
+                output TEXT,
+                lesson_slug TEXT,
+                course_slug TEXT,
+                created_at TEXT NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS learner_goals (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER,
+                session_id TEXT NOT NULL UNIQUE,
+                weekly_lessons INTEGER NOT NULL DEFAULT 5,
+                updated_at TEXT NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS review_schedule (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER,
+                session_id TEXT NOT NULL,
+                course_slug TEXT NOT NULL,
+                lesson_slug TEXT NOT NULL,
+                next_review_at TEXT NOT NULL,
+                interval_days INTEGER NOT NULL DEFAULT 1,
+                ease_factor REAL NOT NULL DEFAULT 2.5,
+                repetitions INTEGER NOT NULL DEFAULT 0,
+                updated_at TEXT NOT NULL,
+                UNIQUE(session_id, course_slug, lesson_slug)
+            );
+
+            CREATE TABLE IF NOT EXISTS exam_attempts (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER,
+                session_id TEXT NOT NULL,
+                exam_slug TEXT NOT NULL,
+                score INTEGER NOT NULL DEFAULT 0,
+                max_score INTEGER NOT NULL DEFAULT 0,
+                answers_json TEXT,
+                passed INTEGER NOT NULL DEFAULT 0,
+                created_at TEXT NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS study_log (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER,
+                session_id TEXT NOT NULL,
+                minutes INTEGER NOT NULL DEFAULT 15,
+                lesson_slug TEXT,
+                created_at TEXT NOT NULL
+            );
         SQL);
+    }
+
+    private function ensureUserColumns(): void
+    {
+        $this->ensureColumn('users', 'is_admin', 'INTEGER NOT NULL DEFAULT 0');
+        $this->ensureColumn('users', 'plan', "TEXT NOT NULL DEFAULT 'free'");
+        $this->ensureColumn('users', 'locale', "TEXT NOT NULL DEFAULT 'es'");
+        $this->ensureColumn('users', 'theme', "TEXT NOT NULL DEFAULT 'dark'");
+        $this->ensureColumn('users', 'email_verified_at', 'TEXT');
+        $this->ensureColumn('users', 'learning_path', 'TEXT');
     }
 
     private function ensureColumn(string $table, string $column, string $definition): void
