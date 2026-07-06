@@ -148,6 +148,17 @@ class Database
                 path_slug TEXT NOT NULL,
                 selected_at TEXT NOT NULL
             );
+
+            CREATE TABLE IF NOT EXISTS daily_missions (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER,
+                session_id TEXT NOT NULL,
+                mission_date TEXT NOT NULL,
+                mission_key TEXT NOT NULL,
+                completed INTEGER NOT NULL DEFAULT 0,
+                xp_reward INTEGER NOT NULL DEFAULT 25,
+                UNIQUE(session_id, mission_date, mission_key)
+            );
         SQL);
     }
 
