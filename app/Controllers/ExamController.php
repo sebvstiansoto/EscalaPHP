@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Controllers;
 
 use App\Http\Csrf;
+use App\Services\AchievementService;
 use App\Services\ExamService;
 use App\Services\LearnerContext;
 use App\View;
@@ -14,6 +15,7 @@ class ExamController
     public function __construct(
         private ExamService $exams,
         private LearnerContext $context,
+        private AchievementService $achievements,
         private array $config,
     ) {
     }
@@ -39,9 +41,12 @@ class ExamController
         View::show('exams/show', [
             'config' => $this->config,
             'title' => (string) ($exam['title'] ?? 'Examen'),
-            'exam' => $exam,
+            'exam' => $exam + ['slug' => $slug],
             'result' => $_SESSION['exam_result'] ?? null,
         ]);
+        if (empty($_SESSION['exam_result'])) {
+            $_SESSION['exam_started'][$slug] = time();
+        }
         unset($_SESSION['exam_result']);
     }
 
@@ -50,7 +55,11 @@ class ExamController
         Csrf::abortIfInvalid($_POST['_csrf'] ?? null);
         $slug = (string) ($_POST['exam'] ?? '');
         $answers = is_array($_POST['answers'] ?? null) ? $_POST['answers'] : [];
-        $_SESSION['exam_result'] = $this->exams->grade($slug, $answers, $this->context);
+        $result = $this->exams->grade($slug, $answers, $this->context);
+        if (!empty($result['passed']) && !empty($result['simulation'])) {
+            $this->achievements->awardSimulationExamPass();
+        }
+        $_SESSION['exam_result'] = $result;
         header('Location: /examenes/' . urlencode($slug));
         exit;
     }

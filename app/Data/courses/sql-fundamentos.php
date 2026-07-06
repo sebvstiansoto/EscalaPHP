@@ -431,4 +431,81 @@ GROUP BY city',
       ),
     ),
   ),
+  7 => 
+  array (
+    'slug' => 'sql-fundamentos-produccion',
+    'order' => 8,
+    'title' => 'Buenas prácticas avanzadas en producción',
+    'level' => 'Producción',
+    'minutes' => 35,
+    'summary' => 'Buenas prácticas avanzadas en producción — cierre avanzado de SQL avanzado.',
+    'concepts' => 
+    array (
+      0 => 'best-practices',
+      1 => 'checklist',
+      2 => 'career',
+    ),
+    'sections' => 
+    array (
+      0 => 
+      array (
+        'heading' => 'Patrones en producción',
+        'body' => 'Aplica lo aprendido en SQL avanzado a un entorno real: límites, fallos parciales, idempotencia y métricas que importan en producción.',
+        'code' => '<?php
+declare(strict_types=1);
+
+// Checklist post-deploy — sql-fundamentos
+$checks = [
+    \'health\' => file_get_contents(\'https://app.test/health\') !== false,
+    \'migrations\' => true,
+    \'cache_warm\' => true,
+];',
+      ),
+      1 => 
+      array (
+        'heading' => 'Operación continua',
+        'body' => 'Documenta runbooks, define SLOs, automatiza verificaciones post-deploy y revisa alertas antes de que los usuarios las reporten.',
+        'code' => '<?php
+declare(strict_types=1);
+
+// Checklist post-deploy — sql-fundamentos
+$checks = [
+    \'health\' => file_get_contents(\'https://app.test/health\') !== false,
+    \'migrations\' => true,
+    \'cache_warm\' => true,
+];',
+      ),
+    ),
+    'exercises' => 
+    array (
+      0 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Qué revisar antes de un deploy a producción?',
+        'options' => 
+        array (
+          0 => 'Health checks, migraciones y rollback plan',
+          1 => 'Solo el color del botón',
+          2 => 'Nada si compila',
+        ),
+        'answer' => 'Health checks, migraciones y rollback plan',
+        'explanation' => 'Un checklist de deploy evita incidentes evitables.',
+        'pro_tip' => 'Automatiza el checklist en CI/CD cuando sea posible.',
+      ),
+      1 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Señal de que necesitas observabilidad mejor?',
+        'options' => 
+        array (
+          0 => 'Descubres fallos por tweets de usuarios',
+          1 => 'Todo funciona en local',
+          2 => 'Tienes logs estructurados',
+        ),
+        'answer' => 'Descubres fallos por tweets de usuarios',
+        'explanation' => 'Si no tienes métricas/trazas, operas a ciegas.',
+        'pro_tip' => 'Define SLI/SLO antes de escalar el equipo.',
+      ),
+    ),
+  ),
 );

@@ -177,6 +177,66 @@ class AchievementService
         if ($this->context->isLoggedIn()) {
             $this->award('registered');
         }
+
+        $completedCourses = $this->countCompletedCourses();
+        if ($completedCourses >= 5) {
+            $this->award('scholar_5');
+        }
+        if ($completedCourses >= 10) {
+            $this->award('scholar_10');
+        }
+        if ($completedCourses >= 25) {
+            $this->award('scholar_25');
+        }
+        if ($completedCourses >= 50) {
+            $this->award('scholar_50');
+        }
+
+        $pathService = new LearningPathService();
+        $pathsDone = count($pathService->completedPaths($this->progress));
+        if ($pathsDone >= 1) {
+            $this->award('path_first');
+        }
+        if ($pathsDone >= 3) {
+            $this->award('path_master');
+        }
+
+        foreach ([
+            'seguridad-web' => 'sec_graduate',
+            'laravel-fundamentos' => 'laravel_graduate',
+            'nextjs-fullstack' => 'next_graduate',
+            'aws-cloud-basico' => 'aws_graduate',
+            'terraform-iac' => 'tf_graduate',
+            'ai-llm-desarrollo' => 'ai_graduate',
+            'system-design' => 'sd_graduate',
+            'testing-php' => 'test_graduate',
+            'oauth-openid' => 'oauth_graduate',
+            'observabilidad' => 'obs_graduate',
+        ] as $course => $badge) {
+            if ($this->isCourseComplete($course)) {
+                $this->award($badge);
+            }
+        }
+    }
+
+    public function awardSimulationExamPass(): void
+    {
+        $this->award('exam_sim_pass');
+    }
+
+    public function countCompletedCourses(): int
+    {
+        $count = 0;
+        foreach (\App\CourseCatalog::courses() as $slug => $course) {
+            if (($course['status'] ?? '') !== 'available') {
+                continue;
+            }
+            if ($this->isCourseComplete($slug)) {
+                $count++;
+            }
+        }
+
+        return $count;
     }
 
     public function recordLabUse(): void
@@ -204,6 +264,16 @@ class AchievementService
             'cicd' => $this->has('ci_graduate'),
             'kubernetes' => $this->has('k8s_graduate'),
             'sql-fundamentos' => $this->has('sql_graduate'),
+            'seguridad-web' => $this->has('sec_graduate'),
+            'laravel-fundamentos' => $this->has('laravel_graduate'),
+            'nextjs-fullstack' => $this->has('next_graduate'),
+            'aws-cloud-basico' => $this->has('aws_graduate'),
+            'terraform-iac' => $this->has('tf_graduate'),
+            'ai-llm-desarrollo' => $this->has('ai_graduate'),
+            'system-design' => $this->has('sd_graduate'),
+            'testing-php' => $this->has('test_graduate'),
+            'oauth-openid' => $this->has('oauth_graduate'),
+            'observabilidad' => $this->has('obs_graduate'),
             default => $this->isCourseComplete($courseSlug),
         };
     }

@@ -401,4 +401,155 @@ print(handler())',
       ),
     ),
   ),
+  6 => 
+  array (
+    'slug' => 'django-rest-produccion',
+    'order' => 7,
+    'title' => 'Patrones de producción y resiliencia',
+    'level' => 'Producción',
+    'minutes' => 35,
+    'summary' => 'Patrones de producción y resiliencia — cierre avanzado de Django REST Framework.',
+    'concepts' => 
+    array (
+      0 => 'production',
+      1 => 'resilience',
+      2 => 'ops',
+    ),
+    'sections' => 
+    array (
+      0 => 
+      array (
+        'heading' => 'Patrones en producción',
+        'body' => 'Aplica lo aprendido en Django REST Framework a un entorno real: límites, fallos parciales, idempotencia y métricas que importan en producción.',
+        'code' => '# Circuit breaker simplificado con tenacity / retry
+from tenacity import retry, stop_after_attempt, wait_exponential
+
+@retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=0.5))
+async def call_payment_api(payload: dict) -> dict:
+    async with httpx.AsyncClient(timeout=5.0) as client:
+        r = await client.post("/charge", json=payload)
+        r.raise_for_status()
+        return r.json()',
+      ),
+      1 => 
+      array (
+        'heading' => 'Operación continua',
+        'body' => 'Documenta runbooks, define SLOs, automatiza verificaciones post-deploy y revisa alertas antes de que los usuarios las reporten.',
+        'code' => '# Health check listo para Kubernetes
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/health")
+def health() -> dict:
+    return {"status": "ok", "checks": {"db": True, "cache": True}}',
+      ),
+    ),
+    'exercises' => 
+    array (
+      0 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Qué revisar antes de un deploy a producción?',
+        'options' => 
+        array (
+          0 => 'Health checks, migraciones y rollback plan',
+          1 => 'Solo el color del botón',
+          2 => 'Nada si compila',
+        ),
+        'answer' => 'Health checks, migraciones y rollback plan',
+        'explanation' => 'Un checklist de deploy evita incidentes evitables.',
+        'pro_tip' => 'Automatiza el checklist en CI/CD cuando sea posible.',
+      ),
+      1 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Señal de que necesitas observabilidad mejor?',
+        'options' => 
+        array (
+          0 => 'Descubres fallos por tweets de usuarios',
+          1 => 'Todo funciona en local',
+          2 => 'Tienes logs estructurados',
+        ),
+        'answer' => 'Descubres fallos por tweets de usuarios',
+        'explanation' => 'Si no tienes métricas/trazas, operas a ciegas.',
+        'pro_tip' => 'Define SLI/SLO antes de escalar el equipo.',
+      ),
+    ),
+  ),
+  7 => 
+  array (
+    'slug' => 'django-rest-operaciones',
+    'order' => 8,
+    'title' => 'Observabilidad, debugging y checklist de deploy',
+    'level' => 'Avanzado',
+    'minutes' => 35,
+    'summary' => 'Observabilidad, debugging y checklist de deploy — cierre avanzado de Django REST Framework.',
+    'concepts' => 
+    array (
+      0 => 'production',
+      1 => 'resilience',
+      2 => 'ops',
+    ),
+    'sections' => 
+    array (
+      0 => 
+      array (
+        'heading' => 'Patrones en producción',
+        'body' => 'Aplica lo aprendido en Django REST Framework a un entorno real: límites, fallos parciales, idempotencia y métricas que importan en producción.',
+        'code' => '# Health check listo para Kubernetes
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/health")
+def health() -> dict:
+    return {"status": "ok", "checks": {"db": True, "cache": True}}',
+      ),
+      1 => 
+      array (
+        'heading' => 'Operación continua',
+        'body' => 'Documenta runbooks, define SLOs, automatiza verificaciones post-deploy y revisa alertas antes de que los usuarios las reporten.',
+        'code' => '# Health check listo para Kubernetes
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/health")
+def health() -> dict:
+    return {"status": "ok", "checks": {"db": True, "cache": True}}',
+      ),
+    ),
+    'exercises' => 
+    array (
+      0 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Qué revisar antes de un deploy a producción?',
+        'options' => 
+        array (
+          0 => 'Health checks, migraciones y rollback plan',
+          1 => 'Solo el color del botón',
+          2 => 'Nada si compila',
+        ),
+        'answer' => 'Health checks, migraciones y rollback plan',
+        'explanation' => 'Un checklist de deploy evita incidentes evitables.',
+        'pro_tip' => 'Automatiza el checklist en CI/CD cuando sea posible.',
+      ),
+      1 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Señal de que necesitas observabilidad mejor?',
+        'options' => 
+        array (
+          0 => 'Descubres fallos por tweets de usuarios',
+          1 => 'Todo funciona en local',
+          2 => 'Tienes logs estructurados',
+        ),
+        'answer' => 'Descubres fallos por tweets de usuarios',
+        'explanation' => 'Si no tienes métricas/trazas, operas a ciegas.',
+        'pro_tip' => 'Define SLI/SLO antes de escalar el equipo.',
+      ),
+    ),
+  ),
 );

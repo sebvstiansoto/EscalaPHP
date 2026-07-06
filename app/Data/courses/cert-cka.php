@@ -418,4 +418,186 @@ data:
       ),
     ),
   ),
+  6 => 
+  array (
+    'slug' => 'cert-cka-simulacro',
+    'order' => 7,
+    'title' => 'Simulacro de preguntas clave',
+    'level' => 'Producción',
+    'minutes' => 40,
+    'summary' => 'Simulacro de preguntas clave — cierre avanzado de Cert CKA.',
+    'concepts' => 
+    array (
+      0 => 'exam-prep',
+      1 => 'strategy',
+      2 => 'review',
+    ),
+    'sections' => 
+    array (
+      0 => 
+      array (
+        'heading' => 'Preguntas tipo examen',
+        'body' => 'Repasa escenarios típicos del examen oficial de Cert CKA: servicios clave, límites, costos y arquitecturas recomendadas.',
+        'code' => '# Deployment con probes y recursos
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: api
+          readinessProbe:
+            httpGet: { path: /health, port: 8080 }
+          resources:
+            requests: { cpu: 100m, memory: 128Mi }
+            limits: { cpu: 500m, memory: 512Mi }',
+      ),
+      1 => 
+      array (
+        'heading' => 'Día del examen',
+        'body' => 'Gestiona el tiempo, marca preguntas difíciles, elimina respuestas obviamente incorrectas y repasa tus puntos débiles la semana previa.',
+        'code' => '# Deployment con probes y recursos
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: api
+          readinessProbe:
+            httpGet: { path: /health, port: 8080 }
+          resources:
+            requests: { cpu: 100m, memory: 128Mi }
+            limits: { cpu: 500m, memory: 512Mi }',
+      ),
+    ),
+    'exercises' => 
+    array (
+      0 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Qué hacer primero ante una pregunta larga en el examen?',
+        'options' => 
+        array (
+          0 => 'Leer el final para entender qué piden',
+          1 => 'Responder al azar',
+          2 => 'Saltar sin leer',
+        ),
+        'answer' => 'Leer el final para entender qué piden',
+        'explanation' => 'Muchas preguntas de certificación esconden el requisito real al final del enunciado.',
+        'pro_tip' => 'Simula con temporizador — la presión del tiempo es parte del examen.',
+      ),
+      1 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Cuándo marcar una pregunta para revisar después?',
+        'options' => 
+        array (
+          0 => 'Cuando llevas más de 2 min sin avanzar',
+          1 => 'Nunca',
+          2 => 'Siempre en la primera',
+        ),
+        'answer' => 'Cuando llevas más de 2 min sin avanzar',
+        'explanation' => 'Gestiona el reloj: responde lo seguro primero y vuelve a lo marcado.',
+        'pro_tip' => 'Repasa los simulacros conclicados de la plataforma antes del día D.',
+      ),
+    ),
+  ),
+  7 => 
+  array (
+    'slug' => 'cert-cka-estrategia',
+    'order' => 8,
+    'title' => 'Estrategia y checklist del examen',
+    'level' => 'Avanzado',
+    'minutes' => 40,
+    'summary' => 'Estrategia y checklist del examen — cierre avanzado de Cert CKA.',
+    'concepts' => 
+    array (
+      0 => 'exam-prep',
+      1 => 'strategy',
+      2 => 'review',
+    ),
+    'sections' => 
+    array (
+      0 => 
+      array (
+        'heading' => 'Preguntas tipo examen',
+        'body' => 'Repasa escenarios típicos del examen oficial de Cert CKA: servicios clave, límites, costos y arquitecturas recomendadas.',
+        'code' => '# Deployment con probes y recursos
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: api
+          readinessProbe:
+            httpGet: { path: /health, port: 8080 }
+          resources:
+            requests: { cpu: 100m, memory: 128Mi }
+            limits: { cpu: 500m, memory: 512Mi }',
+      ),
+      1 => 
+      array (
+        'heading' => 'Día del examen',
+        'body' => 'Gestiona el tiempo, marca preguntas difíciles, elimina respuestas obviamente incorrectas y repasa tus puntos débiles la semana previa.',
+        'code' => '# Deployment con probes y recursos
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: api
+          readinessProbe:
+            httpGet: { path: /health, port: 8080 }
+          resources:
+            requests: { cpu: 100m, memory: 128Mi }
+            limits: { cpu: 500m, memory: 512Mi }',
+      ),
+    ),
+    'exercises' => 
+    array (
+      0 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Qué hacer primero ante una pregunta larga en el examen?',
+        'options' => 
+        array (
+          0 => 'Leer el final para entender qué piden',
+          1 => 'Responder al azar',
+          2 => 'Saltar sin leer',
+        ),
+        'answer' => 'Leer el final para entender qué piden',
+        'explanation' => 'Muchas preguntas de certificación esconden el requisito real al final del enunciado.',
+        'pro_tip' => 'Simula con temporizador — la presión del tiempo es parte del examen.',
+      ),
+      1 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Cuándo marcar una pregunta para revisar después?',
+        'options' => 
+        array (
+          0 => 'Cuando llevas más de 2 min sin avanzar',
+          1 => 'Nunca',
+          2 => 'Siempre en la primera',
+        ),
+        'answer' => 'Cuando llevas más de 2 min sin avanzar',
+        'explanation' => 'Gestiona el reloj: responde lo seguro primero y vuelve a lo marcado.',
+        'pro_tip' => 'Repasa los simulacros conclicados de la plataforma antes del día D.',
+      ),
+    ),
+  ),
 );

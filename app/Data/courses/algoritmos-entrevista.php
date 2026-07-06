@@ -362,4 +362,158 @@ for (let i = 0; i < nums.length; i++) {
       ),
     ),
   ),
+  6 => 
+  array (
+    'slug' => 'algoritmos-entrevista-produccion',
+    'order' => 7,
+    'title' => 'Buenas prácticas avanzadas en producción',
+    'level' => 'Producción',
+    'minutes' => 35,
+    'summary' => 'Buenas prácticas avanzadas en producción — cierre avanzado de Algoritmos para entrevistas.',
+    'concepts' => 
+    array (
+      0 => 'best-practices',
+      1 => 'checklist',
+      2 => 'career',
+    ),
+    'sections' => 
+    array (
+      0 => 
+      array (
+        'heading' => 'Patrones en producción',
+        'body' => 'Aplica lo aprendido en Algoritmos para entrevistas a un entorno real: límites, fallos parciales, idempotencia y métricas que importan en producción.',
+        'code' => '// Structured logging en Node/Next
+import pino from \'pino\';
+
+export const logger = pino({
+  level: process.env.LOG_LEVEL ?? \'info\',
+  redact: [\'req.headers.authorization\', \'password\'],
+});
+
+logger.info({ route: \'/api/users\', ms: 42 }, \'request completed\');',
+      ),
+      1 => 
+      array (
+        'heading' => 'Operación continua',
+        'body' => 'Documenta runbooks, define SLOs, automatiza verificaciones post-deploy y revisa alertas antes de que los usuarios las reporten.',
+        'code' => '// Structured logging en Node/Next
+import pino from \'pino\';
+
+export const logger = pino({
+  level: process.env.LOG_LEVEL ?? \'info\',
+  redact: [\'req.headers.authorization\', \'password\'],
+});
+
+logger.info({ route: \'/api/users\', ms: 42 }, \'request completed\');',
+      ),
+    ),
+    'exercises' => 
+    array (
+      0 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Qué revisar antes de un deploy a producción?',
+        'options' => 
+        array (
+          0 => 'Health checks, migraciones y rollback plan',
+          1 => 'Solo el color del botón',
+          2 => 'Nada si compila',
+        ),
+        'answer' => 'Health checks, migraciones y rollback plan',
+        'explanation' => 'Un checklist de deploy evita incidentes evitables.',
+        'pro_tip' => 'Automatiza el checklist en CI/CD cuando sea posible.',
+      ),
+      1 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Señal de que necesitas observabilidad mejor?',
+        'options' => 
+        array (
+          0 => 'Descubres fallos por tweets de usuarios',
+          1 => 'Todo funciona en local',
+          2 => 'Tienes logs estructurados',
+        ),
+        'answer' => 'Descubres fallos por tweets de usuarios',
+        'explanation' => 'Si no tienes métricas/trazas, operas a ciegas.',
+        'pro_tip' => 'Define SLI/SLO antes de escalar el equipo.',
+      ),
+    ),
+  ),
+  7 => 
+  array (
+    'slug' => 'algoritmos-entrevista-operaciones',
+    'order' => 8,
+    'title' => 'Checklist profesional y próximos pasos',
+    'level' => 'Avanzado',
+    'minutes' => 35,
+    'summary' => 'Checklist profesional y próximos pasos — cierre avanzado de Algoritmos para entrevistas.',
+    'concepts' => 
+    array (
+      0 => 'best-practices',
+      1 => 'checklist',
+      2 => 'career',
+    ),
+    'sections' => 
+    array (
+      0 => 
+      array (
+        'heading' => 'Patrones en producción',
+        'body' => 'Aplica lo aprendido en Algoritmos para entrevistas a un entorno real: límites, fallos parciales, idempotencia y métricas que importan en producción.',
+        'code' => '// Structured logging en Node/Next
+import pino from \'pino\';
+
+export const logger = pino({
+  level: process.env.LOG_LEVEL ?? \'info\',
+  redact: [\'req.headers.authorization\', \'password\'],
+});
+
+logger.info({ route: \'/api/users\', ms: 42 }, \'request completed\');',
+      ),
+      1 => 
+      array (
+        'heading' => 'Operación continua',
+        'body' => 'Documenta runbooks, define SLOs, automatiza verificaciones post-deploy y revisa alertas antes de que los usuarios las reporten.',
+        'code' => '// Structured logging en Node/Next
+import pino from \'pino\';
+
+export const logger = pino({
+  level: process.env.LOG_LEVEL ?? \'info\',
+  redact: [\'req.headers.authorization\', \'password\'],
+});
+
+logger.info({ route: \'/api/users\', ms: 42 }, \'request completed\');',
+      ),
+    ),
+    'exercises' => 
+    array (
+      0 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Qué revisar antes de un deploy a producción?',
+        'options' => 
+        array (
+          0 => 'Health checks, migraciones y rollback plan',
+          1 => 'Solo el color del botón',
+          2 => 'Nada si compila',
+        ),
+        'answer' => 'Health checks, migraciones y rollback plan',
+        'explanation' => 'Un checklist de deploy evita incidentes evitables.',
+        'pro_tip' => 'Automatiza el checklist en CI/CD cuando sea posible.',
+      ),
+      1 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Señal de que necesitas observabilidad mejor?',
+        'options' => 
+        array (
+          0 => 'Descubres fallos por tweets de usuarios',
+          1 => 'Todo funciona en local',
+          2 => 'Tienes logs estructurados',
+        ),
+        'answer' => 'Descubres fallos por tweets de usuarios',
+        'explanation' => 'Si no tienes métricas/trazas, operas a ciegas.',
+        'pro_tip' => 'Define SLI/SLO antes de escalar el equipo.',
+      ),
+    ),
+  ),
 );

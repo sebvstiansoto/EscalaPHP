@@ -421,4 +421,186 @@ data:
       ),
     ),
   ),
+  6 => 
+  array (
+    'slug' => 'terraform-iac-produccion',
+    'order' => 7,
+    'title' => 'Alta disponibilidad y recuperación ante fallos',
+    'level' => 'Producción',
+    'minutes' => 35,
+    'summary' => 'Alta disponibilidad y recuperación ante fallos — cierre avanzado de Terraform & IaC.',
+    'concepts' => 
+    array (
+      0 => 'ha',
+      1 => 'dr',
+      2 => 'runbook',
+    ),
+    'sections' => 
+    array (
+      0 => 
+      array (
+        'heading' => 'Patrones en producción',
+        'body' => 'Aplica lo aprendido en Terraform & IaC a un entorno real: límites, fallos parciales, idempotencia y métricas que importan en producción.',
+        'code' => '# Deployment con probes y recursos
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: api
+          readinessProbe:
+            httpGet: { path: /health, port: 8080 }
+          resources:
+            requests: { cpu: 100m, memory: 128Mi }
+            limits: { cpu: 500m, memory: 512Mi }',
+      ),
+      1 => 
+      array (
+        'heading' => 'Operación continua',
+        'body' => 'Documenta runbooks, define SLOs, automatiza verificaciones post-deploy y revisa alertas antes de que los usuarios las reporten.',
+        'code' => '# Deployment con probes y recursos
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: api
+          readinessProbe:
+            httpGet: { path: /health, port: 8080 }
+          resources:
+            requests: { cpu: 100m, memory: 128Mi }
+            limits: { cpu: 500m, memory: 512Mi }',
+      ),
+    ),
+    'exercises' => 
+    array (
+      0 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Qué revisar antes de un deploy a producción?',
+        'options' => 
+        array (
+          0 => 'Health checks, migraciones y rollback plan',
+          1 => 'Solo el color del botón',
+          2 => 'Nada si compila',
+        ),
+        'answer' => 'Health checks, migraciones y rollback plan',
+        'explanation' => 'Un checklist de deploy evita incidentes evitables.',
+        'pro_tip' => 'Automatiza el checklist en CI/CD cuando sea posible.',
+      ),
+      1 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Señal de que necesitas observabilidad mejor?',
+        'options' => 
+        array (
+          0 => 'Descubres fallos por tweets de usuarios',
+          1 => 'Todo funciona en local',
+          2 => 'Tienes logs estructurados',
+        ),
+        'answer' => 'Descubres fallos por tweets de usuarios',
+        'explanation' => 'Si no tienes métricas/trazas, operas a ciegas.',
+        'pro_tip' => 'Define SLI/SLO antes de escalar el equipo.',
+      ),
+    ),
+  ),
+  7 => 
+  array (
+    'slug' => 'terraform-iac-operaciones',
+    'order' => 8,
+    'title' => 'Runbooks, SLOs y operación en producción',
+    'level' => 'Avanzado',
+    'minutes' => 35,
+    'summary' => 'Runbooks, SLOs y operación en producción — cierre avanzado de Terraform & IaC.',
+    'concepts' => 
+    array (
+      0 => 'ha',
+      1 => 'dr',
+      2 => 'runbook',
+    ),
+    'sections' => 
+    array (
+      0 => 
+      array (
+        'heading' => 'Patrones en producción',
+        'body' => 'Aplica lo aprendido en Terraform & IaC a un entorno real: límites, fallos parciales, idempotencia y métricas que importan en producción.',
+        'code' => '# Deployment con probes y recursos
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: api
+          readinessProbe:
+            httpGet: { path: /health, port: 8080 }
+          resources:
+            requests: { cpu: 100m, memory: 128Mi }
+            limits: { cpu: 500m, memory: 512Mi }',
+      ),
+      1 => 
+      array (
+        'heading' => 'Operación continua',
+        'body' => 'Documenta runbooks, define SLOs, automatiza verificaciones post-deploy y revisa alertas antes de que los usuarios las reporten.',
+        'code' => '# Deployment con probes y recursos
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: api
+          readinessProbe:
+            httpGet: { path: /health, port: 8080 }
+          resources:
+            requests: { cpu: 100m, memory: 128Mi }
+            limits: { cpu: 500m, memory: 512Mi }',
+      ),
+    ),
+    'exercises' => 
+    array (
+      0 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Qué revisar antes de un deploy a producción?',
+        'options' => 
+        array (
+          0 => 'Health checks, migraciones y rollback plan',
+          1 => 'Solo el color del botón',
+          2 => 'Nada si compila',
+        ),
+        'answer' => 'Health checks, migraciones y rollback plan',
+        'explanation' => 'Un checklist de deploy evita incidentes evitables.',
+        'pro_tip' => 'Automatiza el checklist en CI/CD cuando sea posible.',
+      ),
+      1 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Señal de que necesitas observabilidad mejor?',
+        'options' => 
+        array (
+          0 => 'Descubres fallos por tweets de usuarios',
+          1 => 'Todo funciona en local',
+          2 => 'Tienes logs estructurados',
+        ),
+        'answer' => 'Descubres fallos por tweets de usuarios',
+        'explanation' => 'Si no tienes métricas/trazas, operas a ciegas.',
+        'pro_tip' => 'Define SLI/SLO antes de escalar el equipo.',
+      ),
+    ),
+  ),
 );

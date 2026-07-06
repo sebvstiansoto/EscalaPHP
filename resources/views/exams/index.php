@@ -5,7 +5,7 @@
         <?php foreach ($exams as $exam): ?>
             <article class="course-card">
                 <h2><?= htmlspecialchars($exam['title']) ?></h2>
-                <p><?= count($exam['questions'] ?? []) ?> preguntas · <?= (int) ($exam['time_minutes'] ?? 30) ?> min</p>
+                <p><?= count($exam['questions'] ?? []) ?> preguntas · <?= (int) ($exam['time_minutes'] ?? 30) ?> min<?php if (!empty($exam['simulation'])): ?> · ⏱️ Simulacro<?php endif; ?></p>
                 <a href="/examenes/<?= urlencode($exam['slug']) ?>" class="btn">Empezar examen</a>
             </article>
         <?php endforeach; ?>

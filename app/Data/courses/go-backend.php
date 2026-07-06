@@ -393,4 +393,146 @@ echo "Listo"
       ),
     ),
   ),
+  6 => 
+  array (
+    'slug' => 'go-backend-produccion',
+    'order' => 7,
+    'title' => 'Patrones de producción y resiliencia',
+    'level' => 'Producción',
+    'minutes' => 35,
+    'summary' => 'Patrones de producción y resiliencia — cierre avanzado de Go backend.',
+    'concepts' => 
+    array (
+      0 => 'production',
+      1 => 'resilience',
+      2 => 'ops',
+    ),
+    'sections' => 
+    array (
+      0 => 
+      array (
+        'heading' => 'Patrones en producción',
+        'body' => 'Aplica lo aprendido en Go backend a un entorno real: límites, fallos parciales, idempotencia y métricas que importan en producción.',
+        'code' => '#!/usr/bin/env bash
+set -euo pipefail
+
+# Runbook: verificar servicio tras deploy
+curl -fsS "https://app.example.com/health" | jq .
+kubectl rollout status deployment/api -n production --timeout=120s',
+      ),
+      1 => 
+      array (
+        'heading' => 'Operación continua',
+        'body' => 'Documenta runbooks, define SLOs, automatiza verificaciones post-deploy y revisa alertas antes de que los usuarios las reporten.',
+        'code' => '#!/usr/bin/env bash
+set -euo pipefail
+
+# Runbook: verificar servicio tras deploy
+curl -fsS "https://app.example.com/health" | jq .
+kubectl rollout status deployment/api -n production --timeout=120s',
+      ),
+    ),
+    'exercises' => 
+    array (
+      0 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Qué revisar antes de un deploy a producción?',
+        'options' => 
+        array (
+          0 => 'Health checks, migraciones y rollback plan',
+          1 => 'Solo el color del botón',
+          2 => 'Nada si compila',
+        ),
+        'answer' => 'Health checks, migraciones y rollback plan',
+        'explanation' => 'Un checklist de deploy evita incidentes evitables.',
+        'pro_tip' => 'Automatiza el checklist en CI/CD cuando sea posible.',
+      ),
+      1 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Señal de que necesitas observabilidad mejor?',
+        'options' => 
+        array (
+          0 => 'Descubres fallos por tweets de usuarios',
+          1 => 'Todo funciona en local',
+          2 => 'Tienes logs estructurados',
+        ),
+        'answer' => 'Descubres fallos por tweets de usuarios',
+        'explanation' => 'Si no tienes métricas/trazas, operas a ciegas.',
+        'pro_tip' => 'Define SLI/SLO antes de escalar el equipo.',
+      ),
+    ),
+  ),
+  7 => 
+  array (
+    'slug' => 'go-backend-operaciones',
+    'order' => 8,
+    'title' => 'Observabilidad, debugging y checklist de deploy',
+    'level' => 'Avanzado',
+    'minutes' => 35,
+    'summary' => 'Observabilidad, debugging y checklist de deploy — cierre avanzado de Go backend.',
+    'concepts' => 
+    array (
+      0 => 'production',
+      1 => 'resilience',
+      2 => 'ops',
+    ),
+    'sections' => 
+    array (
+      0 => 
+      array (
+        'heading' => 'Patrones en producción',
+        'body' => 'Aplica lo aprendido en Go backend a un entorno real: límites, fallos parciales, idempotencia y métricas que importan en producción.',
+        'code' => '#!/usr/bin/env bash
+set -euo pipefail
+
+# Runbook: verificar servicio tras deploy
+curl -fsS "https://app.example.com/health" | jq .
+kubectl rollout status deployment/api -n production --timeout=120s',
+      ),
+      1 => 
+      array (
+        'heading' => 'Operación continua',
+        'body' => 'Documenta runbooks, define SLOs, automatiza verificaciones post-deploy y revisa alertas antes de que los usuarios las reporten.',
+        'code' => '#!/usr/bin/env bash
+set -euo pipefail
+
+# Runbook: verificar servicio tras deploy
+curl -fsS "https://app.example.com/health" | jq .
+kubectl rollout status deployment/api -n production --timeout=120s',
+      ),
+    ),
+    'exercises' => 
+    array (
+      0 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Qué revisar antes de un deploy a producción?',
+        'options' => 
+        array (
+          0 => 'Health checks, migraciones y rollback plan',
+          1 => 'Solo el color del botón',
+          2 => 'Nada si compila',
+        ),
+        'answer' => 'Health checks, migraciones y rollback plan',
+        'explanation' => 'Un checklist de deploy evita incidentes evitables.',
+        'pro_tip' => 'Automatiza el checklist en CI/CD cuando sea posible.',
+      ),
+      1 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Señal de que necesitas observabilidad mejor?',
+        'options' => 
+        array (
+          0 => 'Descubres fallos por tweets de usuarios',
+          1 => 'Todo funciona en local',
+          2 => 'Tienes logs estructurados',
+        ),
+        'answer' => 'Descubres fallos por tweets de usuarios',
+        'explanation' => 'Si no tienes métricas/trazas, operas a ciegas.',
+        'pro_tip' => 'Define SLI/SLO antes de escalar el equipo.',
+      ),
+    ),
+  ),
 );

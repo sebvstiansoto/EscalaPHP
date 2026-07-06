@@ -68,4 +68,51 @@ class LearningPathService
 
         return null;
     }
+
+    /** @return array{completed: int, total: int, percent: int, done: bool} */
+    public function progressForPath(ProgressRepository $progress, string $pathSlug): array
+    {
+        $paths = $this->all();
+        if (!isset($paths[$pathSlug])) {
+            return ['completed' => 0, 'total' => 0, 'percent' => 0, 'done' => false];
+        }
+
+        $total = 0;
+        $completed = 0;
+        foreach ($paths[$pathSlug]['courses'] as $courseSlug) {
+            $lessons = \App\CourseCatalog::lessonsForCourse($courseSlug);
+            foreach ($lessons as $lesson) {
+                $total++;
+                if ($progress->isLessonCompleted($courseSlug, (string) $lesson['slug'])) {
+                    $completed++;
+                }
+            }
+        }
+
+        return [
+            'completed' => $completed,
+            'total' => $total,
+            'percent' => $total > 0 ? (int) round(($completed / $total) * 100) : 0,
+            'done' => $total > 0 && $completed >= $total,
+        ];
+    }
+
+    public function isPathComplete(ProgressRepository $progress, string $pathSlug): bool
+    {
+        return $this->progressForPath($progress, $pathSlug)['done'];
+    }
+
+    /** @return list<string> */
+    public function completedPaths(ProgressRepository $progress): array
+    {
+        $done = [];
+        foreach ($this->all() as $path) {
+            $slug = (string) ($path['slug'] ?? '');
+            if ($slug !== '' && $this->isPathComplete($progress, $slug)) {
+                $done[] = $slug;
+            }
+        }
+
+        return $done;
+    }
 }

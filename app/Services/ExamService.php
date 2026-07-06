@@ -45,6 +45,16 @@ class ExamService
         $passScore = (int) ($exam['pass_score'] ?? (int) ceil($max * 0.7));
         $passed = $score >= $passScore;
 
+        $timedOut = false;
+        if (!empty($exam['time_minutes']) && isset($_SESSION['exam_started'][$slug])) {
+            $elapsed = time() - (int) $_SESSION['exam_started'][$slug];
+            $limit = ((int) $exam['time_minutes']) * 60 + 30;
+            if ($elapsed > $limit) {
+                $timedOut = true;
+            }
+        }
+        unset($_SESSION['exam_started'][$slug]);
+
         $context->pdo()->prepare(
             'INSERT INTO exam_attempts (user_id, session_id, exam_slug, score, max_score, answers_json, passed, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
         )->execute([
@@ -58,6 +68,14 @@ class ExamService
             date('c'),
         ]);
 
-        return ['ok' => true, 'score' => $score, 'max' => $max, 'passed' => $passed, 'pass_score' => $passScore];
+        return [
+            'ok' => true,
+            'score' => $score,
+            'max' => $max,
+            'passed' => $passed,
+            'pass_score' => $passScore,
+            'timed_out' => $timedOut,
+            'simulation' => !empty($exam['simulation']),
+        ];
     }
 }

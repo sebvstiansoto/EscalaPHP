@@ -13,17 +13,27 @@ class PathController
     public function __construct(
         private LearningPathService $paths,
         private \App\Services\LearnerContext $context,
+        private \App\ProgressRepository $progress,
         private array $config,
     ) {
     }
 
     public function index(): void
     {
+        $pathProgress = [];
+        foreach ($this->paths->all() as $path) {
+            $slug = (string) ($path['slug'] ?? '');
+            if ($slug !== '') {
+                $pathProgress[$slug] = $this->paths->progressForPath($this->progress, $slug);
+            }
+        }
+
         View::show('paths', [
             'config' => $this->config,
             'title' => 'Rutas de aprendizaje',
             'paths' => $this->paths->all(),
             'selected' => $this->paths->selected($this->context),
+            'pathProgress' => $pathProgress,
         ]);
     }
 

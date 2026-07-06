@@ -8,6 +8,7 @@ use App\CourseCatalog;
 use App\ProgressRepository;
 use App\Services\AchievementService;
 use App\Services\CertificateVerifyService;
+use App\Services\LearningPathService;
 use App\View;
 
 class CertificateController
@@ -17,12 +18,19 @@ class CertificateController
         private AchievementService $achievements,
         private Gamification $gamification,
         private CertificateVerifyService $certificateVerify,
+        private LearningPathService $learningPaths,
         private array $config,
     ) {
     }
 
     public function show(): void
     {
+        $pathSlug = (string) ($_GET['ruta'] ?? '');
+        if ($pathSlug !== '') {
+            $this->showPathCertificate($pathSlug);
+            return;
+        }
+
         $courseSlug = (string) ($_GET['curso'] ?? 'php-fundamentos');
         $course = CourseCatalog::course($courseSlug) ?? CourseCatalog::course('php-fundamentos');
         $courseSlug = (string) ($course['slug'] ?? 'php-fundamentos');
@@ -51,8 +59,49 @@ class CertificateController
         ]);
     }
 
+    private function showPathCertificate(string $pathSlug): void
+    {
+        $paths = $this->learningPaths->all();
+        if (!isset($paths[$pathSlug])) {
+            http_response_code(404);
+            View::show('errors/404', ['path' => '/certificado?ruta=' . $pathSlug, 'config' => $this->config]);
+            return;
+        }
+
+        $path = $paths[$pathSlug];
+        $prog = $this->learningPaths->progressForPath($this->progress, $pathSlug);
+        $profile = $this->gamification->profile();
+        $isGraduate = $prog['done'];
+
+        $verifyCode = null;
+        if ($isGraduate) {
+            $verifyCode = $this->certificateVerify->issue('path:' . $pathSlug, (string) ($profile['display_name'] ?? 'Aprendiz'));
+        }
+
+        View::show('certificate', [
+            'config' => $this->config,
+            'title' => 'Certificado — ' . ($path['title'] ?? 'Ruta'),
+            'profile' => $profile,
+            'course' => ['title' => $path['title'] ?? 'Ruta', 'icon' => $path['icon'] ?? '🛤️'],
+            'courseSlug' => 'path:' . $pathSlug,
+            'isGraduate' => $isGraduate,
+            'completed' => $prog['completed'],
+            'total' => $prog['total'],
+            'percent' => $prog['percent'],
+            'date' => date('d/m/Y'),
+            'verifyCode' => $verifyCode,
+            'isPath' => true,
+        ]);
+    }
+
     public function download(): void
     {
+        $pathSlug = (string) ($_GET['ruta'] ?? '');
+        if ($pathSlug !== '') {
+            $this->downloadPathCertificate($pathSlug);
+            return;
+        }
+
         $courseSlug = (string) ($_GET['curso'] ?? 'php-fundamentos');
         if (!$this->achievements->isCourseGraduate($courseSlug)) {
             header('Location: /certificado?curso=' . urlencode($courseSlug));
@@ -85,6 +134,49 @@ h1{color:#3776ab;margin:0} .name{font-size:2rem;margin:1rem 0;color:#111}
 <p>Otorgado a</p>
 <p class="name">{$name}</p>
 <p>Por completar los {$total} módulos del curso con mentor guiado y proyectos validados.</p>
+<p class="meta">Expedido: {$date} · {$xp} XP</p>
+</div>
+<p class="no-print"><button onclick="window.print()">Imprimir / Guardar como PDF</button></p>
+<script>window.onload=()=>window.print()</script>
+</body></html>
+HTML;
+        exit;
+    }
+
+    private function downloadPathCertificate(string $pathSlug): void
+    {
+        if (!$this->learningPaths->isPathComplete($this->progress, $pathSlug)) {
+            header('Location: /certificado?ruta=' . urlencode($pathSlug));
+            exit;
+        }
+
+        $paths = $this->learningPaths->all();
+        $path = $paths[$pathSlug] ?? null;
+        $profile = $this->gamification->profile();
+        $name = htmlspecialchars((string) ($profile['display_name'] ?? 'Aprendiz'), ENT_QUOTES, 'UTF-8');
+        $pathTitle = htmlspecialchars((string) ($path['title'] ?? 'Ruta'), ENT_QUOTES, 'UTF-8');
+        $courseCount = count($path['courses'] ?? []);
+        $date = date('d/m/Y');
+        $xp = (int) ($profile['xp'] ?? 0);
+
+        header('Content-Type: text/html; charset=utf-8');
+        echo <<<HTML
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><title>Certificado — {$pathTitle}</title>
+<style>
+body{font-family:Georgia,serif;text-align:center;padding:3rem;background:#f5f5f5}
+.cert{max-width:700px;margin:0 auto;background:#fff;border:8px double #3776ab;padding:3rem}
+h1{color:#3776ab;margin:0} .name{font-size:2rem;margin:1rem 0;color:#111}
+.meta{color:#666;margin-top:1.5rem}
+@media print{body{background:#fff}.no-print{display:none}}
+</style></head><body>
+<div class="cert">
+<div style="font-size:3rem">🛤️</div>
+<p>CERTIFICADO DE RUTA COMPLETADA</p>
+<h1>{$pathTitle}</h1>
+<p>Otorgado a</p>
+<p class="name">{$name}</p>
+<p>Por completar la ruta guiada con {$courseCount} cursos y todas sus lecciones.</p>
 <p class="meta">Expedido: {$date} · {$xp} XP</p>
 </div>
 <p class="no-print"><button onclick="window.print()">Imprimir / Guardar como PDF</button></p>

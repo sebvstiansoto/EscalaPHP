@@ -393,4 +393,146 @@ echo "Listo"
       ),
     ),
   ),
+  6 => 
+  array (
+    'slug' => 'cert-azure-fund-simulacro',
+    'order' => 7,
+    'title' => 'Simulacro de preguntas clave',
+    'level' => 'Producción',
+    'minutes' => 40,
+    'summary' => 'Simulacro de preguntas clave — cierre avanzado de Cert AZ-900.',
+    'concepts' => 
+    array (
+      0 => 'exam-prep',
+      1 => 'strategy',
+      2 => 'review',
+    ),
+    'sections' => 
+    array (
+      0 => 
+      array (
+        'heading' => 'Preguntas tipo examen',
+        'body' => 'Repasa escenarios típicos del examen oficial de Cert AZ-900: servicios clave, límites, costos y arquitecturas recomendadas.',
+        'code' => '#!/usr/bin/env bash
+set -euo pipefail
+
+# Runbook: verificar servicio tras deploy
+curl -fsS "https://app.example.com/health" | jq .
+kubectl rollout status deployment/api -n production --timeout=120s',
+      ),
+      1 => 
+      array (
+        'heading' => 'Día del examen',
+        'body' => 'Gestiona el tiempo, marca preguntas difíciles, elimina respuestas obviamente incorrectas y repasa tus puntos débiles la semana previa.',
+        'code' => '#!/usr/bin/env bash
+set -euo pipefail
+
+# Runbook: verificar servicio tras deploy
+curl -fsS "https://app.example.com/health" | jq .
+kubectl rollout status deployment/api -n production --timeout=120s',
+      ),
+    ),
+    'exercises' => 
+    array (
+      0 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Qué hacer primero ante una pregunta larga en el examen?',
+        'options' => 
+        array (
+          0 => 'Leer el final para entender qué piden',
+          1 => 'Responder al azar',
+          2 => 'Saltar sin leer',
+        ),
+        'answer' => 'Leer el final para entender qué piden',
+        'explanation' => 'Muchas preguntas de certificación esconden el requisito real al final del enunciado.',
+        'pro_tip' => 'Simula con temporizador — la presión del tiempo es parte del examen.',
+      ),
+      1 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Cuándo marcar una pregunta para revisar después?',
+        'options' => 
+        array (
+          0 => 'Cuando llevas más de 2 min sin avanzar',
+          1 => 'Nunca',
+          2 => 'Siempre en la primera',
+        ),
+        'answer' => 'Cuando llevas más de 2 min sin avanzar',
+        'explanation' => 'Gestiona el reloj: responde lo seguro primero y vuelve a lo marcado.',
+        'pro_tip' => 'Repasa los simulacros conclicados de la plataforma antes del día D.',
+      ),
+    ),
+  ),
+  7 => 
+  array (
+    'slug' => 'cert-azure-fund-estrategia',
+    'order' => 8,
+    'title' => 'Estrategia y checklist del examen',
+    'level' => 'Avanzado',
+    'minutes' => 40,
+    'summary' => 'Estrategia y checklist del examen — cierre avanzado de Cert AZ-900.',
+    'concepts' => 
+    array (
+      0 => 'exam-prep',
+      1 => 'strategy',
+      2 => 'review',
+    ),
+    'sections' => 
+    array (
+      0 => 
+      array (
+        'heading' => 'Preguntas tipo examen',
+        'body' => 'Repasa escenarios típicos del examen oficial de Cert AZ-900: servicios clave, límites, costos y arquitecturas recomendadas.',
+        'code' => '#!/usr/bin/env bash
+set -euo pipefail
+
+# Runbook: verificar servicio tras deploy
+curl -fsS "https://app.example.com/health" | jq .
+kubectl rollout status deployment/api -n production --timeout=120s',
+      ),
+      1 => 
+      array (
+        'heading' => 'Día del examen',
+        'body' => 'Gestiona el tiempo, marca preguntas difíciles, elimina respuestas obviamente incorrectas y repasa tus puntos débiles la semana previa.',
+        'code' => '#!/usr/bin/env bash
+set -euo pipefail
+
+# Runbook: verificar servicio tras deploy
+curl -fsS "https://app.example.com/health" | jq .
+kubectl rollout status deployment/api -n production --timeout=120s',
+      ),
+    ),
+    'exercises' => 
+    array (
+      0 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Qué hacer primero ante una pregunta larga en el examen?',
+        'options' => 
+        array (
+          0 => 'Leer el final para entender qué piden',
+          1 => 'Responder al azar',
+          2 => 'Saltar sin leer',
+        ),
+        'answer' => 'Leer el final para entender qué piden',
+        'explanation' => 'Muchas preguntas de certificación esconden el requisito real al final del enunciado.',
+        'pro_tip' => 'Simula con temporizador — la presión del tiempo es parte del examen.',
+      ),
+      1 => 
+      array (
+        'type' => 'choice',
+        'question' => '¿Cuándo marcar una pregunta para revisar después?',
+        'options' => 
+        array (
+          0 => 'Cuando llevas más de 2 min sin avanzar',
+          1 => 'Nunca',
+          2 => 'Siempre en la primera',
+        ),
+        'answer' => 'Cuando llevas más de 2 min sin avanzar',
+        'explanation' => 'Gestiona el reloj: responde lo seguro primero y vuelve a lo marcado.',
+        'pro_tip' => 'Repasa los simulacros conclicados de la plataforma antes del día D.',
+      ),
+    ),
+  ),
 );

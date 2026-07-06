@@ -6569,5 +6569,1409 @@ Ana|Laptop|1200',
     'type' => 'honor',
   ),
 ),
+    'astro-web-produccion' => array (
+  'title' => 'Práctica: Performance, bundle y Core Web Vitals',
+  'description' => 'Consolida «Performance, bundle y Core Web Vitals» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'astro-web-operaciones' => array (
+  'title' => 'Práctica: Accesibilidad, SEO y checklist de release',
+  'description' => 'Consolida «Accesibilidad, SEO y checklist de release» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'cicd-produccion' => array (
+  'title' => 'Práctica: Alta disponibilidad y recuperación ante fallos',
+  'description' => 'Consolida «Alta disponibilidad y recuperación ante fallos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'cicd-operaciones' => array (
+  'title' => 'Práctica: Runbooks, SLOs y operación en producción',
+  'description' => 'Consolida «Runbooks, SLOs y operación en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'git-fundamentos-produccion' => array (
+  'title' => 'Práctica: Buenas prácticas avanzadas en producción',
+  'description' => 'Consolida «Buenas prácticas avanzadas en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'sql-fundamentos-produccion' => array (
+  'title' => 'Práctica: Buenas prácticas avanzadas en producción',
+  'description' => 'Consolida «Buenas prácticas avanzadas en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'typescript-fundamentos-produccion' => array (
+  'title' => 'Práctica: Performance, bundle y Core Web Vitals',
+  'description' => 'Consolida «Performance, bundle y Core Web Vitals» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'typescript-fundamentos-operaciones' => array (
+  'title' => 'Práctica: Accesibilidad, SEO y checklist de release',
+  'description' => 'Consolida «Accesibilidad, SEO y checklist de release» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'nodejs-backend-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'nodejs-backend-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'linux-bash-produccion' => array (
+  'title' => 'Práctica: Buenas prácticas avanzadas en producción',
+  'description' => 'Consolida «Buenas prácticas avanzadas en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'linux-bash-operaciones' => array (
+  'title' => 'Práctica: Checklist profesional y próximos pasos',
+  'description' => 'Consolida «Checklist profesional y próximos pasos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'seguridad-web-produccion' => array (
+  'title' => 'Práctica: Buenas prácticas avanzadas en producción',
+  'description' => 'Consolida «Buenas prácticas avanzadas en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'testing-php-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'testing-php-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'tailwind-css-produccion' => array (
+  'title' => 'Práctica: Performance, bundle y Core Web Vitals',
+  'description' => 'Consolida «Performance, bundle y Core Web Vitals» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'tailwind-css-operaciones' => array (
+  'title' => 'Práctica: Accesibilidad, SEO y checklist de release',
+  'description' => 'Consolida «Accesibilidad, SEO y checklist de release» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'patrones-diseno-produccion' => array (
+  'title' => 'Práctica: Buenas prácticas avanzadas en producción',
+  'description' => 'Consolida «Buenas prácticas avanzadas en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'patrones-diseno-operaciones' => array (
+  'title' => 'Práctica: Checklist profesional y próximos pasos',
+  'description' => 'Consolida «Checklist profesional y próximos pasos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'symfony-fundamentos-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'symfony-fundamentos-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'nginx-proxy-produccion' => array (
+  'title' => 'Práctica: Alta disponibilidad y recuperación ante fallos',
+  'description' => 'Consolida «Alta disponibilidad y recuperación ante fallos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'nginx-proxy-operaciones' => array (
+  'title' => 'Práctica: Runbooks, SLOs y operación en producción',
+  'description' => 'Consolida «Runbooks, SLOs y operación en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'django-rest-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'django-rest-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'algoritmos-entrevista-produccion' => array (
+  'title' => 'Práctica: Buenas prácticas avanzadas en producción',
+  'description' => 'Consolida «Buenas prácticas avanzadas en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'algoritmos-entrevista-operaciones' => array (
+  'title' => 'Práctica: Checklist profesional y próximos pasos',
+  'description' => 'Consolida «Checklist profesional y próximos pasos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'websockets-realtime-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'websockets-realtime-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'graphql-api-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'graphql-api-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'arquitectura-software-produccion' => array (
+  'title' => 'Práctica: Buenas prácticas avanzadas en producción',
+  'description' => 'Consolida «Buenas prácticas avanzadas en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'arquitectura-software-operaciones' => array (
+  'title' => 'Práctica: Checklist profesional y próximos pasos',
+  'description' => 'Consolida «Checklist profesional y próximos pasos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'mensajeria-colas-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'mensajeria-colas-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'aws-cloud-basico-produccion' => array (
+  'title' => 'Práctica: Alta disponibilidad y recuperación ante fallos',
+  'description' => 'Consolida «Alta disponibilidad y recuperación ante fallos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'aws-cloud-basico-operaciones' => array (
+  'title' => 'Práctica: Runbooks, SLOs y operación en producción',
+  'description' => 'Consolida «Runbooks, SLOs y operación en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'ethical-hacking-produccion' => array (
+  'title' => 'Práctica: Buenas prácticas avanzadas en producción',
+  'description' => 'Consolida «Buenas prácticas avanzadas en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'go-backend-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'go-backend-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'java-spring-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'java-spring-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'mongodb-nosql-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'mongodb-nosql-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'vue-frontend-produccion' => array (
+  'title' => 'Práctica: Performance, bundle y Core Web Vitals',
+  'description' => 'Consolida «Performance, bundle y Core Web Vitals» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'vue-frontend-operaciones' => array (
+  'title' => 'Práctica: Accesibilidad, SEO y checklist de release',
+  'description' => 'Consolida «Accesibilidad, SEO y checklist de release» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'terraform-iac-produccion' => array (
+  'title' => 'Práctica: Alta disponibilidad y recuperación ante fallos',
+  'description' => 'Consolida «Alta disponibilidad y recuperación ante fallos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'terraform-iac-operaciones' => array (
+  'title' => 'Práctica: Runbooks, SLOs y operación en producción',
+  'description' => 'Consolida «Runbooks, SLOs y operación en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'grpc-apis-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'grpc-apis-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'oauth-openid-produccion' => array (
+  'title' => 'Práctica: Buenas prácticas avanzadas en producción',
+  'description' => 'Consolida «Buenas prácticas avanzadas en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'oauth-openid-operaciones' => array (
+  'title' => 'Práctica: Checklist profesional y próximos pasos',
+  'description' => 'Consolida «Checklist profesional y próximos pasos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'observabilidad-produccion' => array (
+  'title' => 'Práctica: Escalado, particionado y costos',
+  'description' => 'Consolida «Escalado, particionado y costos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'observabilidad-operaciones' => array (
+  'title' => 'Práctica: Calidad de datos, pipelines y alertas',
+  'description' => 'Consolida «Calidad de datos, pipelines y alertas» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'rust-fundamentos-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'rust-fundamentos-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'angular-fundamentos-produccion' => array (
+  'title' => 'Práctica: Performance, bundle y Core Web Vitals',
+  'description' => 'Consolida «Performance, bundle y Core Web Vitals» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'angular-fundamentos-operaciones' => array (
+  'title' => 'Práctica: Accesibilidad, SEO y checklist de release',
+  'description' => 'Consolida «Accesibilidad, SEO y checklist de release» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'clean-code-produccion' => array (
+  'title' => 'Práctica: Buenas prácticas avanzadas en producción',
+  'description' => 'Consolida «Buenas prácticas avanzadas en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'clean-code-operaciones' => array (
+  'title' => 'Práctica: Checklist profesional y próximos pasos',
+  'description' => 'Consolida «Checklist profesional y próximos pasos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'stripe-pagos-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'stripe-pagos-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'flutter-mobile-produccion' => array (
+  'title' => 'Práctica: Publicación en stores y CI mobile',
+  'description' => 'Consolida «Publicación en stores y CI mobile» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'flutter-mobile-operaciones' => array (
+  'title' => 'Práctica: Performance, crashes y monitoreo en producción',
+  'description' => 'Consolida «Performance, crashes y monitoreo en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'csharp-dotnet-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'csharp-dotnet-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'kotlin-android-produccion' => array (
+  'title' => 'Práctica: Publicación en stores y CI mobile',
+  'description' => 'Consolida «Publicación en stores y CI mobile» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'kotlin-android-operaciones' => array (
+  'title' => 'Práctica: Performance, crashes y monitoreo en producción',
+  'description' => 'Consolida «Performance, crashes y monitoreo en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'elasticsearch-busqueda-produccion' => array (
+  'title' => 'Práctica: Escalado, particionado y costos',
+  'description' => 'Consolida «Escalado, particionado y costos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'elasticsearch-busqueda-operaciones' => array (
+  'title' => 'Práctica: Calidad de datos, pipelines y alertas',
+  'description' => 'Consolida «Calidad de datos, pipelines y alertas» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'gcp-cloud-basico-produccion' => array (
+  'title' => 'Práctica: Alta disponibilidad y recuperación ante fallos',
+  'description' => 'Consolida «Alta disponibilidad y recuperación ante fallos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'gcp-cloud-basico-operaciones' => array (
+  'title' => 'Práctica: Runbooks, SLOs y operación en producción',
+  'description' => 'Consolida «Runbooks, SLOs y operación en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'azure-cloud-basico-produccion' => array (
+  'title' => 'Práctica: Alta disponibilidad y recuperación ante fallos',
+  'description' => 'Consolida «Alta disponibilidad y recuperación ante fallos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'azure-cloud-basico-operaciones' => array (
+  'title' => 'Práctica: Runbooks, SLOs y operación en producción',
+  'description' => 'Consolida «Runbooks, SLOs y operación en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'helm-kubernetes-produccion' => array (
+  'title' => 'Práctica: Alta disponibilidad y recuperación ante fallos',
+  'description' => 'Consolida «Alta disponibilidad y recuperación ante fallos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'helm-kubernetes-operaciones' => array (
+  'title' => 'Práctica: Runbooks, SLOs y operación en producción',
+  'description' => 'Consolida «Runbooks, SLOs y operación en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'ansible-automation-produccion' => array (
+  'title' => 'Práctica: Alta disponibilidad y recuperación ante fallos',
+  'description' => 'Consolida «Alta disponibilidad y recuperación ante fallos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'ansible-automation-operaciones' => array (
+  'title' => 'Práctica: Runbooks, SLOs y operación en producción',
+  'description' => 'Consolida «Runbooks, SLOs y operación en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'webrtc-comunicacion-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'webrtc-comunicacion-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'pwa-offline-produccion' => array (
+  'title' => 'Práctica: Performance, bundle y Core Web Vitals',
+  'description' => 'Consolida «Performance, bundle y Core Web Vitals» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'pwa-offline-operaciones' => array (
+  'title' => 'Práctica: Accesibilidad, SEO y checklist de release',
+  'description' => 'Consolida «Accesibilidad, SEO y checklist de release» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'accesibilidad-web-produccion' => array (
+  'title' => 'Práctica: Performance, bundle y Core Web Vitals',
+  'description' => 'Consolida «Performance, bundle y Core Web Vitals» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'accesibilidad-web-operaciones' => array (
+  'title' => 'Práctica: Accesibilidad, SEO y checklist de release',
+  'description' => 'Consolida «Accesibilidad, SEO y checklist de release» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'wordpress-dev-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'wordpress-dev-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'web3-blockchain-produccion' => array (
+  'title' => 'Práctica: Buenas prácticas avanzadas en producción',
+  'description' => 'Consolida «Buenas prácticas avanzadas en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'web3-blockchain-operaciones' => array (
+  'title' => 'Práctica: Checklist profesional y próximos pasos',
+  'description' => 'Consolida «Checklist profesional y próximos pasos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'playwright-e2e-produccion' => array (
+  'title' => 'Práctica: Buenas prácticas avanzadas en producción',
+  'description' => 'Consolida «Buenas prácticas avanzadas en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'playwright-e2e-operaciones' => array (
+  'title' => 'Práctica: Checklist profesional y próximos pasos',
+  'description' => 'Consolida «Checklist profesional y próximos pasos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'svelte-fundamentos-produccion' => array (
+  'title' => 'Práctica: Performance, bundle y Core Web Vitals',
+  'description' => 'Consolida «Performance, bundle y Core Web Vitals» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'svelte-fundamentos-operaciones' => array (
+  'title' => 'Práctica: Accesibilidad, SEO y checklist de release',
+  'description' => 'Consolida «Accesibilidad, SEO y checklist de release» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'electron-desktop-produccion' => array (
+  'title' => 'Práctica: Performance, bundle y Core Web Vitals',
+  'description' => 'Consolida «Performance, bundle y Core Web Vitals» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'electron-desktop-operaciones' => array (
+  'title' => 'Práctica: Accesibilidad, SEO y checklist de release',
+  'description' => 'Consolida «Accesibilidad, SEO y checklist de release» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'deno-bun-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'deno-bun-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'supabase-backend-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'supabase-backend-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'figma-devs-produccion' => array (
+  'title' => 'Práctica: Performance, bundle y Core Web Vitals',
+  'description' => 'Consolida «Performance, bundle y Core Web Vitals» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'figma-devs-operaciones' => array (
+  'title' => 'Práctica: Accesibilidad, SEO y checklist de release',
+  'description' => 'Consolida «Accesibilidad, SEO y checklist de release» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'agile-scrum-produccion' => array (
+  'title' => 'Práctica: Buenas prácticas avanzadas en producción',
+  'description' => 'Consolida «Buenas prácticas avanzadas en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'agile-scrum-operaciones' => array (
+  'title' => 'Práctica: Checklist profesional y próximos pasos',
+  'description' => 'Consolida «Checklist profesional y próximos pasos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'technical-writing-produccion' => array (
+  'title' => 'Práctica: Buenas prácticas avanzadas en producción',
+  'description' => 'Consolida «Buenas prácticas avanzadas en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'technical-writing-operaciones' => array (
+  'title' => 'Práctica: Checklist profesional y próximos pasos',
+  'description' => 'Consolida «Checklist profesional y próximos pasos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'cert-aws-saa-simulacro' => array (
+  'title' => 'Práctica: Simulacro de preguntas clave',
+  'description' => 'Consolida «Simulacro de preguntas clave» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'cert-aws-saa-estrategia' => array (
+  'title' => 'Práctica: Estrategia y checklist del examen',
+  'description' => 'Consolida «Estrategia y checklist del examen» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'cert-cka-simulacro' => array (
+  'title' => 'Práctica: Simulacro de preguntas clave',
+  'description' => 'Consolida «Simulacro de preguntas clave» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'cert-cka-estrategia' => array (
+  'title' => 'Práctica: Estrategia y checklist del examen',
+  'description' => 'Consolida «Estrategia y checklist del examen» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'cert-azure-fund-simulacro' => array (
+  'title' => 'Práctica: Simulacro de preguntas clave',
+  'description' => 'Consolida «Simulacro de preguntas clave» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'cert-azure-fund-estrategia' => array (
+  'title' => 'Práctica: Estrategia y checklist del examen',
+  'description' => 'Consolida «Estrategia y checklist del examen» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'prisma-orm-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'prisma-orm-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'firebase-backend-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'firebase-backend-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'openapi-documentacion-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'openapi-documentacion-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'event-sourcing-cqrs-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'event-sourcing-cqrs-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'php-avanzado-produccion' => array (
+  'title' => 'Práctica: Patrones de producción y resiliencia',
+  'description' => 'Consolida «Patrones de producción y resiliencia» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'php-avanzado-operaciones' => array (
+  'title' => 'Práctica: Observabilidad, debugging y checklist de deploy',
+  'description' => 'Consolida «Observabilidad, debugging y checklist de deploy» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'contains',
+    'must_contain' => 
+    array (
+      0 => 'health',
+    ),
+  ),
+),
+    'networking-devops-produccion' => array (
+  'title' => 'Práctica: Alta disponibilidad y recuperación ante fallos',
+  'description' => 'Consolida «Alta disponibilidad y recuperación ante fallos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'networking-devops-operaciones' => array (
+  'title' => 'Práctica: Runbooks, SLOs y operación en producción',
+  'description' => 'Consolida «Runbooks, SLOs y operación en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'producto-tech-produccion' => array (
+  'title' => 'Práctica: Buenas prácticas avanzadas en producción',
+  'description' => 'Consolida «Buenas prácticas avanzadas en producción» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
+    'producto-tech-operaciones' => array (
+  'title' => 'Práctica: Checklist profesional y próximos pasos',
+  'description' => 'Consolida «Checklist profesional y próximos pasos» con un ejercicio hands-on.',
+  'reward_xp' => 70,
+  'validation' => 
+  array (
+    'type' => 'honor',
+  ),
+),
 ];
 ;
