@@ -17,9 +17,9 @@ class Migrator
         $this->pdo->exec('CREATE TABLE IF NOT EXISTS schema_migrations (version TEXT PRIMARY KEY, applied_at TEXT NOT NULL)');
 
         $this->repairIncomplete([
-            '001_platform_tables' => 'notifications',
-            '002_max_platform' => 'daily_missions',
-            '003_product_max' => 'user_sessions',
+            '001_platform_tables' => ['notifications'],
+            '002_max_platform' => ['daily_missions'],
+            '003_product_max' => ['user_sessions', 'comments', 'job_queue'],
         ]);
 
         $applied = $this->appliedVersions();
@@ -41,11 +41,18 @@ class Migrator
         }
     }
 
-    /** @param array<string, string> $sentinels */
+    /** @param array<string, list<string>> $sentinels */
     private function repairIncomplete(array $sentinels): void
     {
-        foreach ($sentinels as $version => $table) {
-            if ($this->tableExists($table)) {
+        foreach ($sentinels as $version => $tables) {
+            $complete = true;
+            foreach ($tables as $table) {
+                if (!$this->tableExists($table)) {
+                    $complete = false;
+                    break;
+                }
+            }
+            if ($complete) {
                 continue;
             }
 

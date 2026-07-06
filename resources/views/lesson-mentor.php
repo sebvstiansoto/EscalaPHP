@@ -323,11 +323,16 @@ document.querySelectorAll('.live-demo').forEach(el => {
     const list = document.getElementById('comments-list');
     const form = document.getElementById('comment-form');
     const load = async () => {
-        const res = await fetch('/api/comments?type=lesson&id=' + encodeURIComponent(id));
-        const data = await res.json();
-        list.innerHTML = (data.comments || []).map(c =>
-            `<div class="comment-item"><strong>${c.display_name}</strong>: ${c.body.replace(/</g,'&lt;')}<br><small>${c.created_at}</small></div>`
-        ).join('') || '<p class="muted">Sé el primero en comentar.</p>';
+        try {
+            const res = await fetch('/api/comments?type=lesson&id=' + encodeURIComponent(id));
+            if (!res.ok) return;
+            const data = await res.json();
+            list.innerHTML = (data.comments || []).map(c =>
+                `<div class="comment-item"><strong>${c.display_name}</strong>: ${c.body.replace(/</g,'&lt;')}<br><small>${c.created_at}</small></div>`
+            ).join('') || '<p class="muted">Sé el primero en comentar.</p>';
+        } catch {
+            list.innerHTML = '<p class="muted">Comentarios no disponibles.</p>';
+        }
     };
     form.addEventListener('submit', async e => {
         e.preventDefault();

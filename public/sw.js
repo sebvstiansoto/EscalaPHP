@@ -1,8 +1,13 @@
-const CACHE = 'escala-v3';
-const ASSETS = ['/assets/style.css?v=9', '/assets/app.js?v=9', '/assets/icon.svg', '/manifest.json'];
+const CACHE = 'escala-v4';
+const ASSETS = ['/assets/style.css?v=16', '/assets/app.js?v=9', '/assets/icon.svg', '/manifest.json'];
 
 self.addEventListener('install', e => {
-    e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
+    e.waitUntil(
+        caches.open(CACHE)
+            .then(c => c.addAll(ASSETS))
+            .then(() => self.skipWaiting())
+            .catch(() => self.skipWaiting())
+    );
 });
 
 self.addEventListener('activate', e => {
@@ -12,16 +17,19 @@ self.addEventListener('activate', e => {
     );
 });
 
+function networkOrCache(request, fallback) {
+    return fetch(request).catch(() => fallback);
+}
+
 self.addEventListener('fetch', e => {
     const url = new URL(e.request.url);
     if (e.request.method !== 'GET') {
         return;
     }
     if (url.pathname.startsWith('/api/') || url.pathname.startsWith('/health')) {
-        e.respondWith(fetch(e.request));
+        e.respondWith(networkOrCache(e.request, new Response('{"ok":false}', { status: 503, headers: { 'Content-Type': 'application/json' } })));
         return;
     }
-    // Solo assets estáticos en caché (nunca HTML — evita tema/idioma desincronizados)
     if (url.pathname.startsWith('/assets/') || url.pathname === '/manifest.json') {
         e.respondWith(
             caches.match(e.request).then(cached => {
@@ -34,11 +42,10 @@ self.addEventListener('fetch', e => {
                         caches.open(CACHE).then(c => c.put(e.request, clone));
                     }
                     return res;
-                });
+                }).catch(() => cached || new Response('', { status: 504 }));
             })
         );
         return;
     }
-    // Navegación: siempre red primero
-    e.respondWith(fetch(e.request));
+    e.respondWith(networkOrCache(e.request, new Response('Sin conexión', { status: 504, headers: { 'Content-Type': 'text/plain' } })));
 });

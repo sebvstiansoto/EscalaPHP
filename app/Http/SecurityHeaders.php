@@ -17,6 +17,6 @@ class SecurityHeaders
             header('Strict-Transport-Security: max-age=31536000; includeSubDomains');
         }
 
-        header("Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'self'");
+        header("Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'self'");
     }
 }

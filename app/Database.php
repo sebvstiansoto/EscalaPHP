@@ -159,6 +159,28 @@ class Database
                 xp_reward INTEGER NOT NULL DEFAULT 25,
                 UNIQUE(session_id, mission_date, mission_key)
             );
+
+            CREATE TABLE IF NOT EXISTS comments (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                entity_type TEXT NOT NULL,
+                entity_id TEXT NOT NULL,
+                user_id INTEGER,
+                session_id TEXT NOT NULL,
+                display_name TEXT NOT NULL,
+                body TEXT NOT NULL,
+                parent_id INTEGER,
+                created_at TEXT NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS job_queue (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                type TEXT NOT NULL,
+                payload TEXT NOT NULL,
+                status TEXT NOT NULL DEFAULT 'pending',
+                attempts INTEGER NOT NULL DEFAULT 0,
+                run_at TEXT NOT NULL,
+                created_at TEXT NOT NULL
+            );
         SQL);
     }
 
